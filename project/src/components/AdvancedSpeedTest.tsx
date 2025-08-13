@@ -1,22 +1,34 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { RotateCcw, Settings, Download, TrendingUp, Wifi, Activity } from 'lucide-react';
-import { SpeedTestResult, TestProgress as TestProgressType, GraphData, TestConfig } from '../types/speedTest';
-import SpeedTestEngine from '../utils/speedTestEngine';
-import TestProgress from './TestProgress';
-import SpeedChart from './SpeedChart';
-import ResultsDisplay from './ResultsDisplay';
-import TestConfigPanel from './TestConfigPanel';
-import BufferbloatAnalysis from './BufferbloatAnalysis';
-import StressTestPanel from './StressTestPanel';
+import React, { useState, useCallback, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  RotateCcw,
+  Settings,
+  Download,
+  TrendingUp,
+  Wifi,
+  Activity,
+} from "lucide-react";
+import {
+  SpeedTestResult,
+  TestProgress as TestProgressType,
+  GraphData,
+  TestConfig,
+} from "../types/speedTest";
+import SpeedTestEngine from "../utils/speedTestEngine";
+import TestProgress from "./TestProgress";
+import SpeedChart from "./SpeedChart";
+import ResultsDisplay from "./ResultsDisplay";
+import TestConfigPanel from "./TestConfigPanel";
+import BufferbloatAnalysis from "./BufferbloatAnalysis";
+import StressTestPanel from "./StressTestPanel";
 
 const AdvancedSpeedTest: React.FC = () => {
   const [isTestRunning, setIsTestRunning] = useState(false);
   const [testProgress, setTestProgress] = useState<TestProgressType>({
-    phase: 'idle',
+    phase: "idle",
     progress: 0,
     currentSpeed: 0,
-    elapsedTime: 0
+    elapsedTime: 0,
   });
   const [graphData, setGraphData] = useState<GraphData[]>([]);
   const [testResult, setTestResult] = useState<SpeedTestResult | null>(null);
@@ -26,7 +38,7 @@ const AdvancedSpeedTest: React.FC = () => {
     duration: 10,
     parallelConnections: 4,
     enableBufferbloat: true,
-    enableStressTest: false
+    enableStressTest: false,
   });
   const [engine] = useState(() => new SpeedTestEngine());
 
@@ -43,24 +55,32 @@ const AdvancedSpeedTest: React.FC = () => {
     setTestResult(null);
     setGraphData([]);
     setTestProgress({
-      phase: 'ping',
+      phase: "ping",
       progress: 0,
       currentSpeed: 0,
-      elapsedTime: 0
+      elapsedTime: 0,
     });
 
     try {
-      const testEngine = new SpeedTestEngine(handleProgressUpdate, handleGraphUpdate, testConfig);
+      const testEngine = new SpeedTestEngine(
+        handleProgressUpdate,
+        handleGraphUpdate,
+        testConfig,
+      );
       const result = await testEngine.runSpeedTest();
       setTestResult(result);
-      
+
       // Store result in localStorage
-      const savedResults = JSON.parse(localStorage.getItem('speedTestResults') || '[]');
+      const savedResults = JSON.parse(
+        localStorage.getItem("speedTestResults") || "[]",
+      );
       savedResults.unshift(result);
-      localStorage.setItem('speedTestResults', JSON.stringify(savedResults.slice(0, 20)));
-      
+      localStorage.setItem(
+        "speedTestResults",
+        JSON.stringify(savedResults.slice(0, 20)),
+      );
     } catch (error) {
-      console.error('Speed test failed:', error);
+      console.error("Speed test failed:", error);
       setTimeout(() => startTest(), 2000);
     } finally {
       setIsTestRunning(false);
@@ -71,10 +91,10 @@ const AdvancedSpeedTest: React.FC = () => {
     setTestResult(null);
     setGraphData([]);
     setTestProgress({
-      phase: 'idle',
+      phase: "idle",
       progress: 0,
       currentSpeed: 0,
-      elapsedTime: 0
+      elapsedTime: 0,
     });
     setAutoStarted(false);
   };
@@ -105,10 +125,14 @@ const AdvancedSpeedTest: React.FC = () => {
           {/* Header Controls */}
           <div className="flex justify-between items-center mb-8">
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-2">Network Analysis</h2>
-              <p className="text-gray-600">Comprehensive internet performance testing</p>
+              <h2 className="text-3xl font-bold text-gray-800 mb-2">
+                Network Analysis
+              </h2>
+              <p className="text-gray-600">
+                Comprehensive internet performance testing
+              </p>
             </div>
-            
+
             <div className="flex gap-3">
               <button
                 onClick={() => setShowConfig(!showConfig)}
@@ -117,7 +141,7 @@ const AdvancedSpeedTest: React.FC = () => {
                 <Settings className="w-4 h-4" />
                 Configure
               </button>
-              
+
               {!isTestRunning && (
                 <button
                   onClick={resetTest}
@@ -135,12 +159,12 @@ const AdvancedSpeedTest: React.FC = () => {
             {showConfig && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
+                animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 className="mb-8"
               >
-                <TestConfigPanel 
-                  config={testConfig} 
+                <TestConfigPanel
+                  config={testConfig}
                   onChange={setTestConfig}
                   onClose={() => setShowConfig(false)}
                 />
@@ -163,12 +187,16 @@ const AdvancedSpeedTest: React.FC = () => {
                     <div className="text-center">
                       <motion.div
                         animate={{ rotate: 360 }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
                         className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
                       >
                         <Activity className="w-8 h-8 text-white" />
                       </motion.div>
-                      
+
                       <h3 className="text-2xl font-bold text-gray-800 mb-2">
                         Testing in Progress
                       </h3>
@@ -178,21 +206,25 @@ const AdvancedSpeedTest: React.FC = () => {
                     </div>
 
                     <TestProgress progress={testProgress} />
-                    
-                    {testProgress.currentSpeed > 0 && testProgress.phase !== 'ping' && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6"
-                      >
-                        <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
-                          {testProgress.currentSpeed.toFixed(1)}
-                        </div>
-                        <div className="text-lg text-gray-600 font-medium">
-                          Mbps • {testProgress.phase === 'download' ? 'Download' : 'Upload'}
-                        </div>
-                      </motion.div>
-                    )}
+
+                    {testProgress.currentSpeed > 0 &&
+                      testProgress.phase !== "ping" && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6"
+                        >
+                          <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                            {testProgress.currentSpeed.toFixed(1)}
+                          </div>
+                          <div className="text-lg text-gray-600 font-medium">
+                            Mbps •{" "}
+                            {testProgress.phase === "download"
+                              ? "Download"
+                              : "Upload"}
+                          </div>
+                        </motion.div>
+                      )}
                   </div>
                 ) : (
                   <div className="text-center py-12">
@@ -203,18 +235,24 @@ const AdvancedSpeedTest: React.FC = () => {
                     >
                       <Wifi className="w-10 h-10 text-white" />
                     </motion.div>
-                    
+
                     <h3 className="text-2xl font-bold text-gray-800 mb-4">
                       Ready to Test
                     </h3>
                     <p className="text-gray-600 mb-6">
                       Your speed test will start automatically
                     </p>
-                    
+
                     <div className="flex justify-center space-x-2">
                       <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-pink-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div
+                        className="w-2 h-2 bg-purple-500 rounded-full animate-bounce"
+                        style={{ animationDelay: "0.1s" }}
+                      ></div>
+                      <div
+                        className="w-2 h-2 bg-pink-500 rounded-full animate-bounce"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
                     </div>
                   </div>
                 )}
@@ -246,7 +284,11 @@ const AdvancedSpeedTest: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <BufferbloatAnalysis isActive={isTestRunning && testProgress.phase === 'bufferbloat'} />
+                  <BufferbloatAnalysis
+                    isActive={
+                      isTestRunning && testProgress.phase === "bufferbloat"
+                    }
+                  />
                 </motion.div>
               )}
 
@@ -272,22 +314,22 @@ const AdvancedSpeedTest: React.FC = () => {
             {[
               {
                 icon: Download,
-                title: 'Download Analysis',
-                desc: 'Comprehensive download speed testing with multi-threaded connections and real-time monitoring.',
-                gradient: 'from-green-400 to-blue-500'
+                title: "Download Analysis",
+                desc: "Comprehensive download speed testing with multi-threaded connections and real-time monitoring.",
+                gradient: "from-green-400 to-blue-500",
               },
               {
                 icon: TrendingUp,
-                title: 'Upload Performance',
-                desc: 'Advanced upload testing with latency analysis and bandwidth optimization insights.',
-                gradient: 'from-purple-400 to-pink-500'
+                title: "Upload Performance",
+                desc: "Advanced upload testing with latency analysis and bandwidth optimization insights.",
+                gradient: "from-purple-400 to-pink-500",
               },
               {
                 icon: Activity,
-                title: 'Network Stability',
-                desc: 'Ping, jitter, and bufferbloat analysis for gaming and real-time application performance.',
-                gradient: 'from-orange-400 to-red-500'
-              }
+                title: "Network Stability",
+                desc: "Ping, jitter, and bufferbloat analysis for gaming and real-time application performance.",
+                gradient: "from-orange-400 to-red-500",
+              },
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -296,11 +338,17 @@ const AdvancedSpeedTest: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                 className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
               >
-                <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.gradient} rounded-lg mb-4`}>
+                <div
+                  className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.gradient} rounded-lg mb-4`}
+                >
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {feature.desc}
+                </p>
               </motion.div>
             ))}
           </motion.div>

@@ -2,12 +2,12 @@
   "name": "speedtest-backend",
   "version": "1.0.0",
   "description": "Backend server for speed test application optimized for high-speed traffic",
-  "main": "server.js",
+  "main": "server-azure.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "start:cluster": "node server.js"
+    "start": "node server-azure.js",
+    "dev": "nodemon server-azure.js",
+    "start:cluster": "node server-azure.js"
   },
   "dependencies": {
     "cluster": "^0.7.7",

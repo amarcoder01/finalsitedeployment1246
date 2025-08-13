@@ -1,5 +1,5 @@
-import React from 'react';
-import { TestProgress as TestProgressType } from '../types/speedTest';
+import React from "react";
+import { TestProgress as TestProgressType } from "../types/speedTest";
 
 interface TestProgressProps {
   progress: TestProgressType;
@@ -8,31 +8,46 @@ interface TestProgressProps {
 const TestProgress: React.FC<TestProgressProps> = ({ progress }) => {
   const getPhaseLabel = (phase: string) => {
     switch (phase) {
-      case 'ping': return 'Testing Connection & Latency';
-      case 'download': return 'Testing Download Speed';
-      case 'upload': return 'Testing Upload Speed';
-      case 'complete': return 'Test Complete';
-      default: return 'Initializing Test';
+      case "ping":
+        return "Testing Connection & Latency";
+      case "download":
+        return "Testing Download Speed";
+      case "upload":
+        return "Testing Upload Speed";
+      case "complete":
+        return "Test Complete";
+      default:
+        return "Initializing Test";
     }
   };
 
   const getPhaseColor = (phase: string) => {
     switch (phase) {
-      case 'ping': return 'bg-blue-500';
-      case 'download': return 'bg-green-500';
-      case 'upload': return 'bg-orange-500';
-      case 'complete': return 'bg-purple-500';
-      default: return 'bg-gray-500';
+      case "ping":
+        return "bg-blue-500";
+      case "download":
+        return "bg-green-500";
+      case "upload":
+        return "bg-orange-500";
+      case "complete":
+        return "bg-purple-500";
+      default:
+        return "bg-gray-500";
     }
   };
 
   const getPhaseGradient = (phase: string) => {
     switch (phase) {
-      case 'ping': return 'from-blue-400 to-blue-600';
-      case 'download': return 'from-green-400 to-green-600';
-      case 'upload': return 'from-orange-400 to-orange-600';
-      case 'complete': return 'from-purple-400 to-purple-600';
-      default: return 'from-gray-400 to-gray-600';
+      case "ping":
+        return "from-blue-400 to-blue-600";
+      case "download":
+        return "from-green-400 to-green-600";
+      case "upload":
+        return "from-orange-400 to-orange-600";
+      case "complete":
+        return "from-purple-400 to-purple-600";
+      default:
+        return "from-gray-400 to-gray-600";
     }
   };
 
@@ -46,15 +61,15 @@ const TestProgress: React.FC<TestProgressProps> = ({ progress }) => {
           {progress.progress.toFixed(0)}%
         </span>
       </div>
-      
+
       <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
         <div
           className={`h-full transition-all duration-500 ease-out bg-gradient-to-r ${getPhaseGradient(progress.phase)} shadow-sm`}
           style={{ width: `${progress.progress}%` }}
         />
       </div>
-      
-      {progress.currentSpeed > 0 && progress.phase !== 'ping' && (
+
+      {progress.currentSpeed > 0 && progress.phase !== "ping" && (
         <div className="mt-4 text-center">
           <div className="inline-flex items-baseline gap-2 bg-gray-50 px-4 py-2 rounded-lg">
             <span className="text-2xl font-bold text-gray-800">
@@ -65,11 +80,13 @@ const TestProgress: React.FC<TestProgressProps> = ({ progress }) => {
         </div>
       )}
 
-      {progress.phase === 'ping' && (
+      {progress.phase === "ping" && (
         <div className="mt-4 text-center">
           <div className="inline-flex items-center gap-2 text-blue-600">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium">Measuring network latency...</span>
+            <span className="text-sm font-medium">
+              Measuring network latency...
+            </span>
           </div>
         </div>
       )}

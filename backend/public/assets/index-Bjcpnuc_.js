@@ -3,18 +3,18 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      "assets/ReportGenerator-CbOP5yeF.js",
+      "assets/ReportGenerator-lY0zm9Sv.js",
       "assets/vendor-B_qP7WtP.js",
       "assets/pdf-BDHYIwva.js",
       "assets/ui-AS6gtC_B.js",
     ]),
 ) => i.map((i) => d[i]);
 var Cs = Object.defineProperty;
-var Ps = (t, o, s) =>
-  o in t
-    ? Cs(t, o, { enumerable: !0, configurable: !0, writable: !0, value: s })
-    : (t[o] = s);
-var Z = (t, o, s) => Ps(t, typeof o != "symbol" ? o + "" : o, s);
+var Ps = (s, o, t) =>
+  o in s
+    ? Cs(s, o, { enumerable: !0, configurable: !0, writable: !0, value: t })
+    : (s[o] = t);
+var Z = (s, o, t) => Ps(s, typeof o != "symbol" ? o + "" : o, t);
 import {
   a as Es,
   b as Rs,
@@ -28,8 +28,8 @@ import {
   e as Ds,
   f as ue,
 } from "./vendor-B_qP7WtP.js";
-import { m as y, A as z, V as O, O as Bs } from "./ui-AS6gtC_B.js";
-import { h as Fs, _ as us } from "./pdf-BDHYIwva.js";
+import { m as y, A as z, V as O, O as Fs } from "./ui-AS6gtC_B.js";
+import { h as Bs, _ as us } from "./pdf-BDHYIwva.js";
 (function () {
   const o = document.createElement("link").relList;
   if (o && o.supports && o.supports("modulepreload")) return;
@@ -40,7 +40,7 @@ import { h as Fs, _ as us } from "./pdf-BDHYIwva.js";
         for (const i of a.addedNodes)
           i.tagName === "LINK" && i.rel === "modulepreload" && n(i);
   }).observe(document, { childList: !0, subtree: !0 });
-  function s(r) {
+  function t(r) {
     const a = {};
     return (
       r.integrity && (a.integrity = r.integrity),
@@ -56,7 +56,7 @@ import { h as Fs, _ as us } from "./pdf-BDHYIwva.js";
   function n(r) {
     if (r.ep) return;
     r.ep = !0;
-    const a = s(r);
+    const a = t(r);
     fetch(r.href, a);
   }
 })();
@@ -74,11 +74,11 @@ var Ye = { exports: {} },
 function $s() {
   if (Mt) return Ne;
   Mt = 1;
-  var t = Es(),
+  var s = Es(),
     o = Symbol.for("react.element"),
-    s = Symbol.for("react.fragment"),
+    t = Symbol.for("react.fragment"),
     n = Object.prototype.hasOwnProperty,
-    r = t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
+    r = s.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
     a = { key: !0, ref: !0, __self: !0, __source: !0 };
   function i(l, c, d) {
     var m,
@@ -100,7 +100,7 @@ function $s() {
       _owner: r.current,
     };
   }
-  return ((Ne.Fragment = s), (Ne.jsx = i), (Ne.jsxs = i), Ne);
+  return ((Ne.Fragment = t), (Ne.jsx = i), (Ne.jsxs = i), Ne);
 }
 var Ct;
 function Us() {
@@ -112,8 +112,8 @@ var e = Us(),
 function _s() {
   if (Pt) return Le;
   Pt = 1;
-  var t = Rs();
-  return ((Le.createRoot = t.createRoot), (Le.hydrateRoot = t.hydrateRoot), Le);
+  var s = Rs();
+  return ((Le.createRoot = s.createRoot), (Le.hydrateRoot = s.hydrateRoot), Le);
 }
 var qs = _s();
 /**
@@ -137,13 +137,13 @@ var qs = _s();
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */ const Hs = (t) =>
-    t
+ */ const Hs = (s) =>
+    s
       .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
       .toLowerCase()
       .trim(),
-  L = (t, o) => {
-    const s = R.forwardRef(
+  L = (s, o) => {
+    const t = R.forwardRef(
       (
         {
           color: n = "currentColor",
@@ -165,7 +165,7 @@ var qs = _s();
             height: r,
             stroke: n,
             strokeWidth: i ? (Number(a) * 24) / Number(r) : a,
-            className: ["lucide", `lucide-${Hs(t)}`, l].join(" "),
+            className: ["lucide", `lucide-${Hs(s)}`, l].join(" "),
             ...d,
           },
           [
@@ -174,7 +174,7 @@ var qs = _s();
           ],
         ),
     );
-    return ((s.displayName = `${t}`), s);
+    return ((t.displayName = `${s}`), t);
   };
 /**
  * @license lucide-react v0.344.0 - ISC
@@ -380,7 +380,7 @@ var qs = _s();
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */ const Be = L("Github", [
+ */ const Fe = L("Github", [
   [
     "path",
     {
@@ -499,7 +499,7 @@ var qs = _s();
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */ const Fe = L("Loader", [
+ */ const Be = L("Loader", [
   ["line", { x1: "12", x2: "12", y1: "2", y2: "6", key: "gza1u7" }],
   ["line", { x1: "12", x2: "12", y1: "18", y2: "22", key: "1qhbu9" }],
   ["line", { x1: "4.93", x2: "7.76", y1: "4.93", y2: "7.76", key: "xae44r" }],
@@ -745,8 +745,8 @@ var qs = _s();
     ],
   ]),
   sr = () => {
-    const [t, o] = R.useState(!1),
-      [s, n] = R.useState(!1),
+    const [s, o] = R.useState(!1),
+      [t, n] = R.useState(!1),
       [r, a] = R.useState(!1),
       l = As().pathname;
     R.useEffect(() => {
@@ -759,7 +759,7 @@ var qs = _s();
       );
     }, []);
     const c = () => {
-        o(!t);
+        o(!s);
       },
       d = () => {
         o(!1);
@@ -771,7 +771,7 @@ var qs = _s();
         a(!1);
       };
     return e.jsxs("header", {
-      className: `sticky top-0 z-50 transition-all duration-300 ${s ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"}`,
+      className: `sticky top-0 z-50 transition-all duration-300 ${t ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"}`,
       children: [
         e.jsx("div", {
           className: "container mx-auto px-4 py-4",
@@ -902,7 +902,7 @@ var qs = _s();
                     rel: "noopener noreferrer",
                     className:
                       "px-4 py-2 rounded-lg flex items-center gap-1.5 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors",
-                    children: [e.jsx(Be, { className: "w-4 h-4" }), "GitHub"],
+                    children: [e.jsx(Fe, { className: "w-4 h-4" }), "GitHub"],
                   }),
                 ],
               }),
@@ -911,7 +911,7 @@ var qs = _s();
                   "md:hidden p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors",
                 onClick: c,
                 "aria-label": "Toggle menu",
-                children: t
+                children: s
                   ? e.jsx(jt, { className: "w-6 h-6" })
                   : e.jsx(Xs, { className: "w-6 h-6" }),
               }),
@@ -920,7 +920,7 @@ var qs = _s();
         }),
         e.jsx(z, {
           children:
-            t &&
+            s &&
             e.jsx(y.div, {
               initial: { opacity: 0, height: 0 },
               animate: { opacity: 1, height: "auto" },
@@ -982,7 +982,7 @@ var qs = _s();
                       className:
                         "flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors",
                       onClick: d,
-                      children: [e.jsx(Be, { className: "w-5 h-5" }), "GitHub"],
+                      children: [e.jsx(Fe, { className: "w-5 h-5" }), "GitHub"],
                     }),
                   ],
                 }),
@@ -992,21 +992,21 @@ var qs = _s();
       ],
     });
   },
-  Ke = ({ to: t, isActive: o, icon: s, children: n }) =>
+  Ke = ({ to: s, isActive: o, icon: t, children: n }) =>
     e.jsxs(q, {
-      to: t,
+      to: s,
       className: `px-4 py-2 rounded-lg flex items-center gap-1.5 text-sm font-medium transition-colors ${o ? "text-blue-600 bg-blue-50" : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"}`,
-      children: [s, n],
+      children: [t, n],
     }),
-  me = ({ to: t, isActive: o, icon: s, children: n, onClick: r }) =>
+  me = ({ to: s, isActive: o, icon: t, children: n, onClick: r }) =>
     e.jsxs(q, {
-      to: t,
+      to: s,
       className: `flex items-center gap-3 px-4 py-3 rounded-lg ${o ? "text-blue-600 bg-blue-50" : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"} transition-colors`,
       onClick: r,
-      children: [s, n],
+      children: [t, n],
     }),
   rr = () => {
-    const t = new Date().getFullYear();
+    const s = new Date().getFullYear();
     return e.jsx("footer", {
       className: "bg-white border-t border-gray-200 pt-12 pb-8",
       children: e.jsxs("div", {
@@ -1081,7 +1081,7 @@ var qs = _s();
                         rel: "noopener noreferrer",
                         className:
                           "text-gray-400 hover:text-gray-900 transition-colors",
-                        children: e.jsx(Be, { className: "w-5 h-5" }),
+                        children: e.jsx(Fe, { className: "w-5 h-5" }),
                       }),
                     ],
                   }),
@@ -1174,7 +1174,7 @@ var qs = _s();
                           className:
                             "text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1.5",
                           children: [
-                            e.jsx(Be, { className: "w-4 h-4" }),
+                            e.jsx(Fe, { className: "w-4 h-4" }),
                             "GitHub",
                           ],
                         }),
@@ -1238,7 +1238,7 @@ var qs = _s();
             children: [
               e.jsxs("p", {
                 className: "text-sm text-gray-500 mb-4 md:mb-0",
-                children: ["© ", t, " SpeedTest Pro. All rights reserved."],
+                children: ["© ", s, " SpeedTest Pro. All rights reserved."],
               }),
               e.jsx("div", {
                 className: "flex items-center text-sm text-gray-500",
@@ -1257,15 +1257,18 @@ var qs = _s();
       }),
     });
   };
-var fe = ((t) => ((t.XHR = "xhr"), (t.WEBSOCKET = "websocket"), t))(fe || {});
-const ws = () => "https://api.yourdomain.com",
+var fe = ((s) => ((s.XHR = "xhr"), (s.WEBSOCKET = "websocket"), s))(fe || {});
+const ws = () =>
+    window.location.hostname.includes("onrender.com")
+      ? ""
+      : window.location.origin,
   ar = () => {
-    const t = ws();
-    return window.location.hostname.includes("onrender.com") || t === ""
+    const s = ws();
+    return window.location.hostname.includes("onrender.com") || s === ""
       ? window.location.origin
           .replace("https://", "wss://")
           .replace("http://", "ws://")
-      : t.replace("https://", "wss://").replace("http://", "ws://") +
+      : s.replace("https://", "wss://").replace("http://", "ws://") +
           "/functions/websocket";
   },
   H = {
@@ -1280,15 +1283,15 @@ const ws = () => "https://api.yourdomain.com",
       websocket: "/websocket",
     },
   };
-var W = ((t) => (
-  (t.INITIALIZE = "initialize"),
-  (t.START_TEST = "start_test"),
-  (t.PROGRESS_UPDATE = "progress_update"),
-  (t.GRAPH_UPDATE = "graph_update"),
-  (t.TEST_COMPLETE = "test_complete"),
-  (t.TEST_ERROR = "test_error"),
-  (t.ABORT = "abort"),
-  t
+var W = ((s) => (
+  (s.INITIALIZE = "initialize"),
+  (s.START_TEST = "start_test"),
+  (s.PROGRESS_UPDATE = "progress_update"),
+  (s.GRAPH_UPDATE = "graph_update"),
+  (s.TEST_COMPLETE = "test_complete"),
+  (s.TEST_ERROR = "test_error"),
+  (s.ABORT = "abort"),
+  s
 ))(W || {});
 function nr() {
   return typeof self < "u" && self.location
@@ -1311,7 +1314,7 @@ const Se = [
     distance: 0,
   },
 ];
-let B,
+let F,
   js = null,
   Q = [],
   X = 1.06,
@@ -1325,12 +1328,12 @@ let B,
   De = [],
   te = [],
   se = [];
-self.onmessage = async (t) => {
-  const { type: o, payload: s } = t.data;
+self.onmessage = async (s) => {
+  const { type: o, payload: t } = s.data;
   try {
     switch (o) {
       case "initialize":
-        ((B = s.config),
+        ((F = t.config),
           postMessage({ type: "initialize", payload: { success: !0 } }));
         break;
       case "start_test":
@@ -1349,29 +1352,29 @@ self.onmessage = async (t) => {
     });
   }
 };
-function $(t, o, s) {
+function $(s, o, t) {
   postMessage({
     type: "progress_update",
     payload: {
-      phase: t,
+      phase: s,
       progress: Math.min(o, 100),
-      currentSpeed: s,
+      currentSpeed: t,
       elapsedTime: performance.now(),
     },
   });
 }
-function He(t) {
-  postMessage({ type: "graph_update", payload: t });
+function He(s) {
+  postMessage({ type: "graph_update", payload: s });
 }
 async function or() {
   ((js = new AbortController()), (Q = []));
-  const t = performance.now();
+  const s = performance.now();
   try {
     $("ping", 10, 0);
     const o = await cr();
-    B.protocol === fe.WEBSOCKET ? await lr() : await ir(o, t);
+    F.protocol === fe.WEBSOCKET ? await lr() : await ir(o, s);
   } catch {
-    const s = {
+    const t = {
       id: Date.now().toString(),
       timestamp: Date.now(),
       downloadSpeed: Math.round((Math.random() * 80 + 25) * 10) / 10,
@@ -1380,53 +1383,53 @@ async function or() {
       jitter: Math.round((Math.random() * 8 + 2) * 10) / 10,
       serverLocation: "Global CDN",
       userLocation: await Nt(),
-      testDuration: (performance.now() - t) / 1e3,
-      bufferbloat: B.enableBufferbloat
+      testDuration: (performance.now() - s) / 1e3,
+      bufferbloat: F.enableBufferbloat
         ? { rating: "B", latencyIncrease: 35 }
         : void 0,
       packetLoss: { percentage: 2, sent: 50, received: 49 },
     };
-    ($("complete", 100, 0), postMessage({ type: "test_complete", payload: s }));
+    ($("complete", 100, 0), postMessage({ type: "test_complete", payload: t }));
   }
 }
-async function ir(t, o) {
+async function ir(s, o) {
   ($("ping", 30, 0),
     console.log(
       "Starting ping measurements with backend-controlled ping testing",
     ));
-  const s = [],
+  const t = [],
     n = 5;
   for (let h = 0; h < n; h++)
     try {
       const u = await Pe();
       (console.log(`Ping sample ${h + 1}/${n}: ${u.toFixed(2)}ms`),
-        s.push(u),
+        t.push(u),
         $("ping", 30 + (h / n) * 20, 0));
     } catch (u) {
       console.error(`Failed to measure ping sample ${h + 1}:`, u);
     }
-  if (s.length === 0) {
+  if (t.length === 0) {
     console.warn("No valid ping measurements collected, trying one more time");
     try {
       const h = await Pe();
-      s.push(h);
+      t.push(h);
     } catch (h) {
       (console.error("Final ping measurement attempt failed:", h),
-        s.push(Math.random() * 30 + 15));
+        t.push(Math.random() * 30 + 15));
     }
   }
-  const r = s.reduce((h, u) => h + u, 0) / s.length;
+  const r = t.reduce((h, u) => h + u, 0) / t.length;
   console.log(`Average ping: ${r.toFixed(2)}ms`);
-  const a = await dr(s);
+  const a = await dr(t);
   (console.log(`Measured jitter: ${a.toFixed(2)}ms`),
-    B.enableDynamicGracePeriod
+    F.enableDynamicGracePeriod
       ? console.log(
           "Starting speed tests with dynamic TCP grace period (1-3s based on connection speed)",
         )
       : console.log(
           "Starting speed tests with static grace period to exclude TCP slow-start",
         ),
-    B.enableAutoProtocolOverhead
+    F.enableAutoProtocolOverhead
       ? console.log(
           "Protocol overhead factor will be automatically detected during the test",
         )
@@ -1440,7 +1443,7 @@ async function ir(t, o) {
   $("packetLoss", 0, 0);
   const c = await xr();
   let d;
-  B.enableBufferbloat && (d = await hr(r));
+  F.enableBufferbloat && (d = await hr(r));
   const m = await Nt(),
     p = {
       id: Date.now().toString(),
@@ -1449,18 +1452,18 @@ async function ir(t, o) {
       uploadSpeed: Math.round(l * 10) / 10,
       ping: Math.round(r * 10) / 10,
       jitter: Math.round(a * 10) / 10,
-      serverLocation: t.location,
+      serverLocation: s.location,
       userLocation: m,
       testDuration: (performance.now() - o) / 1e3,
       bufferbloat: d,
       packetLoss: c,
-      protocolOverhead: B.enableAutoProtocolOverhead
+      protocolOverhead: F.enableAutoProtocolOverhead
         ? {
             detected: V,
-            factor: V ? Math.round(X * 1e4) / 1e4 : B.protocolOverheadFactor,
+            factor: V ? Math.round(X * 1e4) / 1e4 : F.protocolOverheadFactor,
             overheadPercentage: V
               ? Math.round((X - 1) * 1e3) / 10
-              : Math.round((B.protocolOverheadFactor - 1) * 1e3) / 10,
+              : Math.round((F.protocolOverheadFactor - 1) * 1e3) / 10,
           }
         : void 0,
     };
@@ -1469,21 +1472,21 @@ async function ir(t, o) {
 async function lr() {
   try {
     (await gr(), $("ping", 0, 0));
-    const t = await vr();
+    const s = await vr();
     $("download", 0, 0);
     const o = await Sr();
     $("upload", 0, 0);
-    const s = await kr(),
+    const t = await kr(),
       n = await Nt(),
-      r = t * 0.1,
+      r = s * 0.1,
       a = { percentage: 0, sent: 0, received: 0 },
       i = { rating: "A", latencyIncrease: 0 },
       l = {
         id: Date.now().toString(),
         timestamp: Date.now(),
         downloadSpeed: Math.round(o * 10) / 10,
-        uploadSpeed: Math.round(s * 10) / 10,
-        ping: Math.round(t * 10) / 10,
+        uploadSpeed: Math.round(t * 10) / 10,
+        ping: Math.round(s * 10) / 10,
         jitter: Math.round(r * 10) / 10,
         serverLocation: "WebSocket Server",
         userLocation: n,
@@ -1495,19 +1498,19 @@ async function lr() {
     (pr(),
       $("complete", 100, 0),
       postMessage({ type: "test_complete", payload: l }));
-  } catch (t) {
-    throw (console.error("WebSocket speed test failed:", t), t);
+  } catch (s) {
+    throw (console.error("WebSocket speed test failed:", s), s);
   }
 }
 async function cr() {
   try {
-    const t = Se.find((a) => a.id === "cf-auto");
-    if (t)
+    const s = Se.find((a) => a.id === "cf-auto");
+    if (s)
       try {
-        const a = await Dt(t.host);
-        if (a < 1e3) return { ...t, latency: a, distance: a };
+        const a = await Dt(s.host);
+        if (a < 1e3) return { ...s, latency: a, distance: a };
       } catch {}
-    const s = Se.filter((a) => a.id !== "cf-auto").map(async (a) => {
+    const t = Se.filter((a) => a.id !== "cf-auto").map(async (a) => {
         try {
           const i = await Dt(a.host);
           return { ...a, latency: i, distance: i };
@@ -1515,19 +1518,19 @@ async function cr() {
           return { ...a, latency: 9999, distance: 9999 };
         }
       }),
-      r = (await Promise.all(s)).reduce((a, i) =>
+      r = (await Promise.all(t)).reduce((a, i) =>
         i.latency < a.latency ? i : a,
       );
-    return r.latency > 5e3 ? t || Se[0] : r;
-  } catch (t) {
+    return r.latency > 5e3 ? s || Se[0] : r;
+  } catch (s) {
     return (
-      console.error("Error finding best server:", t),
+      console.error("Error finding best server:", s),
       Se.find((o) => o.id === "cf-auto") || Se[0]
     );
   }
 }
-async function Dt(t) {
-  const r = `${t.startsWith("http") ? new URL(t).origin : H.baseUrl}${H.endpoints.ping}?nocache=${Date.now()}`;
+async function Dt(s) {
+  const r = `${s.startsWith("http") ? new URL(s).origin : H.baseUrl}${H.endpoints.ping}?nocache=${Date.now()}`;
   for (let a = 0; a <= 2; a++)
     try {
       const i = performance.now(),
@@ -1585,19 +1588,19 @@ async function Pe() {
     a.reduce((i, l) => i + l, 0) / a.length
   );
 }
-async function dr(t) {
+async function dr(s) {
   if (
     (console.log(
       "Starting jitter calculation with ping samples:",
-      t.map((n) => n.toFixed(2)).join(", "),
+      s.map((n) => n.toFixed(2)).join(", "),
     ),
-    t.length < 3)
+    s.length < 3)
   ) {
     console.log(
-      `Not enough ping samples (${t.length}), collecting additional samples for jitter calculation`,
+      `Not enough ping samples (${s.length}), collecting additional samples for jitter calculation`,
     );
     const n = [],
-      r = 5 - t.length;
+      r = 5 - s.length;
     for (let a = 0; a < r; a++)
       try {
         const i = await Pe();
@@ -1606,13 +1609,13 @@ async function dr(t) {
       } catch (i) {
         console.error("Error measuring additional ping for jitter:", i);
       }
-    ((t = [...t, ...n]),
+    ((s = [...s, ...n]),
       console.log(
         "Combined ping samples:",
-        t.map((a) => a.toFixed(2)).join(", "),
+        s.map((a) => a.toFixed(2)).join(", "),
       ));
   }
-  if (t.length < 2) {
+  if (s.length < 2) {
     console.warn(
       "Not enough ping measurements for jitter calculation, using fallback",
     );
@@ -1620,14 +1623,14 @@ async function dr(t) {
     return (console.log(`Using fallback jitter value: ${n.toFixed(2)}ms`), n);
   }
   const o = [];
-  for (let n = 1; n < t.length; n++) {
-    const r = Math.abs(t[n] - t[n - 1]);
+  for (let n = 1; n < s.length; n++) {
+    const r = Math.abs(s[n] - s[n - 1]);
     (o.push(r),
       console.log(
-        `Difference between ping ${n} and ${n - 1}: |${t[n].toFixed(2)} - ${t[n - 1].toFixed(2)}| = ${r.toFixed(2)}ms`,
+        `Difference between ping ${n} and ${n - 1}: |${s[n].toFixed(2)} - ${s[n - 1].toFixed(2)}| = ${r.toFixed(2)}ms`,
       ));
   }
-  let s;
+  let t;
   if (o.length >= 4) {
     const n = [...o].sort((a, i) => a - i),
       r = n.slice(1, -1);
@@ -1640,13 +1643,13 @@ async function dr(t) {
         "Remaining differences:",
         r.map((a) => a.toFixed(2)).join(", "),
       ),
-      (s = r.reduce((a, i) => a + i, 0) / r.length));
-  } else s = o.reduce((n, r) => n + r, 0) / o.length;
-  return (console.log(`Final jitter calculation: ${s.toFixed(2)}ms`), s);
+      (t = r.reduce((a, i) => a + i, 0) / r.length));
+  } else t = o.reduce((n, r) => n + r, 0) / o.length;
+  return (console.log(`Final jitter calculation: ${t.toFixed(2)}ms`), t);
 }
 async function ur() {
-  const t = performance.now(),
-    s = Array(B.parallelConnections)
+  const s = performance.now(),
+    t = Array(F.parallelConnections)
       .fill(null)
       .map(
         (a, i) =>
@@ -1655,12 +1658,12 @@ async function ur() {
       .map(async (a, i) => {
         try {
           const l = performance.now();
-          let c = B.tcpGracePeriod * 1e3;
+          let c = F.tcpGracePeriod * 1e3;
           const d = 1e3,
-            m = B.enableDynamicGracePeriod,
+            m = F.enableDynamicGracePeriod,
             p = await fetch(a, {
               signal: AbortSignal.timeout(
-                (B.duration + (m ? 5 : B.tcpGracePeriod)) * 1e3,
+                (F.duration + (m ? 5 : F.tcpGracePeriod)) * 1e3,
               ),
               cache: "no-store",
             });
@@ -1710,7 +1713,7 @@ async function ur() {
                 )),
               !w &&
                 ((x += j.length),
-                B.enableAutoProtocolOverhead && !V && p.headers && !V))
+                F.enableAutoProtocolOverhead && !V && p.headers && !V))
             )
               try {
                 const C = p.headers.get("content-length");
@@ -1728,8 +1731,8 @@ async function ur() {
                   ) {
                     let U = he;
                     (he.length >= 5 &&
-                      (U = [...he].sort((I, F) => I - F).slice(1, -1)),
-                      (X = U.reduce((I, F) => I + F, 0) / U.length),
+                      (U = [...he].sort((I, B) => I - B).slice(1, -1)),
+                      (X = U.reduce((I, B) => I + B, 0) / U.length),
                       (V = !0),
                       console.log(
                         `Auto-detected protocol overhead factor: ${X.toFixed(4)} (${((X - 1) * 100).toFixed(2)}% overhead)`,
@@ -1741,7 +1744,7 @@ async function ur() {
               }
             if (T - g > 100) {
               let C;
-              const P = B.enableAutoProtocolOverhead && V ? X : 1.06;
+              const P = F.enableAutoProtocolOverhead && V ? X : 1.06;
               if (
                 (w
                   ? (C = ((u * 8) / ((T - l) / 1e3) / 1e6) * P)
@@ -1749,12 +1752,12 @@ async function ur() {
                 i === 0)
               ) {
                 const E = Math.min(
-                  ((T - t) / ((B.duration + B.tcpGracePeriod) * 1e3)) * 100,
+                  ((T - s) / ((F.duration + F.tcpGracePeriod) * 1e3)) * 100,
                   100,
                 );
                 ($("download", E, C),
                   Q.push({
-                    time: T - t,
+                    time: T - s,
                     speed: C,
                     phase: w ? "download-grace" : "download",
                   }),
@@ -1765,7 +1768,7 @@ async function ur() {
           }
           const D = performance.now(),
             f =
-              B.enableAutoProtocolOverhead && V ? X : B.protocolOverheadFactor;
+              F.enableAutoProtocolOverhead && V ? X : F.protocolOverheadFactor;
           if (S === 0) {
             const b = (D - l) / 1e3;
             return ((u * 8) / b / 1e6) * f;
@@ -1779,23 +1782,23 @@ async function ur() {
           );
         }
       }),
-    r = (await Promise.all(s)).filter((a) => a > 0);
+    r = (await Promise.all(t)).filter((a) => a > 0);
   return r.length === 0
     ? Math.random() * 100 + 25
     : r.reduce((a, i) => a + i) / r.length;
 }
 async function mr() {
-  const t = performance.now(),
+  const s = performance.now(),
     o = `${H.baseUrl}${H.endpoints.upload}`;
-  let s = B.tcpGracePeriod * 1e3;
+  let t = F.tcpGracePeriod * 1e3;
   const n = 1e3,
-    r = B.enableDynamicGracePeriod,
-    a = Math.ceil(B.duration / 2);
-  let i = Math.ceil(r ? n / 1e3 / 2 : B.tcpGracePeriod / 2),
+    r = F.enableDynamicGracePeriod,
+    a = Math.ceil(F.duration / 2);
+  let i = Math.ceil(r ? n / 1e3 / 2 : F.tcpGracePeriod / 2),
     l = a - i,
     c = [],
     d = !1;
-  const m = Array(Math.min(B.parallelConnections, 3))
+  const m = Array(Math.min(F.parallelConnections, 3))
       .fill(null)
       .map(async (u, x) => {
         try {
@@ -1822,25 +1825,25 @@ async function mr() {
               const E = performance.now(),
                 A = (E - T) / 1e3;
               if (((w += S.byteLength), r && j && !d && x === 0)) {
-                const F = (S.byteLength * 8) / A / 1e6;
-                (c.push(F),
+                const B = (S.byteLength * 8) / A / 1e6;
+                (c.push(B),
                   b === 0 &&
-                    (F > 50
-                      ? ((s = n),
-                        (i = Math.max(1, Math.ceil(s / 1e3 / 2))),
+                    (B > 50
+                      ? ((t = n),
+                        (i = Math.max(1, Math.ceil(t / 1e3 / 2))),
                         console.log(
-                          `Fast upload connection detected (${F.toFixed(2)} Mbps), using ${s / 1e3}s grace period`,
+                          `Fast upload connection detected (${B.toFixed(2)} Mbps), using ${t / 1e3}s grace period`,
                         ))
-                      : F > 10
-                        ? ((s = 2e3),
-                          (i = Math.ceil(s / 1e3 / 2)),
+                      : B > 10
+                        ? ((t = 2e3),
+                          (i = Math.ceil(t / 1e3 / 2)),
                           console.log(
-                            `Medium upload connection detected (${F.toFixed(2)} Mbps), using ${s / 1e3}s grace period`,
+                            `Medium upload connection detected (${B.toFixed(2)} Mbps), using ${t / 1e3}s grace period`,
                           ))
-                        : ((s = 3e3),
-                          (i = Math.ceil(s / 1e3 / 2)),
+                        : ((t = 3e3),
+                          (i = Math.ceil(t / 1e3 / 2)),
                           console.log(
-                            `Slow upload connection detected (${F.toFixed(2)} Mbps), using ${s / 1e3}s grace period`,
+                            `Slow upload connection detected (${B.toFixed(2)} Mbps), using ${t / 1e3}s grace period`,
                           )),
                     (l = a - i),
                     (d = !0)));
@@ -1854,19 +1857,19 @@ async function mr() {
                 j || ((M += S.byteLength), (v += A)));
               let U;
               const I =
-                B.enableAutoProtocolOverhead && V
+                F.enableAutoProtocolOverhead && V
                   ? X
-                  : B.protocolOverheadFactor;
+                  : F.protocolOverheadFactor;
               if (
                 (j
                   ? (U = ((w * 8) / ((E - k) / 1e3) / 1e6) * I)
                   : (U = ((M * 8) / v / 1e6) * I),
                 x === 0)
               ) {
-                const F = Math.min(((b + 1) / a) * 100, 100);
-                ($("upload", F, U),
+                const B = Math.min(((b + 1) / a) * 100, 100);
+                ($("upload", B, U),
                   Q.push({
-                    time: E - t,
+                    time: E - s,
                     speed: U,
                     phase: j ? "upload-grace" : "upload",
                   }),
@@ -1878,7 +1881,7 @@ async function mr() {
           }
           const f = performance.now(),
             N =
-              B.enableAutoProtocolOverhead && V ? X : B.protocolOverheadFactor;
+              F.enableAutoProtocolOverhead && V ? X : F.protocolOverheadFactor;
           if (M === 0 || v === 0) {
             const b = (f - k) / 1e3;
             return ((w * 8) / b / 1e6) * N;
@@ -1896,16 +1899,16 @@ async function mr() {
     ? Math.random() * 40 + 10
     : h.reduce((u, x) => u + x) / h.length;
 }
-async function hr(t) {
-  if (!B.enableBufferbloat) return { rating: "A", latencyIncrease: 0 };
+async function hr(s) {
+  if (!F.enableBufferbloat) return { rating: "A", latencyIncrease: 0 };
   ($("bufferbloat", 0, 0),
-    console.log(`Starting bufferbloat test with base ping: ${t.toFixed(2)}ms`));
+    console.log(`Starting bufferbloat test with base ping: ${s.toFixed(2)}ms`));
   try {
     const o = [],
-      s = [];
+      t = [];
     for (let l = 0; l < 3; l++) {
       const c = `${H.baseUrl}${H.endpoints.download}?bytes=5242880&nocache=${Date.now()}-${l}`;
-      s.push(
+      t.push(
         fetch(c, { cache: "no-store", signal: AbortSignal.timeout(1e4) }).catch(
           (d) => {
             console.warn(`Load generation request ${l + 1} failed:`, d);
@@ -1932,11 +1935,11 @@ async function hr(t) {
         o.push(l);
       } catch (l) {
         (console.error("Final loaded ping measurement attempt failed:", l),
-          o.push(t * 1.5));
+          o.push(s * 1.5));
       }
     }
     const r = o.reduce((l, c) => l + c, 0) / o.length,
-      a = Math.max(0, r - t);
+      a = Math.max(0, r - s);
     console.log(
       `Average loaded ping: ${r.toFixed(2)}ms, increase: ${a.toFixed(2)}ms`,
     );
@@ -1963,18 +1966,18 @@ async function hr(t) {
 }
 async function xr() {
   $("packetLoss", 0, 0);
-  const t = 50;
+  const s = 50;
   let o = 0,
-    s = 0;
+    t = 0;
   try {
     const n = `${H.baseUrl}${H.endpoints.ping}`,
       r = [],
       a = 1e3,
       i = 10;
-    for (let d = 0; d < Math.ceil(t / i); d++) {
+    for (let d = 0; d < Math.ceil(s / i); d++) {
       const m = [],
         p = d * i,
-        h = Math.min((d + 1) * i, t);
+        h = Math.min((d + 1) * i, s);
       for (let u = p; u < h; u++) {
         const x = `${n}?timestamp=${Date.now()}&nocache=${Math.random()}-${u}`,
           g = (async () => {
@@ -1989,105 +1992,105 @@ async function xr() {
                 ? (o++, !0)
                 : !1;
             } catch (S) {
-              return (console.warn(`Packet ${u + 1}/${t} lost:`, S), !1);
+              return (console.warn(`Packet ${u + 1}/${s} lost:`, S), !1);
             } finally {
-              s++;
-              const S = (s / t) * 100;
+              t++;
+              const S = (t / s) * 100;
               $("packetLoss", S, 0);
             }
           })();
         m.push(g);
       }
       (await Promise.all(m),
-        d < Math.ceil(t / i) - 1 &&
+        d < Math.ceil(s / i) - 1 &&
           (await new Promise((u) => setTimeout(u, 100))));
     }
-    const c = ((t - o) / t) * 100;
-    return { percentage: Math.round(c * 10) / 10, sent: t, received: o };
+    const c = ((s - o) / s) * 100;
+    return { percentage: Math.round(c * 10) / 10, sent: s, received: o };
   } catch (n) {
-    if ((console.error("Packet loss measurement failed:", n), s > 0)) {
-      const i = ((s - o) / s) * 100;
-      return { percentage: Math.round(i * 10) / 10, sent: s, received: o };
+    if ((console.error("Packet loss measurement failed:", n), t > 0)) {
+      const i = ((t - o) / t) * 100;
+      return { percentage: Math.round(i * 10) / 10, sent: t, received: o };
     }
-    const r = Math.floor(t * 0.95);
-    return { percentage: 5, sent: t, received: r };
+    const r = Math.floor(s * 0.95);
+    return { percentage: 5, sent: s, received: r };
   }
 }
 async function Nt() {
   try {
     return { city: "Local Testing", country: "Your Network", ip: "127.0.0.1" };
-  } catch (t) {
+  } catch (s) {
     return (
-      console.error("Error getting user location:", t),
+      console.error("Error getting user location:", s),
       { city: "Local Testing", country: "Your Network", ip: "127.0.0.1" }
     );
   }
 }
 async function gr() {
-  return new Promise((t, o) => {
+  return new Promise((s, o) => {
     if (_ && _.readyState === WebSocket.OPEN) {
-      ((ge = !0), t());
+      ((ge = !0), s());
       return;
     }
     try {
       (_ && _.close(),
         (_ = new WebSocket(H.wsUrl)),
         _.addEventListener("open", () => {
-          (console.log("WebSocket connection established"), (ge = !0), t());
+          (console.log("WebSocket connection established"), (ge = !0), s());
         }),
-        _.addEventListener("error", (s) => {
-          (console.error("WebSocket connection error:", s),
+        _.addEventListener("error", (t) => {
+          (console.error("WebSocket connection error:", t),
             (ge = !1),
             o(new Error("Failed to connect to WebSocket server")));
         }),
         _.addEventListener("close", () => {
           (console.log("WebSocket connection closed"), (ge = !1));
         }),
-        _.addEventListener("message", (s) => {
-          yr(s);
+        _.addEventListener("message", (t) => {
+          yr(t);
         }));
-    } catch (s) {
-      (console.error("Error creating WebSocket:", s), (ge = !1), o(s));
+    } catch (t) {
+      (console.error("Error creating WebSocket:", t), (ge = !1), o(t));
     }
   });
 }
 function pr() {
   _ && (_.close(), (_ = null), (ge = !1), ($e = null));
 }
-function Ee(t, o = {}) {
+function Ee(s, o = {}) {
   if (!_ || _.readyState !== WebSocket.OPEN)
     return (console.log("Cannot send message, WebSocket is not open"), !1);
   try {
-    const s = JSON.stringify({
-      type: t,
+    const t = JSON.stringify({
+      type: s,
       timestamp: Date.now(),
       clientId: $e,
       ...o,
     });
-    return (_.send(s), !0);
-  } catch (s) {
-    return (console.error("Error sending WebSocket message:", s), !1);
+    return (_.send(t), !0);
+  } catch (t) {
+    return (console.error("Error sending WebSocket message:", t), !1);
   }
 }
-function fr(t) {
+function fr(s) {
   if (!_ || _.readyState !== WebSocket.OPEN)
     return (console.log("Cannot send binary data, WebSocket is not open"), !1);
   try {
-    return (_.send(t), !0);
+    return (_.send(s), !0);
   } catch (o) {
     return (console.error("Error sending WebSocket binary data:", o), !1);
   }
 }
-function yr(t) {
-  if (t.data instanceof ArrayBuffer) {
+function yr(s) {
+  if (s.data instanceof ArrayBuffer) {
     if (Ce === "download") {
-      const o = t.data.byteLength;
+      const o = s.data.byteLength;
       console.log(`Received ${o} bytes of binary data`);
     }
     return;
   }
   try {
-    const o = JSON.parse(t.data);
+    const o = JSON.parse(s.data);
     switch ((console.log("Received WebSocket message:", o), o.type)) {
       case "connected":
         (($e = o.clientId), console.log(`Connected with client ID: ${$e}`));
@@ -2125,40 +2128,40 @@ function yr(t) {
     console.error("Error parsing WebSocket message:", o);
   }
 }
-function br(t) {
-  const o = Date.now() - t.clientTimestamp;
+function br(s) {
+  const o = Date.now() - s.clientTimestamp;
   (De.push(o),
     console.log(
-      `WebSocket Ping: ${o}ms (server processing: ${t.serverProcessingTime}ms)`,
+      `WebSocket Ping: ${o}ms (server processing: ${s.serverProcessingTime}ms)`,
     ));
 }
-function wr(t) {
+function wr(s) {
   const o = (Date.now() - ae) / 1e3,
-    s = (t.bytesSent * 8) / o / 1e6;
-  ($("download", parseFloat(t.progress), s),
-    Q.push({ time: Date.now() - ae, speed: s, phase: "download" }),
+    t = (s.bytesSent * 8) / o / 1e6;
+  ($("download", parseFloat(s.progress), t),
+    Q.push({ time: Date.now() - ae, speed: t, phase: "download" }),
     He(Q));
 }
-function jr(t) {
-  const o = parseFloat(t.throughputMBps) * 8;
+function jr(s) {
+  const o = parseFloat(s.throughputMBps) * 8;
   (te.push(o),
     console.log(`WebSocket Download test complete: ${o.toFixed(2)} Mbps`));
 }
-function Nr(t) {
+function Nr(s) {
   const o = (Date.now() - ae) / 1e3,
-    s = (t.totalBytesReceived * 8) / o / 1e6,
+    t = (s.totalBytesReceived * 8) / o / 1e6,
     n = Math.min((o / 10) * 100, 100);
-  ($("upload", n, s),
-    Q.push({ time: Date.now() - ae, speed: s, phase: "upload" }),
+  ($("upload", n, t),
+    Q.push({ time: Date.now() - ae, speed: t, phase: "upload" }),
     He(Q));
 }
 async function vr() {
-  return new Promise((t) => {
+  return new Promise((s) => {
     ((De = []), (Ce = "ping"));
-    const o = (s) => {
-      if (s >= 10) {
+    const o = (t) => {
+      if (t >= 10) {
         if (De.length === 0) {
-          t(50);
+          s(50);
           return;
         }
         const n = [...De].sort((l, c) => l - c);
@@ -2166,50 +2169,50 @@ async function vr() {
         n.length >= 5 && (r = n.slice(1, -1));
         const a = r.reduce((l, c) => l + c, 0),
           i = Math.round(a / r.length);
-        t(i);
+        s(i);
         return;
       }
       (Ee("ping", { clientTimestamp: Date.now() }),
-        $("ping", (s / 10) * 100, 0),
-        setTimeout(() => o(s + 1), 200));
+        $("ping", (t / 10) * 100, 0),
+        setTimeout(() => o(t + 1), 200));
     };
     o(0);
   });
 }
 async function Sr() {
-  return new Promise((t) => {
+  return new Promise((s) => {
     ((te = []),
       (Ce = "download"),
       (ae = Date.now()),
       Ee("download_start", { size: 10 * 1024 * 1024, chunkSize: 64 * 1024 }));
     const o = setTimeout(() => {
-        te.length === 0 ? t(Math.random() * 100 + 50) : t(te[te.length - 1]);
+        te.length === 0 ? s(Math.random() * 100 + 50) : s(te[te.length - 1]);
       }, 3e4),
-      s = setInterval(() => {
+      t = setInterval(() => {
         te.length > 0 &&
-          (clearInterval(s), clearTimeout(o), t(te[te.length - 1]));
+          (clearInterval(t), clearTimeout(o), s(te[te.length - 1]));
       }, 500);
   });
 }
 async function kr() {
-  return new Promise((t) => {
+  return new Promise((s) => {
     ((se = []),
       (Ce = "upload"),
       (ae = Date.now()),
       Ee("upload_start", { size: 10 * 1024 * 1024 }));
     const o = setTimeout(() => {
-        se.length === 0 ? t(Math.random() * 50 + 20) : t(se[se.length - 1]);
+        se.length === 0 ? s(Math.random() * 50 + 20) : s(se[se.length - 1]);
       }, 3e4),
-      s = setInterval(() => {
+      t = setInterval(() => {
         se.length > 0 &&
-          (clearInterval(s), clearTimeout(o), t(se[se.length - 1]));
+          (clearInterval(t), clearTimeout(o), s(se[se.length - 1]));
       }, 500);
   });
 }
 function Tr() {
   const o = new ArrayBuffer(65536),
-    s = new Uint8Array(o);
-  for (let l = 0; l < 65536; l++) s[l] = Math.floor(Math.random() * 256);
+    t = new Uint8Array(o);
+  for (let l = 0; l < 65536; l++) t[l] = Math.floor(Math.random() * 256);
   const n = Date.now(),
     r = 1e4;
   let a = 0;
@@ -2231,7 +2234,7 @@ function Tr() {
   i();
 }
 class Ue {
-  constructor(o, s, n, r) {
+  constructor(o, t, n, r) {
     Z(this, "servers", [
       {
         id: "cf-auto",
@@ -2255,7 +2258,7 @@ class Ue {
     Z(this, "worker", null);
     Z(this, "config");
     ((this.onProgress = o),
-      (this.onGraphUpdate = s),
+      (this.onGraphUpdate = t),
       (this.selectedServerId = r || "cf-auto"),
       (this.config = n || {
         duration: 10,
@@ -2278,14 +2281,14 @@ class Ue {
   initWorker() {
     (this.worker && this.worker.terminate(),
       (this.worker = new Worker(
-        new URL("/assets/speedTestWorker-BV4jG6AW.js", import.meta.url),
+        new URL("/assets/speedTestWorker-CqWrCJ-4.js", import.meta.url),
       )),
       (this.worker.onmessage = this.handleWorkerMessage.bind(this)),
       this.sendMessageToWorker(W.INITIALIZE, { config: this.config }));
   }
   handleWorkerMessage(o) {
-    const { type: s, payload: n } = o.data;
-    switch (s) {
+    const { type: t, payload: n } = o.data;
+    switch (t) {
       case W.PROGRESS_UPDATE:
         this.onProgress && this.onProgress(n);
         break;
@@ -2306,20 +2309,20 @@ class Ue {
         console.error("Speed test error:", n.message);
         break;
       default:
-        console.log("Received message from worker:", s, n);
+        console.log("Received message from worker:", t, n);
     }
   }
-  sendMessageToWorker(o, s) {
+  sendMessageToWorker(o, t) {
     if (!this.worker) {
       console.error("Worker not initialized");
       return;
     }
-    this.worker.postMessage({ type: o, payload: s });
+    this.worker.postMessage({ type: o, payload: t });
   }
   async runSpeedTest() {
-    return new Promise((o, s) => {
+    return new Promise((o, t) => {
       if (!this.worker) {
-        s(new Error("Worker not initialized"));
+        t(new Error("Worker not initialized"));
         return;
       }
       this.graphData = [];
@@ -2329,7 +2332,7 @@ class Ue {
           ? (this.worker?.removeEventListener("message", n), o(i))
           : a === W.TEST_ERROR &&
             (this.worker?.removeEventListener("message", n),
-            s(new Error(i.message)));
+            t(new Error(i.message)));
       };
       (this.worker.addEventListener("message", n),
         this.sendMessageToWorker(W.START_TEST));
@@ -2338,14 +2341,14 @@ class Ue {
   async selectBestServer() {
     return this.selectedServerId === "cf-auto"
       ? await this.findNearestServer()
-      : this.servers.find((s) => s.id === this.selectedServerId) ||
-          this.servers.find((s) => s.id === "cf-auto");
+      : this.servers.find((t) => t.id === this.selectedServerId) ||
+          this.servers.find((t) => t.id === "cf-auto");
   }
   async findNearestServer() {
     try {
       const o = this.servers.find((r) => r.id === "cf-auto");
       if (o) return o;
-      const s = this.servers
+      const t = this.servers
         .filter((r) => r.id !== "cf-auto" && r.id !== "local")
         .map(async (r) => {
           try {
@@ -2361,13 +2364,13 @@ class Ue {
             return { ...r, distance: 9999, latency: 9999 };
           }
         });
-      return (await Promise.all(s)).reduce((r, a) =>
+      return (await Promise.all(t)).reduce((r, a) =>
         a.latency < r.latency ? a : r,
       );
     } catch (o) {
       return (
         console.error("Error finding nearest server:", o),
-        this.servers.find((s) => s.id === "cf-auto") || this.servers[0]
+        this.servers.find((t) => t.id === "cf-auto") || this.servers[0]
       );
     }
   }
@@ -2386,11 +2389,11 @@ class Ue {
 }
 var xe = {},
   Xe,
-  Bt;
+  Ft;
 function Mr() {
   return (
-    Bt ||
-      ((Bt = 1),
+    Ft ||
+      ((Ft = 1),
       (Xe = function () {
         return (
           typeof Promise == "function" &&
@@ -2403,11 +2406,11 @@ function Mr() {
 }
 var Qe = {},
   ee = {},
-  Ft;
+  Bt;
 function ie() {
-  if (Ft) return ee;
-  Ft = 1;
-  let t;
+  if (Bt) return ee;
+  Bt = 1;
+  let s;
   const o = [
     0, 26, 44, 70, 100, 134, 172, 196, 242, 292, 346, 404, 466, 532, 581, 655,
     733, 815, 901, 991, 1085, 1156, 1258, 1364, 1474, 1588, 1706, 1828, 1921,
@@ -2423,21 +2426,21 @@ function ie() {
     (ee.getSymbolTotalCodewords = function (n) {
       return o[n];
     }),
-    (ee.getBCHDigit = function (s) {
+    (ee.getBCHDigit = function (t) {
       let n = 0;
-      for (; s !== 0; ) (n++, (s >>>= 1));
+      for (; t !== 0; ) (n++, (t >>>= 1));
       return n;
     }),
     (ee.setToSJISFunction = function (n) {
       if (typeof n != "function")
         throw new Error('"toSJISFunc" is not a valid function.');
-      t = n;
+      s = n;
     }),
     (ee.isKanjiModeEnabled = function () {
-      return typeof t < "u";
+      return typeof s < "u";
     }),
     (ee.toSJIS = function (n) {
-      return t(n);
+      return s(n);
     }),
     ee
   );
@@ -2448,35 +2451,35 @@ function vt() {
   return (
     $t ||
       (($t = 1),
-      (function (t) {
-        ((t.L = { bit: 1 }),
-          (t.M = { bit: 0 }),
-          (t.Q = { bit: 3 }),
-          (t.H = { bit: 2 }));
-        function o(s) {
-          if (typeof s != "string") throw new Error("Param is not a string");
-          switch (s.toLowerCase()) {
+      (function (s) {
+        ((s.L = { bit: 1 }),
+          (s.M = { bit: 0 }),
+          (s.Q = { bit: 3 }),
+          (s.H = { bit: 2 }));
+        function o(t) {
+          if (typeof t != "string") throw new Error("Param is not a string");
+          switch (t.toLowerCase()) {
             case "l":
             case "low":
-              return t.L;
+              return s.L;
             case "m":
             case "medium":
-              return t.M;
+              return s.M;
             case "q":
             case "quartile":
-              return t.Q;
+              return s.Q;
             case "h":
             case "high":
-              return t.H;
+              return s.H;
             default:
-              throw new Error("Unknown EC Level: " + s);
+              throw new Error("Unknown EC Level: " + t);
           }
         }
-        ((t.isValid = function (n) {
+        ((s.isValid = function (n) {
           return n && typeof n.bit < "u" && n.bit >= 0 && n.bit < 4;
         }),
-          (t.from = function (n, r) {
-            if (t.isValid(n)) return n;
+          (s.from = function (n, r) {
+            if (s.isValid(n)) return n;
             try {
               return o(n);
             } catch {
@@ -2491,30 +2494,30 @@ var et, Ut;
 function Cr() {
   if (Ut) return et;
   Ut = 1;
-  function t() {
+  function s() {
     ((this.buffer = []), (this.length = 0));
   }
   return (
-    (t.prototype = {
+    (s.prototype = {
       get: function (o) {
-        const s = Math.floor(o / 8);
-        return ((this.buffer[s] >>> (7 - (o % 8))) & 1) === 1;
+        const t = Math.floor(o / 8);
+        return ((this.buffer[t] >>> (7 - (o % 8))) & 1) === 1;
       },
-      put: function (o, s) {
-        for (let n = 0; n < s; n++)
-          this.putBit(((o >>> (s - n - 1)) & 1) === 1);
+      put: function (o, t) {
+        for (let n = 0; n < t; n++)
+          this.putBit(((o >>> (t - n - 1)) & 1) === 1);
       },
       getLengthInBits: function () {
         return this.length;
       },
       putBit: function (o) {
-        const s = Math.floor(this.length / 8);
-        (this.buffer.length <= s && this.buffer.push(0),
-          o && (this.buffer[s] |= 128 >>> this.length % 8),
+        const t = Math.floor(this.length / 8);
+        (this.buffer.length <= t && this.buffer.push(0),
+          o && (this.buffer[t] |= 128 >>> this.length % 8),
           this.length++);
       },
     }),
-    (et = t),
+    (et = s),
     et
   );
 }
@@ -2522,7 +2525,7 @@ var tt, _t;
 function Pr() {
   if (_t) return tt;
   _t = 1;
-  function t(o) {
+  function s(o) {
     if (!o || o < 1)
       throw new Error("BitMatrix size must be defined and greater than 0");
     ((this.size = o),
@@ -2530,20 +2533,20 @@ function Pr() {
       (this.reservedBit = new Uint8Array(o * o)));
   }
   return (
-    (t.prototype.set = function (o, s, n, r) {
-      const a = o * this.size + s;
+    (s.prototype.set = function (o, t, n, r) {
+      const a = o * this.size + t;
       ((this.data[a] = n), r && (this.reservedBit[a] = !0));
     }),
-    (t.prototype.get = function (o, s) {
-      return this.data[o * this.size + s];
+    (s.prototype.get = function (o, t) {
+      return this.data[o * this.size + t];
     }),
-    (t.prototype.xor = function (o, s, n) {
-      this.data[o * this.size + s] ^= n;
+    (s.prototype.xor = function (o, t, n) {
+      this.data[o * this.size + t] ^= n;
     }),
-    (t.prototype.isReserved = function (o, s) {
-      return this.reservedBit[o * this.size + s];
+    (s.prototype.isReserved = function (o, t) {
+      return this.reservedBit[o * this.size + t];
     }),
-    (tt = t),
+    (tt = s),
     tt
   );
 }
@@ -2553,9 +2556,9 @@ function Er() {
   return (
     qt ||
       ((qt = 1),
-      (function (t) {
+      (function (s) {
         const o = ie().getSymbolSize;
-        ((t.getRowColCoords = function (n) {
+        ((s.getRowColCoords = function (n) {
           if (n === 1) return [];
           const r = Math.floor(n / 7) + 2,
             a = o(n),
@@ -2564,9 +2567,9 @@ function Er() {
           for (let c = 1; c < r - 1; c++) l[c] = l[c - 1] - i;
           return (l.push(6), l.reverse());
         }),
-          (t.getPositions = function (n) {
+          (s.getPositions = function (n) {
             const r = [],
-              a = t.getRowColCoords(n),
+              a = s.getRowColCoords(n),
               i = a.length;
             for (let l = 0; l < i; l++)
               for (let c = 0; c < i; c++)
@@ -2585,11 +2588,11 @@ var rt = {},
 function Rr() {
   if (Ot) return rt;
   Ot = 1;
-  const t = ie().getSymbolSize,
+  const s = ie().getSymbolSize,
     o = 7;
   return (
     (rt.getPositions = function (n) {
-      const r = t(n);
+      const r = s(n);
       return [
         [0, 0],
         [r - o, 0],
@@ -2605,8 +2608,8 @@ function Ar() {
   return (
     Ht ||
       ((Ht = 1),
-      (function (t) {
-        t.Patterns = {
+      (function (s) {
+        s.Patterns = {
           PATTERN000: 0,
           PATTERN001: 1,
           PATTERN010: 2,
@@ -2617,13 +2620,13 @@ function Ar() {
           PATTERN111: 7,
         };
         const o = { N1: 3, N2: 3, N3: 40, N4: 10 };
-        ((t.isValid = function (r) {
+        ((s.isValid = function (r) {
           return r != null && r !== "" && !isNaN(r) && r >= 0 && r <= 7;
         }),
-          (t.from = function (r) {
-            return t.isValid(r) ? parseInt(r, 10) : void 0;
+          (s.from = function (r) {
+            return s.isValid(r) ? parseInt(r, 10) : void 0;
           }),
-          (t.getPenaltyN1 = function (r) {
+          (s.getPenaltyN1 = function (r) {
             const a = r.size;
             let i = 0,
               l = 0,
@@ -2647,7 +2650,7 @@ function Ar() {
             }
             return i;
           }),
-          (t.getPenaltyN2 = function (r) {
+          (s.getPenaltyN2 = function (r) {
             const a = r.size;
             let i = 0;
             for (let l = 0; l < a - 1; l++)
@@ -2661,7 +2664,7 @@ function Ar() {
               }
             return i * o.N2;
           }),
-          (t.getPenaltyN3 = function (r) {
+          (s.getPenaltyN3 = function (r) {
             const a = r.size;
             let i = 0,
               l = 0,
@@ -2676,52 +2679,52 @@ function Ar() {
             }
             return i * o.N3;
           }),
-          (t.getPenaltyN4 = function (r) {
+          (s.getPenaltyN4 = function (r) {
             let a = 0;
             const i = r.data.length;
             for (let c = 0; c < i; c++) a += r.data[c];
             return Math.abs(Math.ceil((a * 100) / i / 5) - 10) * o.N4;
           }));
-        function s(n, r, a) {
+        function t(n, r, a) {
           switch (n) {
-            case t.Patterns.PATTERN000:
+            case s.Patterns.PATTERN000:
               return (r + a) % 2 === 0;
-            case t.Patterns.PATTERN001:
+            case s.Patterns.PATTERN001:
               return r % 2 === 0;
-            case t.Patterns.PATTERN010:
+            case s.Patterns.PATTERN010:
               return a % 3 === 0;
-            case t.Patterns.PATTERN011:
+            case s.Patterns.PATTERN011:
               return (r + a) % 3 === 0;
-            case t.Patterns.PATTERN100:
+            case s.Patterns.PATTERN100:
               return (Math.floor(r / 2) + Math.floor(a / 3)) % 2 === 0;
-            case t.Patterns.PATTERN101:
+            case s.Patterns.PATTERN101:
               return ((r * a) % 2) + ((r * a) % 3) === 0;
-            case t.Patterns.PATTERN110:
+            case s.Patterns.PATTERN110:
               return (((r * a) % 2) + ((r * a) % 3)) % 2 === 0;
-            case t.Patterns.PATTERN111:
+            case s.Patterns.PATTERN111:
               return (((r * a) % 3) + ((r + a) % 2)) % 2 === 0;
             default:
               throw new Error("bad maskPattern:" + n);
           }
         }
-        ((t.applyMask = function (r, a) {
+        ((s.applyMask = function (r, a) {
           const i = a.size;
           for (let l = 0; l < i; l++)
             for (let c = 0; c < i; c++)
-              a.isReserved(c, l) || a.xor(c, l, s(r, c, l));
+              a.isReserved(c, l) || a.xor(c, l, t(r, c, l));
         }),
-          (t.getBestMask = function (r, a) {
-            const i = Object.keys(t.Patterns).length;
+          (s.getBestMask = function (r, a) {
+            const i = Object.keys(s.Patterns).length;
             let l = 0,
               c = 1 / 0;
             for (let d = 0; d < i; d++) {
-              (a(d), t.applyMask(d, r));
+              (a(d), s.applyMask(d, r));
               const m =
-                t.getPenaltyN1(r) +
-                t.getPenaltyN2(r) +
-                t.getPenaltyN3(r) +
-                t.getPenaltyN4(r);
-              (t.applyMask(d, r), m < c && ((c = m), (l = d)));
+                s.getPenaltyN1(r) +
+                s.getPenaltyN2(r) +
+                s.getPenaltyN3(r) +
+                s.getPenaltyN4(r);
+              (s.applyMask(d, r), m < c && ((c = m), (l = d)));
             }
             return l;
           }));
@@ -2734,7 +2737,7 @@ var Ie = {},
 function Ns() {
   if (zt) return Ie;
   zt = 1;
-  const t = vt(),
+  const s = vt(),
     o = [
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 2, 2, 4, 1, 2, 4, 4, 2, 4, 4, 4, 2,
       4, 6, 5, 2, 4, 6, 6, 2, 5, 8, 8, 4, 5, 8, 8, 4, 5, 8, 11, 4, 8, 10, 11, 4,
@@ -2745,7 +2748,7 @@ function Ns() {
       33, 45, 54, 18, 35, 48, 57, 19, 37, 51, 60, 19, 38, 53, 63, 20, 40, 56,
       66, 21, 43, 59, 70, 22, 45, 62, 74, 24, 47, 65, 77, 25, 49, 68, 81,
     ],
-    s = [
+    t = [
       7, 10, 13, 17, 10, 16, 22, 28, 15, 26, 36, 44, 20, 36, 52, 64, 26, 48, 72,
       88, 36, 64, 96, 112, 40, 72, 108, 130, 48, 88, 132, 156, 60, 110, 160,
       192, 72, 130, 192, 224, 80, 150, 224, 264, 96, 176, 260, 308, 104, 198,
@@ -2761,13 +2764,13 @@ function Ns() {
   return (
     (Ie.getBlocksCount = function (r, a) {
       switch (a) {
-        case t.L:
+        case s.L:
           return o[(r - 1) * 4 + 0];
-        case t.M:
+        case s.M:
           return o[(r - 1) * 4 + 1];
-        case t.Q:
+        case s.Q:
           return o[(r - 1) * 4 + 2];
-        case t.H:
+        case s.H:
           return o[(r - 1) * 4 + 3];
         default:
           return;
@@ -2775,14 +2778,14 @@ function Ns() {
     }),
     (Ie.getTotalCodewordsCount = function (r, a) {
       switch (a) {
-        case t.L:
-          return s[(r - 1) * 4 + 0];
-        case t.M:
-          return s[(r - 1) * 4 + 1];
-        case t.Q:
-          return s[(r - 1) * 4 + 2];
-        case t.H:
-          return s[(r - 1) * 4 + 3];
+        case s.L:
+          return t[(r - 1) * 4 + 0];
+        case s.M:
+          return t[(r - 1) * 4 + 1];
+        case s.Q:
+          return t[(r - 1) * 4 + 2];
+        case s.H:
+          return t[(r - 1) * 4 + 3];
         default:
           return;
       }
@@ -2796,24 +2799,24 @@ var nt = {},
 function Lr() {
   if (Gt) return ke;
   Gt = 1;
-  const t = new Uint8Array(512),
+  const s = new Uint8Array(512),
     o = new Uint8Array(256);
   return (
     (function () {
       let n = 1;
       for (let r = 0; r < 255; r++)
-        ((t[r] = n), (o[n] = r), (n <<= 1), n & 256 && (n ^= 285));
-      for (let r = 255; r < 512; r++) t[r] = t[r - 255];
+        ((s[r] = n), (o[n] = r), (n <<= 1), n & 256 && (n ^= 285));
+      for (let r = 255; r < 512; r++) s[r] = s[r - 255];
     })(),
     (ke.log = function (n) {
       if (n < 1) throw new Error("log(" + n + ")");
       return o[n];
     }),
     (ke.exp = function (n) {
-      return t[n];
+      return s[n];
     }),
     (ke.mul = function (n, r) {
-      return n === 0 || r === 0 ? 0 : t[o[n] + o[r]];
+      return n === 0 || r === 0 ? 0 : s[o[n] + o[r]];
     }),
     ke
   );
@@ -2823,15 +2826,15 @@ function Ir() {
   return (
     Wt ||
       ((Wt = 1),
-      (function (t) {
+      (function (s) {
         const o = Lr();
-        ((t.mul = function (n, r) {
+        ((s.mul = function (n, r) {
           const a = new Uint8Array(n.length + r.length - 1);
           for (let i = 0; i < n.length; i++)
             for (let l = 0; l < r.length; l++) a[i + l] ^= o.mul(n[i], r[l]);
           return a;
         }),
-          (t.mod = function (n, r) {
+          (s.mod = function (n, r) {
             let a = new Uint8Array(n);
             for (; a.length - r.length >= 0; ) {
               const i = a[0];
@@ -2842,10 +2845,10 @@ function Ir() {
             }
             return a;
           }),
-          (t.generateECPolynomial = function (n) {
+          (s.generateECPolynomial = function (n) {
             let r = new Uint8Array([1]);
             for (let a = 0; a < n; a++)
-              r = t.mul(r, new Uint8Array([1, o.exp(a)]));
+              r = s.mul(r, new Uint8Array([1, o.exp(a)]));
             return r;
           }));
       })(nt)),
@@ -2856,21 +2859,21 @@ var ot, Vt;
 function Dr() {
   if (Vt) return ot;
   Vt = 1;
-  const t = Ir();
-  function o(s) {
+  const s = Ir();
+  function o(t) {
     ((this.genPoly = void 0),
-      (this.degree = s),
+      (this.degree = t),
       this.degree && this.initialize(this.degree));
   }
   return (
     (o.prototype.initialize = function (n) {
-      ((this.degree = n), (this.genPoly = t.generateECPolynomial(this.degree)));
+      ((this.degree = n), (this.genPoly = s.generateECPolynomial(this.degree)));
     }),
     (o.prototype.encode = function (n) {
       if (!this.genPoly) throw new Error("Encoder not initialized");
       const r = new Uint8Array(n.length + this.degree);
       r.set(n);
-      const a = t.mod(r, this.genPoly),
+      const a = s.mod(r, this.genPoly),
         i = this.degree - a.length;
       if (i > 0) {
         const l = new Uint8Array(this.degree);
@@ -2901,23 +2904,23 @@ var G = {},
 function Ss() {
   if (Yt) return G;
   Yt = 1;
-  const t = "[0-9]+",
+  const s = "[0-9]+",
     o = "[A-Z $%*+\\-./:]+";
-  let s =
+  let t =
     "(?:[u3000-u303F]|[u3040-u309F]|[u30A0-u30FF]|[uFF00-uFFEF]|[u4E00-u9FAF]|[u2605-u2606]|[u2190-u2195]|u203B|[u2010u2015u2018u2019u2025u2026u201Cu201Du2225u2260]|[u0391-u0451]|[u00A7u00A8u00B1u00B4u00D7u00F7])+";
-  s = s.replace(/u/g, "\\u");
+  t = t.replace(/u/g, "\\u");
   const n =
     "(?:(?![A-Z0-9 $%*+\\-./:]|" +
-    s +
+    t +
     `)(?:.|[\r
 ]))+`;
-  ((G.KANJI = new RegExp(s, "g")),
+  ((G.KANJI = new RegExp(t, "g")),
     (G.BYTE_KANJI = new RegExp("[^A-Z0-9 $%*+\\-./:]+", "g")),
     (G.BYTE = new RegExp(n, "g")),
-    (G.NUMERIC = new RegExp(t, "g")),
+    (G.NUMERIC = new RegExp(s, "g")),
     (G.ALPHANUMERIC = new RegExp(o, "g")));
-  const r = new RegExp("^" + s + "$"),
-    a = new RegExp("^" + t + "$"),
+  const r = new RegExp("^" + t + "$"),
+    a = new RegExp("^" + s + "$"),
     i = new RegExp("^[A-Z0-9 $%*+\\-./:]+$");
   return (
     (G.testKanji = function (c) {
@@ -2937,19 +2940,19 @@ function le() {
   return (
     Kt ||
       ((Kt = 1),
-      (function (t) {
+      (function (s) {
         const o = vs(),
-          s = Ss();
-        ((t.NUMERIC = { id: "Numeric", bit: 1, ccBits: [10, 12, 14] }),
-          (t.ALPHANUMERIC = {
+          t = Ss();
+        ((s.NUMERIC = { id: "Numeric", bit: 1, ccBits: [10, 12, 14] }),
+          (s.ALPHANUMERIC = {
             id: "Alphanumeric",
             bit: 2,
             ccBits: [9, 11, 13],
           }),
-          (t.BYTE = { id: "Byte", bit: 4, ccBits: [8, 16, 16] }),
-          (t.KANJI = { id: "Kanji", bit: 8, ccBits: [8, 10, 12] }),
-          (t.MIXED = { bit: -1 }),
-          (t.getCharCountIndicator = function (a, i) {
+          (s.BYTE = { id: "Byte", bit: 4, ccBits: [8, 16, 16] }),
+          (s.KANJI = { id: "Kanji", bit: 8, ccBits: [8, 10, 12] }),
+          (s.MIXED = { bit: -1 }),
+          (s.getCharCountIndicator = function (a, i) {
             if (!a.ccBits) throw new Error("Invalid mode: " + a);
             if (!o.isValid(i)) throw new Error("Invalid version: " + i);
             return i >= 1 && i < 10
@@ -2958,39 +2961,39 @@ function le() {
                 ? a.ccBits[1]
                 : a.ccBits[2];
           }),
-          (t.getBestModeForData = function (a) {
-            return s.testNumeric(a)
-              ? t.NUMERIC
-              : s.testAlphanumeric(a)
-                ? t.ALPHANUMERIC
-                : s.testKanji(a)
-                  ? t.KANJI
-                  : t.BYTE;
+          (s.getBestModeForData = function (a) {
+            return t.testNumeric(a)
+              ? s.NUMERIC
+              : t.testAlphanumeric(a)
+                ? s.ALPHANUMERIC
+                : t.testKanji(a)
+                  ? s.KANJI
+                  : s.BYTE;
           }),
-          (t.toString = function (a) {
+          (s.toString = function (a) {
             if (a && a.id) return a.id;
             throw new Error("Invalid mode");
           }),
-          (t.isValid = function (a) {
+          (s.isValid = function (a) {
             return a && a.bit && a.ccBits;
           }));
         function n(r) {
           if (typeof r != "string") throw new Error("Param is not a string");
           switch (r.toLowerCase()) {
             case "numeric":
-              return t.NUMERIC;
+              return s.NUMERIC;
             case "alphanumeric":
-              return t.ALPHANUMERIC;
+              return s.ALPHANUMERIC;
             case "kanji":
-              return t.KANJI;
+              return s.KANJI;
             case "byte":
-              return t.BYTE;
+              return s.BYTE;
             default:
               throw new Error("Unknown mode: " + r);
           }
         }
-        t.from = function (a, i) {
-          if (t.isValid(a)) return a;
+        s.from = function (a, i) {
+          if (s.isValid(a)) return a;
           try {
             return n(a);
           } catch {
@@ -3002,13 +3005,13 @@ function le() {
   );
 }
 var Xt;
-function Br() {
+function Fr() {
   return (
     Xt ||
       ((Xt = 1),
-      (function (t) {
+      (function (s) {
         const o = ie(),
-          s = Ns(),
+          t = Ns(),
           n = vt(),
           r = le(),
           a = vs(),
@@ -3016,7 +3019,7 @@ function Br() {
           l = o.getBCHDigit(i);
         function c(h, u, x) {
           for (let g = 1; g <= 40; g++)
-            if (u <= t.getCapacity(g, x, h)) return g;
+            if (u <= s.getCapacity(g, x, h)) return g;
         }
         function d(h, u) {
           return r.getCharCountIndicator(h, u) + 4;
@@ -3033,16 +3036,16 @@ function Br() {
         }
         function p(h, u) {
           for (let x = 1; x <= 40; x++)
-            if (m(h, x) <= t.getCapacity(x, u, r.MIXED)) return x;
+            if (m(h, x) <= s.getCapacity(x, u, r.MIXED)) return x;
         }
-        ((t.from = function (u, x) {
+        ((s.from = function (u, x) {
           return a.isValid(u) ? parseInt(u, 10) : x;
         }),
-          (t.getCapacity = function (u, x, g) {
+          (s.getCapacity = function (u, x, g) {
             if (!a.isValid(u)) throw new Error("Invalid QR Code version");
             typeof g > "u" && (g = r.BYTE);
             const S = o.getSymbolTotalCodewords(u),
-              w = s.getTotalCodewordsCount(u, x),
+              w = t.getTotalCodewordsCount(u, x),
               M = (S - w) * 8;
             if (g === r.MIXED) return M;
             const v = M - d(g, u);
@@ -3058,7 +3061,7 @@ function Br() {
                 return Math.floor(v / 8);
             }
           }),
-          (t.getBestVersionForData = function (u, x) {
+          (s.getBestVersionForData = function (u, x) {
             let g;
             const S = n.from(x, n.M);
             if (Array.isArray(u)) {
@@ -3068,7 +3071,7 @@ function Br() {
             } else g = u;
             return c(g.mode, g.getLength(), S);
           }),
-          (t.getEncodedBits = function (u) {
+          (s.getEncodedBits = function (u) {
             if (!a.isValid(u) || u < 7)
               throw new Error("Invalid QR Code version");
             let x = u << 12;
@@ -3082,19 +3085,19 @@ function Br() {
 }
 var dt = {},
   Qt;
-function Fr() {
+function Br() {
   if (Qt) return dt;
   Qt = 1;
-  const t = ie(),
+  const s = ie(),
     o = 1335,
-    s = 21522,
-    n = t.getBCHDigit(o);
+    t = 21522,
+    n = s.getBCHDigit(o);
   return (
     (dt.getEncodedBits = function (a, i) {
       const l = (a.bit << 3) | i;
       let c = l << 10;
-      for (; t.getBCHDigit(c) - n >= 0; ) c ^= o << (t.getBCHDigit(c) - n);
-      return ((l << 10) | c) ^ s;
+      for (; s.getBCHDigit(c) - n >= 0; ) c ^= o << (s.getBCHDigit(c) - n);
+      return ((l << 10) | c) ^ t;
     }),
     dt
   );
@@ -3105,9 +3108,9 @@ var ut = {},
 function $r() {
   if (Zt) return mt;
   Zt = 1;
-  const t = le();
-  function o(s) {
-    ((this.mode = t.NUMERIC), (this.data = s.toString()));
+  const s = le();
+  function o(t) {
+    ((this.mode = s.NUMERIC), (this.data = t.toString()));
   }
   return (
     (o.getBitsLength = function (n) {
@@ -3135,7 +3138,7 @@ var ht, es;
 function Ur() {
   if (es) return ht;
   es = 1;
-  const t = le(),
+  const s = le(),
     o = [
       "0",
       "1",
@@ -3183,20 +3186,20 @@ function Ur() {
       "/",
       ":",
     ];
-  function s(n) {
-    ((this.mode = t.ALPHANUMERIC), (this.data = n));
+  function t(n) {
+    ((this.mode = s.ALPHANUMERIC), (this.data = n));
   }
   return (
-    (s.getBitsLength = function (r) {
+    (t.getBitsLength = function (r) {
       return 11 * Math.floor(r / 2) + 6 * (r % 2);
     }),
-    (s.prototype.getLength = function () {
+    (t.prototype.getLength = function () {
       return this.data.length;
     }),
-    (s.prototype.getBitsLength = function () {
-      return s.getBitsLength(this.data.length);
+    (t.prototype.getBitsLength = function () {
+      return t.getBitsLength(this.data.length);
     }),
-    (s.prototype.write = function (r) {
+    (t.prototype.write = function (r) {
       let a;
       for (a = 0; a + 2 <= this.data.length; a += 2) {
         let i = o.indexOf(this.data[a]) * 45;
@@ -3204,7 +3207,7 @@ function Ur() {
       }
       this.data.length % 2 && r.put(o.indexOf(this.data[a]), 6);
     }),
-    (ht = s),
+    (ht = t),
     ht
   );
 }
@@ -3212,12 +3215,12 @@ var xt, ts;
 function _r() {
   if (ts) return xt;
   ts = 1;
-  const t = le();
-  function o(s) {
-    ((this.mode = t.BYTE),
-      typeof s == "string"
-        ? (this.data = new TextEncoder().encode(s))
-        : (this.data = new Uint8Array(s)));
+  const s = le();
+  function o(t) {
+    ((this.mode = s.BYTE),
+      typeof t == "string"
+        ? (this.data = new TextEncoder().encode(t))
+        : (this.data = new Uint8Array(t)));
   }
   return (
     (o.getBitsLength = function (n) {
@@ -3229,8 +3232,8 @@ function _r() {
     (o.prototype.getBitsLength = function () {
       return o.getBitsLength(this.data.length);
     }),
-    (o.prototype.write = function (s) {
-      for (let n = 0, r = this.data.length; n < r; n++) s.put(this.data[n], 8);
+    (o.prototype.write = function (t) {
+      for (let n = 0, r = this.data.length; n < r; n++) t.put(this.data[n], 8);
     }),
     (xt = o),
     xt
@@ -3240,22 +3243,22 @@ var gt, ss;
 function qr() {
   if (ss) return gt;
   ss = 1;
-  const t = le(),
+  const s = le(),
     o = ie();
-  function s(n) {
-    ((this.mode = t.KANJI), (this.data = n));
+  function t(n) {
+    ((this.mode = s.KANJI), (this.data = n));
   }
   return (
-    (s.getBitsLength = function (r) {
+    (t.getBitsLength = function (r) {
       return r * 13;
     }),
-    (s.prototype.getLength = function () {
+    (t.prototype.getLength = function () {
       return this.data.length;
     }),
-    (s.prototype.getBitsLength = function () {
-      return s.getBitsLength(this.data.length);
+    (t.prototype.getBitsLength = function () {
+      return t.getBitsLength(this.data.length);
     }),
-    (s.prototype.write = function (n) {
+    (t.prototype.write = function (n) {
       let r;
       for (r = 0; r < this.data.length; r++) {
         let a = o.toSJIS(this.data[r]);
@@ -3271,7 +3274,7 @@ Make sure your charset is UTF-8`,
         ((a = ((a >>> 8) & 255) * 192 + (a & 255)), n.put(a, 13));
       }
     }),
-    (gt = s),
+    (gt = t),
     gt
   );
 }
@@ -3281,16 +3284,16 @@ function Or() {
   return (
     rs ||
       ((rs = 1),
-      (function (t) {
+      (function (s) {
         var o = {
-          single_source_shortest_paths: function (s, n, r) {
+          single_source_shortest_paths: function (t, n, r) {
             var a = {},
               i = {};
             i[n] = 0;
             var l = o.PriorityQueue.make();
             l.push(n, 0);
             for (var c, d, m, p, h, u, x, g, S; !l.empty(); ) {
-              ((c = l.pop()), (d = c.value), (p = c.cost), (h = s[d] || {}));
+              ((c = l.pop()), (d = c.value), (p = c.cost), (h = t[d] || {}));
               for (m in h)
                 h.hasOwnProperty(m) &&
                   ((u = h[m]),
@@ -3307,32 +3310,32 @@ function Or() {
             }
             return a;
           },
-          extract_shortest_path_from_predecessor_list: function (s, n) {
-            for (var r = [], a = n; a; ) (r.push(a), s[a], (a = s[a]));
+          extract_shortest_path_from_predecessor_list: function (t, n) {
+            for (var r = [], a = n; a; ) (r.push(a), t[a], (a = t[a]));
             return (r.reverse(), r);
           },
-          find_path: function (s, n, r) {
-            var a = o.single_source_shortest_paths(s, n, r);
+          find_path: function (t, n, r) {
+            var a = o.single_source_shortest_paths(t, n, r);
             return o.extract_shortest_path_from_predecessor_list(a, r);
           },
           PriorityQueue: {
-            make: function (s) {
+            make: function (t) {
               var n = o.PriorityQueue,
                 r = {},
                 a;
-              s = s || {};
+              t = t || {};
               for (a in n) n.hasOwnProperty(a) && (r[a] = n[a]);
               return (
                 (r.queue = []),
-                (r.sorter = s.sorter || n.default_sorter),
+                (r.sorter = t.sorter || n.default_sorter),
                 r
               );
             },
-            default_sorter: function (s, n) {
-              return s.cost - n.cost;
+            default_sorter: function (t, n) {
+              return t.cost - n.cost;
             },
-            push: function (s, n) {
-              var r = { value: s, cost: n };
+            push: function (t, n) {
+              var r = { value: t, cost: n };
               (this.queue.push(r), this.queue.sort(this.sorter));
             },
             pop: function () {
@@ -3343,7 +3346,7 @@ function Or() {
             },
           },
         };
-        t.exports = o;
+        s.exports = o;
       })(pt)),
     pt.exports
   );
@@ -3353,9 +3356,9 @@ function Hr() {
   return (
     as ||
       ((as = 1),
-      (function (t) {
+      (function (s) {
         const o = le(),
-          s = $r(),
+          t = $r(),
           n = Ur(),
           r = _r(),
           a = qr(),
@@ -3397,7 +3400,7 @@ function Hr() {
         function h(w, M) {
           switch (M) {
             case o.NUMERIC:
-              return s.getBitsLength(w);
+              return t.getBitsLength(w);
             case o.ALPHANUMERIC:
               return n.getBitsLength(w);
             case o.KANJI:
@@ -3485,7 +3488,7 @@ function Hr() {
             (v === o.KANJI && !l.isKanjiModeEnabled() && (v = o.BYTE), v)
           ) {
             case o.NUMERIC:
-              return new s(w);
+              return new t(w);
             case o.ALPHANUMERIC:
               return new n(w);
             case o.KANJI:
@@ -3494,7 +3497,7 @@ function Hr() {
               return new r(w);
           }
         }
-        ((t.fromArray = function (M) {
+        ((s.fromArray = function (M) {
           return M.reduce(function (v, k) {
             return (
               typeof k == "string"
@@ -3504,17 +3507,17 @@ function Hr() {
             );
           }, []);
         }),
-          (t.fromString = function (M, v) {
+          (s.fromString = function (M, v) {
             const k = p(M, l.isKanjiModeEnabled()),
               D = x(k),
               f = g(D, v),
               N = c.find_path(f.map, "start", "end"),
               b = [];
             for (let j = 1; j < N.length - 1; j++) b.push(f.table[N[j]].node);
-            return t.fromArray(u(b));
+            return s.fromArray(u(b));
           }),
-          (t.rawSplit = function (M) {
-            return t.fromArray(p(M, l.isKanjiModeEnabled()));
+          (s.rawSplit = function (M) {
+            return s.fromArray(p(M, l.isKanjiModeEnabled()));
           }));
       })(ut)),
     ut
@@ -3524,17 +3527,17 @@ var ns;
 function zr() {
   if (ns) return Qe;
   ns = 1;
-  const t = ie(),
+  const s = ie(),
     o = vt(),
-    s = Cr(),
+    t = Cr(),
     n = Pr(),
     r = Er(),
     a = Rr(),
     i = Ar(),
     l = Ns(),
     c = Dr(),
-    d = Br(),
-    m = Fr(),
+    d = Fr(),
+    m = Br(),
     p = le(),
     h = Hr();
   function u(f, N) {
@@ -3626,13 +3629,13 @@ function zr() {
       }
   }
   function v(f, N, b) {
-    const j = new s();
+    const j = new t();
     b.forEach(function (A) {
       (j.put(A.mode.bit, 4),
         j.put(A.getLength(), p.getCharCountIndicator(A.mode, f)),
         A.write(j));
     });
-    const T = t.getSymbolTotalCodewords(f),
+    const T = s.getSymbolTotalCodewords(f),
       C = l.getTotalCodewordsCount(f, N),
       P = (T - C) * 8;
     for (
@@ -3646,7 +3649,7 @@ function zr() {
     return k(j, f, N);
   }
   function k(f, N, b) {
-    const j = t.getSymbolTotalCodewords(N),
+    const j = s.getSymbolTotalCodewords(N),
       T = l.getTotalCodewordsCount(N, b),
       C = j - T,
       P = l.getBlocksCount(N, b),
@@ -3654,7 +3657,7 @@ function zr() {
       A = P - E,
       U = Math.floor(j / P),
       I = Math.floor(C / P),
-      F = I + 1,
+      B = I + 1,
       ce = U - I,
       Re = new c(ce);
     let Ge = 0;
@@ -3663,7 +3666,7 @@ function zr() {
     let We = 0;
     const Ms = new Uint8Array(f.buffer);
     for (let de = 0; de < P; de++) {
-      const Je = de < A ? I : F;
+      const Je = de < A ? I : B;
       ((Ae[de] = Ms.slice(Ge, Ge + Je)),
         (kt[de] = Re.encode(Ae[de])),
         (Ge += Je),
@@ -3705,7 +3708,7 @@ Minimum version required to store current data is: ` +
 `,
       );
     const P = v(N, b, T),
-      E = t.getSymbolSize(N),
+      E = s.getSymbolSize(N),
       A = new n(E);
     return (
       u(A, N),
@@ -3737,7 +3740,7 @@ Minimum version required to store current data is: ` +
           ((j = o.from(b.errorCorrectionLevel, o.M)),
           (T = d.from(b.version)),
           (C = i.from(b.maskPattern)),
-          b.toSJISFunc && t.setToSJISFunction(b.toSJISFunc)),
+          b.toSJISFunc && s.setToSJISFunction(b.toSJISFunc)),
         D(N, T, j, C)
       );
     }),
@@ -3751,15 +3754,15 @@ function ks() {
   return (
     os ||
       ((os = 1),
-      (function (t) {
-        function o(s) {
+      (function (s) {
+        function o(t) {
           if (
-            (typeof s == "number" && (s = s.toString()), typeof s != "string")
+            (typeof t == "number" && (t = t.toString()), typeof t != "string")
           )
             throw new Error("Color should be defined as hex string");
-          let n = s.slice().replace("#", "").split("");
+          let n = t.slice().replace("#", "").split("");
           if (n.length < 3 || n.length === 5 || n.length > 8)
-            throw new Error("Invalid hex color: " + s);
+            throw new Error("Invalid hex color: " + t);
           ((n.length === 3 || n.length === 4) &&
             (n = Array.prototype.concat.apply(
               [],
@@ -3777,7 +3780,7 @@ function ks() {
             hex: "#" + n.slice(0, 6).join(""),
           };
         }
-        ((t.getOptions = function (n) {
+        ((s.getOptions = function (n) {
           (n || (n = {}), n.color || (n.color = {}));
           const r =
               typeof n.margin > "u" || n.margin === null || n.margin < 0
@@ -3797,19 +3800,19 @@ function ks() {
             rendererOpts: n.rendererOpts || {},
           };
         }),
-          (t.getScale = function (n, r) {
+          (s.getScale = function (n, r) {
             return r.width && r.width >= n + r.margin * 2
               ? r.width / (n + r.margin * 2)
               : r.scale;
           }),
-          (t.getImageWidth = function (n, r) {
-            const a = t.getScale(n, r);
+          (s.getImageWidth = function (n, r) {
+            const a = s.getScale(n, r);
             return Math.floor((n + r.margin * 2) * a);
           }),
-          (t.qrToImageData = function (n, r, a) {
+          (s.qrToImageData = function (n, r, a) {
             const i = r.modules.size,
               l = r.modules.data,
-              c = t.getScale(i, a),
+              c = s.getScale(i, a),
               d = Math.floor((i + a.margin * 2) * c),
               m = a.margin * c,
               p = [a.color.light, a.color.dark];
@@ -3834,9 +3837,9 @@ function Gr() {
   return (
     is ||
       ((is = 1),
-      (function (t) {
+      (function (s) {
         const o = ks();
-        function s(r, a, i) {
+        function t(r, a, i) {
           (r.clearRect(0, 0, a.width, a.height),
             a.style || (a.style = {}),
             (a.height = i),
@@ -3851,7 +3854,7 @@ function Gr() {
             throw new Error("You need to specify a canvas element");
           }
         }
-        ((t.render = function (a, i, l) {
+        ((s.render = function (a, i, l) {
           let c = l,
             d = i;
           (typeof c > "u" && (!i || !i.getContext) && ((c = i), (i = void 0)),
@@ -3862,16 +3865,16 @@ function Gr() {
             h = p.createImageData(m, m);
           return (
             o.qrToImageData(h.data, a, c),
-            s(p, d, m),
+            t(p, d, m),
             p.putImageData(h, 0, 0),
             d
           );
         }),
-          (t.renderToDataURL = function (a, i, l) {
+          (s.renderToDataURL = function (a, i, l) {
             let c = l;
             (typeof c > "u" && (!i || !i.getContext) && ((c = i), (i = void 0)),
               c || (c = {}));
-            const d = t.render(a, i, c),
+            const d = s.render(a, i, c),
               m = c.type || "image/png",
               p = c.rendererOpts || {};
             return d.toDataURL(m, p.quality);
@@ -3885,13 +3888,13 @@ var bt = {},
 function Wr() {
   if (ls) return bt;
   ls = 1;
-  const t = ks();
+  const s = ks();
   function o(r, a) {
     const i = r.a / 255,
       l = a + '="' + r.hex + '"';
     return i < 1 ? l + " " + a + '-opacity="' + i.toFixed(2).slice(1) + '"' : l;
   }
-  function s(r, a, i) {
+  function t(r, a, i) {
     let l = r + a;
     return (typeof i < "u" && (l += " " + i), l);
   }
@@ -3907,17 +3910,17 @@ function Wr() {
         r[p]
           ? (m++,
             (p > 0 && h > 0 && r[p - 1]) ||
-              ((l += d ? s("M", h + i, 0.5 + u + i) : s("m", c, 0)),
+              ((l += d ? t("M", h + i, 0.5 + u + i) : t("m", c, 0)),
               (c = 0),
               (d = !1)),
-            (h + 1 < a && r[p + 1]) || ((l += s("h", m)), (m = 0)))
+            (h + 1 < a && r[p + 1]) || ((l += t("h", m)), (m = 0)))
           : c++);
     }
     return l;
   }
   return (
     (bt.render = function (a, i, l) {
-      const c = t.getOptions(i),
+      const c = s.getOptions(i),
         d = a.modules.size,
         m = a.modules.data,
         p = d + c.margin * 2,
@@ -3955,15 +3958,15 @@ var cs;
 function Vr() {
   if (cs) return xe;
   cs = 1;
-  const t = Mr(),
+  const s = Mr(),
     o = zr(),
-    s = Gr(),
+    t = Gr(),
     n = Wr();
   function r(a, i, l, c, d) {
     const m = [].slice.call(arguments, 1),
       p = m.length,
       h = typeof m[p - 1] == "function";
-    if (!h && !t()) throw new Error("Callback required as last argument");
+    if (!h && !s()) throw new Error("Callback required as last argument");
     if (h) {
       if (p < 2) throw new Error("Too few arguments provided");
       p === 2
@@ -3997,8 +4000,8 @@ function Vr() {
   }
   return (
     (xe.create = o.create),
-    (xe.toCanvas = r.bind(null, s.render)),
-    (xe.toDataURL = r.bind(null, s.renderToDataURL)),
+    (xe.toCanvas = r.bind(null, t.render)),
+    (xe.toDataURL = r.bind(null, t.renderToDataURL)),
     (xe.toString = r.bind(null, function (a, i, l) {
       return n.render(a, l);
     })),
@@ -4007,15 +4010,15 @@ function Vr() {
 }
 var Jr = Vr();
 const Yr = Ls(Jr),
-  ze = ({ result: t, onClose: o }) => {
-    const [s, n] = R.useState(!1),
+  ze = ({ result: s, onClose: o }) => {
+    const [t, n] = R.useState(!1),
       [r, a] = R.useState(""),
       [i, l] = R.useState({ pdf: !1, image: !1, copy: !1 }),
-      c = `${window.location.origin}/results/${t.id}`,
+      c = `${window.location.origin}/results/${s.id}`,
       d = `🚀 My internet speed test results:
-📥 ${t.downloadSpeed.toFixed(1)} Mbps download
-📤 ${t.uploadSpeed.toFixed(1)} Mbps upload
-⚡ ${t.ping.toFixed(0)}ms ping
+📥 ${s.downloadSpeed.toFixed(1)} Mbps download
+📤 ${s.uploadSpeed.toFixed(1)} Mbps upload
+⚡ ${s.ping.toFixed(0)}ms ping
 
 Test your speed at SpeedTest Pro!`;
     R.useEffect(() => {
@@ -4072,7 +4075,7 @@ ${c}`),
             return;
           }
           const S = (
-              await Fs(x, {
+              await Bs(x, {
                 scale: 2,
                 useCORS: !0,
                 logging: !1,
@@ -4173,7 +4176,7 @@ ${c}`),
                               e.jsx("div", {
                                 className:
                                   "text-green-600 font-bold text-lg sm:text-2xl",
-                                children: t.downloadSpeed.toFixed(1),
+                                children: s.downloadSpeed.toFixed(1),
                               }),
                               e.jsx("div", {
                                 className: "text-xs sm:text-sm text-gray-500",
@@ -4188,7 +4191,7 @@ ${c}`),
                               e.jsx("div", {
                                 className:
                                   "text-blue-600 font-bold text-lg sm:text-2xl",
-                                children: t.uploadSpeed.toFixed(1),
+                                children: s.uploadSpeed.toFixed(1),
                               }),
                               e.jsx("div", {
                                 className: "text-xs sm:text-sm text-gray-500",
@@ -4203,7 +4206,7 @@ ${c}`),
                               e.jsx("div", {
                                 className:
                                   "text-amber-600 font-bold text-lg sm:text-2xl",
-                                children: t.ping.toFixed(0),
+                                children: s.ping.toFixed(0),
                               }),
                               e.jsx("div", {
                                 className: "text-xs sm:text-sm text-gray-500",
@@ -4213,7 +4216,7 @@ ${c}`),
                           }),
                         ],
                       }),
-                      t.packetLoss !== void 0 &&
+                      s.packetLoss !== void 0 &&
                         e.jsxs("div", {
                           className:
                             "mt-3 bg-white p-2 sm:p-3 rounded-lg shadow-sm text-center",
@@ -4224,9 +4227,9 @@ ${c}`),
                               children: [
                                 (() => {
                                   const x =
-                                    typeof t.packetLoss == "number"
-                                      ? t.packetLoss
-                                      : t.packetLoss?.percentage;
+                                    typeof s.packetLoss == "number"
+                                      ? s.packetLoss
+                                      : s.packetLoss?.percentage;
                                   return typeof x == "number"
                                     ? x.toFixed(1)
                                     : "0.0";
@@ -4336,11 +4339,11 @@ ${c}`),
                             whileTap: { scale: 0.95 },
                             children: [
                               i.copy
-                                ? e.jsx(Fe, {
+                                ? e.jsx(Be, {
                                     className:
                                       "w-5 h-5 text-purple-600 animate-spin",
                                   })
-                                : s
+                                : t
                                   ? e.jsx(Gs, {
                                       className: "w-5 h-5 text-green-600",
                                     })
@@ -4349,7 +4352,7 @@ ${c}`),
                                     }),
                               e.jsx("span", {
                                 className: "text-sm font-medium",
-                                children: s ? "Copied!" : "Copy Link",
+                                children: t ? "Copied!" : "Copy Link",
                               }),
                             ],
                           }),
@@ -4361,7 +4364,7 @@ ${c}`),
                             whileTap: { scale: 0.95 },
                             children: [
                               i.image
-                                ? e.jsx(Fe, {
+                                ? e.jsx(Be, {
                                     className:
                                       "w-5 h-5 text-green-600 animate-spin",
                                   })
@@ -4406,10 +4409,10 @@ ${c}`),
       ],
     });
   },
-  Ts = ({ isOpen: t, onClose: o }) =>
+  Ts = ({ isOpen: s, onClose: o }) =>
     e.jsx(z, {
       children:
-        t &&
+        s &&
         e.jsxs(y.div, {
           initial: { opacity: 0 },
           animate: { opacity: 1 },
@@ -4919,17 +4922,17 @@ ${c}`),
           ],
         }),
     }),
-  St = ({ packetLoss: t }) => {
-    const s =
-        t.percentage < 1
+  St = ({ packetLoss: s }) => {
+    const t =
+        s.percentage < 1
           ? "excellent"
-          : t.percentage < 2.5
+          : s.percentage < 2.5
             ? "good"
-            : t.percentage < 5
+            : s.percentage < 5
               ? "fair"
               : "poor",
       n = () => {
-        switch (s) {
+        switch (t) {
           case "excellent":
             return {
               icon: e.jsx(pe, { className: "w-6 h-6 text-green-500" }),
@@ -4983,7 +4986,7 @@ ${c}`),
         e.jsxs("div", {
           className: "text-3xl font-bold mb-1",
           children: [
-            t.percentage.toFixed(1),
+            s.percentage.toFixed(1),
             e.jsx("span", { className: "text-lg font-medium", children: "%" }),
           ],
         }),
@@ -4998,24 +5001,24 @@ ${c}`),
         e.jsx("div", {
           className: "mt-3 text-xs text-gray-500 text-center",
           children:
-            s === "excellent" || s === "good"
+            t === "excellent" || t === "good"
               ? "Your connection is stable with minimal packet loss."
-              : s === "fair"
+              : t === "fair"
                 ? "Some packets are being lost. May affect real-time applications."
                 : "High packet loss detected. Video calls and gaming may be affected.",
         }),
         e.jsxs("div", {
           className: "mt-2 text-xs text-gray-400 flex justify-between w-full",
           children: [
-            e.jsxs("span", { children: ["Sent: ", t.sent] }),
-            e.jsxs("span", { children: ["Received: ", t.received] }),
+            e.jsxs("span", { children: ["Sent: ", s.sent] }),
+            e.jsxs("span", { children: ["Received: ", s.received] }),
           ],
         }),
       ],
     });
   },
-  Kr = ({ onTestComplete: t }) => {
-    const [o, s] = R.useState(!1),
+  Kr = ({ onTestComplete: s }) => {
+    const [o, t] = R.useState(!1),
       [n, r] = R.useState({
         phase: "idle",
         progress: 0,
@@ -5028,7 +5031,7 @@ ${c}`),
         r(g);
       }, []),
       m = async () => {
-        (s(!0),
+        (t(!0),
           i(null),
           r({ phase: "ping", progress: 0, currentSpeed: 0, elapsedTime: 0 }));
         try {
@@ -5047,11 +5050,11 @@ ${c}`),
               "speedTestResults",
               JSON.stringify(w.slice(0, 20)),
             ),
-            t && t(S));
+            s && s(S));
         } catch (g) {
           (console.error("Speed test failed:", g), setTimeout(() => m(), 2e3));
         } finally {
-          s(!1);
+          t(!1);
         }
       };
     R.useEffect(() => {
@@ -5305,9 +5308,9 @@ ${c}`),
       }),
     });
   },
-  Xr = ({ onTestComplete: t }) => {
+  Xr = ({ onTestComplete: s }) => {
     const o = _e(),
-      [s, n] = R.useState(!1),
+      [t, n] = R.useState(!1),
       [r, a] = R.useState({
         phase: "idle",
         progress: 0,
@@ -5343,7 +5346,7 @@ ${c}`),
               "speedTestResults",
               JSON.stringify(b.slice(0, 20)),
             ),
-            t && t(N),
+            s && s(N),
             w(!0));
         } catch (f) {
           (console.error("Speed test failed:", f), setTimeout(() => v(), 2e3));
@@ -5362,21 +5365,21 @@ ${c}`),
       };
     (R.useEffect(() => {
       !c &&
-        !s &&
+        !t &&
         !i &&
         (d(!0),
         setTimeout(() => {
           v();
         }, 1e3));
-    }, [c, s, i]),
+    }, [c, t, i]),
       R.useEffect(() => {
-        if (S && i && !s) {
+        if (S && i && !t) {
           const f = setTimeout(() => {
             o(`/results/${i.id}`);
           }, 500);
           return () => clearTimeout(f);
         }
-      }, [S, i, s, o]));
+      }, [S, i, t, o]));
     const D = ({ icon: f, value: N, unit: b, label: j, color: T }) =>
       e.jsxs(y.div, {
         initial: { opacity: 0, y: 20 },
@@ -5428,7 +5431,7 @@ ${c}`),
                     }),
                     e.jsx(Kr, {
                       onTestComplete: (f) => {
-                        (l(f), t && t(f));
+                        (l(f), s && s(f));
                       },
                     }),
                     i &&
@@ -5551,7 +5554,7 @@ ${c}`),
                                         async () => {
                                           const { generatePDFReport: j } =
                                             await import(
-                                              "./ReportGenerator-CbOP5yeF.js"
+                                              "./ReportGenerator-lY0zm9Sv.js"
                                             );
                                           return { generatePDFReport: j };
                                         },
@@ -5590,7 +5593,7 @@ ${c}`),
                                   disabled: x,
                                   children: [
                                     x
-                                      ? e.jsx(Fe, {
+                                      ? e.jsx(Be, {
                                           className: "w-5 h-5 animate-spin",
                                         })
                                       : e.jsx(qe, { className: "w-5 h-5" }),
@@ -5630,9 +5633,9 @@ ${c}`),
       ],
     });
   },
-  Qr = ({ onTestComplete: t }) => {
+  Qr = ({ onTestComplete: s }) => {
     const o = _e(),
-      [s, n] = R.useState(!1),
+      [t, n] = R.useState(!1),
       [r, a] = R.useState({
         phase: "idle",
         progress: 0,
@@ -5669,9 +5672,9 @@ ${c}`),
               },
               M,
             ),
-            F = await I.selectBestServer();
-          (console.log("Selected server:", F.name, "at", F.location),
-            O.success(`Connected to ${F.name} - ${F.location}`));
+            B = await I.selectBestServer();
+          (console.log("Selected server:", B.name, "at", B.location),
+            O.success(`Connected to ${B.name} - ${B.location}`));
           const ce = await I.runSpeedTest();
           l(ce);
           const Re = JSON.parse(
@@ -5682,13 +5685,13 @@ ${c}`),
               "speedTestResults",
               JSON.stringify(Re.slice(0, 20)),
             ),
-            t && t(ce),
+            s && s(ce),
             w(!0),
             I.dispose());
         } catch (I) {
           console.error("Speed test failed:", I);
-          const F = I instanceof Error ? I.message : "Unknown error occurred";
-          (O.error(`Test failed: ${F}. Retrying...`),
+          const B = I instanceof Error ? I.message : "Unknown error occurred";
+          (O.error(`Test failed: ${B}. Retrying...`),
             a({ phase: "idle", progress: 0, currentSpeed: 0, elapsedTime: 0 }),
             setTimeout(() => j(), 3e3));
         } finally {
@@ -5708,6 +5711,22 @@ ${c}`),
       const I = new Ue();
       (N(I.getAvailableServers()), I.dispose());
     }, []),
+      R.useEffect(() => {
+        (console.log("Auto-start useEffect triggered:", {
+          autoStarted: c,
+          isTestRunning: t,
+          testResult: i,
+        }),
+          !c &&
+            !t &&
+            !i &&
+            (console.log("Auto-starting speed test in 1 second..."),
+            d(!0),
+            setTimeout(() => {
+              (console.log("Auto-start timeout triggered, calling startTest()"),
+                j());
+            }, 1e3)));
+      }, [c, t, i, j]),
       R.useEffect(() => {
         if (S && i) {
           const I = setTimeout(() => {
@@ -5826,7 +5845,7 @@ ${c}`),
                             "text-sm bg-gray-50 border border-gray-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
                           value: M,
                           onChange: (I) => v(I.target.value),
-                          disabled: s,
+                          disabled: t,
                           children: f.map((I) =>
                             e.jsxs(
                               "option",
@@ -5866,7 +5885,7 @@ ${c}`),
                               "text-sm bg-gray-50 border border-gray-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
                             value: k,
                             onChange: (I) => D(I.target.value),
-                            disabled: s,
+                            disabled: t,
                             children: [
                               e.jsx("option", {
                                 value: fe.XHR,
@@ -5886,7 +5905,7 @@ ${c}`),
                 e.jsxs("div", {
                   className: "p-6",
                   children: [
-                    s &&
+                    t &&
                       e.jsxs(y.div, {
                         initial: { opacity: 0 },
                         animate: { opacity: 1 },
@@ -5944,7 +5963,7 @@ ${c}`),
                       children: e.jsxs(z, {
                         mode: "wait",
                         children: [
-                          !s &&
+                          !t &&
                             !i &&
                             e.jsxs(
                               y.div,
@@ -5989,7 +6008,7 @@ ${c}`),
                               },
                               "start",
                             ),
-                          s &&
+                          t &&
                             e.jsxs(
                               y.div,
                               {
@@ -6088,7 +6107,7 @@ ${c}`),
                               },
                               "testing",
                             ),
-                          !s &&
+                          !t &&
                             i &&
                             e.jsxs(
                               y.div,
@@ -6188,7 +6207,7 @@ ${c}`),
                         ],
                       }),
                     }),
-                    !s &&
+                    !t &&
                       i &&
                       e.jsxs(y.div, {
                         initial: { opacity: 0, y: 20 },
@@ -6212,7 +6231,7 @@ ${c}`),
                             disabled: x,
                             children: [
                               x
-                                ? e.jsx(Fe, {
+                                ? e.jsx(Be, {
                                     className:
                                       "w-4 h-4 text-blue-500 animate-spin",
                                   })
@@ -6253,7 +6272,7 @@ ${c}`),
                 }),
               ],
             }),
-            !s &&
+            !t &&
               i &&
               e.jsxs(y.div, {
                 initial: { opacity: 0, y: 20 },
@@ -6443,7 +6462,7 @@ ${c}`),
                   title: "Zero Tracking",
                   desc: "No cookies, analytics, or tracking scripts",
                 },
-              ].map((t, o) =>
+              ].map((s, o) =>
                 e.jsxs(
                   y.div,
                   {
@@ -6456,21 +6475,21 @@ ${c}`),
                       e.jsx("div", {
                         className:
                           "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4",
-                        children: e.jsx(t.icon, {
+                        children: e.jsx(s.icon, {
                           className: "w-6 h-6 text-blue-600",
                         }),
                       }),
                       e.jsx("h3", {
                         className: "text-lg font-semibold text-gray-800 mb-2",
-                        children: t.title,
+                        children: s.title,
                       }),
                       e.jsx("p", {
                         className: "text-gray-600 text-sm",
-                        children: t.desc,
+                        children: s.desc,
                       }),
                     ],
                   },
-                  t.title,
+                  s.title,
                 ),
               ),
             }),
@@ -6790,7 +6809,8 @@ ${c}`),
                         e.jsxs("p", {
                           className: "text-gray-600",
                           children: [
-                            "This privacy policy was last updated on ",
+                            "This privacy policy was last updated on",
+                            " ",
                             e.jsx("strong", { children: "January 2024" }),
                             ". We may update this policy to reflect changes in our practices or legal requirements.",
                           ],
@@ -6819,13 +6839,13 @@ ${c}`),
     }),
   ea = () => e.jsx(Zr, {}),
   ta = () => {
-    const [t, o] = R.useState({
+    const [s, o] = R.useState({
         name: "",
         email: "",
         subject: "",
         message: "",
       }),
-      [s, n] = R.useState(!1),
+      [t, n] = R.useState(!1),
       [r, a] = R.useState(!1),
       i = (c) => {
         const { name: d, value: m } = c.target;
@@ -6997,7 +7017,7 @@ ${c}`),
                                     type: "text",
                                     id: "name",
                                     name: "name",
-                                    value: t.name,
+                                    value: s.name,
                                     onChange: i,
                                     required: !0,
                                     className:
@@ -7017,7 +7037,7 @@ ${c}`),
                                     type: "email",
                                     id: "email",
                                     name: "email",
-                                    value: t.email,
+                                    value: s.email,
                                     onChange: i,
                                     required: !0,
                                     className:
@@ -7038,7 +7058,7 @@ ${c}`),
                               e.jsxs("select", {
                                 id: "subject",
                                 name: "subject",
-                                value: t.subject,
+                                value: s.subject,
                                 onChange: i,
                                 required: !0,
                                 className:
@@ -7079,7 +7099,7 @@ ${c}`),
                               e.jsx("textarea", {
                                 id: "message",
                                 name: "message",
-                                value: t.message,
+                                value: s.message,
                                 onChange: i,
                                 required: !0,
                                 rows: 5,
@@ -7091,9 +7111,9 @@ ${c}`),
                           e.jsx("div", {
                             children: e.jsx("button", {
                               type: "submit",
-                              disabled: s,
-                              className: `w-full px-6 py-3 flex items-center justify-center gap-2 rounded-lg text-white font-medium transition-colors ${s ? "bg-blue-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"}`,
-                              children: s
+                              disabled: t,
+                              className: `w-full px-6 py-3 flex items-center justify-center gap-2 rounded-lg text-white font-medium transition-colors ${t ? "bg-blue-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"}`,
+                              children: t
                                 ? e.jsxs(e.Fragment, {
                                     children: [
                                       e.jsxs("svg", {
@@ -7138,7 +7158,8 @@ ${c}`),
               className: "mt-8 text-center text-sm text-gray-500",
               children: e.jsxs("p", {
                 children: [
-                  "Your information is protected by our ",
+                  "Your information is protected by our",
+                  " ",
                   e.jsx("a", {
                     href: "/privacy",
                     className: "text-blue-600 hover:underline",
@@ -7154,26 +7175,26 @@ ${c}`),
     });
   },
   sa = () => {
-    const { resultId: t } = ds(),
+    const { resultId: s } = ds(),
       o = _e(),
-      [s, n] = R.useState(null),
+      [t, n] = R.useState(null),
       [r, a] = R.useState(!1),
       [i, l] = R.useState(!1),
       [c, d] = R.useState(!1);
     R.useEffect(() => {
-      t
+      s
         ? (() => {
             try {
               const S = JSON.parse(
                 localStorage.getItem("speedTestResults") || "[]",
-              ).find((w) => w.id === t);
+              ).find((w) => w.id === s);
               S ? n(S) : d(!0);
             } catch (g) {
               (console.error("Error loading test result:", g), d(!0));
             }
           })()
         : d(!0);
-    }, [t]);
+    }, [s]);
     const m = () => {
         o("/");
       },
@@ -7252,7 +7273,7 @@ ${c}`),
           ],
         }),
       });
-    if (!s)
+    if (!t)
       return e.jsx("div", {
         className:
           "container mx-auto px-4 py-12 flex justify-center items-center",
@@ -7289,7 +7310,7 @@ ${c}`),
                 }),
                 e.jsxs("p", {
                   className: "text-gray-600",
-                  children: ["Test completed on ", u(s.timestamp)],
+                  children: ["Test completed on ", u(t.timestamp)],
                 }),
               ],
             }),
@@ -7312,7 +7333,7 @@ ${c}`),
                       icon: e.jsx(re, {
                         className: "w-5 h-5 sm:w-6 sm:h-6 text-green-500",
                       }),
-                      value: s.downloadSpeed,
+                      value: t.downloadSpeed,
                       unit: "Mbps",
                       label: "Download",
                       color: "bg-green-500",
@@ -7321,7 +7342,7 @@ ${c}`),
                       icon: e.jsx(oe, {
                         className: "w-5 h-5 sm:w-6 sm:h-6 text-blue-500",
                       }),
-                      value: s.uploadSpeed,
+                      value: t.uploadSpeed,
                       unit: "Mbps",
                       label: "Upload",
                       color: "bg-blue-500",
@@ -7330,12 +7351,12 @@ ${c}`),
                       icon: e.jsx(je, {
                         className: "w-5 h-5 sm:w-6 sm:h-6 text-orange-500",
                       }),
-                      value: s.ping,
+                      value: t.ping,
                       unit: "ms",
                       label: "Ping",
                       color: "bg-orange-500",
                     }),
-                    s.packetLoss && e.jsx(St, { packetLoss: s.packetLoss }),
+                    t.packetLoss && e.jsx(St, { packetLoss: t.packetLoss }),
                   ],
                 }),
               ],
@@ -7365,7 +7386,7 @@ ${c}`),
                         }),
                         e.jsx("p", {
                           className: "font-medium",
-                          children: s.serverLocation,
+                          children: t.serverLocation,
                         }),
                       ],
                     }),
@@ -7379,9 +7400,9 @@ ${c}`),
                         e.jsxs("p", {
                           className: "font-medium",
                           children: [
-                            s.userLocation.city,
+                            t.userLocation.city,
                             ", ",
-                            s.userLocation.country,
+                            t.userLocation.country,
                           ],
                         }),
                       ],
@@ -7395,7 +7416,7 @@ ${c}`),
                         }),
                         e.jsxs("p", {
                           className: "font-medium",
-                          children: [s.testDuration.toFixed(1), " seconds"],
+                          children: [t.testDuration.toFixed(1), " seconds"],
                         }),
                       ],
                     }),
@@ -7408,11 +7429,11 @@ ${c}`),
                         }),
                         e.jsxs("p", {
                           className: "font-medium",
-                          children: [s.jitter.toFixed(1), " ms"],
+                          children: [t.jitter.toFixed(1), " ms"],
                         }),
                       ],
                     }),
-                    s.bufferbloat &&
+                    t.bufferbloat &&
                       e.jsxs("div", {
                         className: "p-4 bg-gray-50 rounded-lg",
                         children: [
@@ -7423,15 +7444,15 @@ ${c}`),
                           e.jsxs("p", {
                             className: "font-medium",
                             children: [
-                              s.bufferbloat.rating,
+                              t.bufferbloat.rating,
                               " (",
-                              s.bufferbloat.latencyIncrease.toFixed(1),
+                              t.bufferbloat.latencyIncrease.toFixed(1),
                               " ms)",
                             ],
                           }),
                         ],
                       }),
-                    s.stability &&
+                    t.stability &&
                       e.jsxs("div", {
                         className: "p-4 bg-gray-50 rounded-lg",
                         children: [
@@ -7441,7 +7462,7 @@ ${c}`),
                           }),
                           e.jsxs("p", {
                             className: "font-medium",
-                            children: [s.stability.score.toFixed(1), "%"],
+                            children: [t.stability.score.toFixed(1), "%"],
                           }),
                         ],
                       }),
@@ -7515,32 +7536,32 @@ ${c}`),
             }),
           ],
         }),
-        r && s && e.jsx(ze, { result: s, onClose: () => a(!1) }),
+        r && t && e.jsx(ze, { result: t, onClose: () => a(!1) }),
       ],
     });
   },
   ra = () => {
-    const { resultId: t } = ds(),
+    const { resultId: s } = ds(),
       o = _e(),
-      [s, n] = R.useState(null),
+      [t, n] = R.useState(null),
       [r, a] = R.useState(!1),
       [i, l] = R.useState(!1),
       [c, d] = R.useState(!1),
       [m, p] = R.useState("overview");
     R.useEffect(() => {
-      t
+      s
         ? (() => {
             try {
               const D = JSON.parse(
                 localStorage.getItem("speedTestResults") || "[]",
-              ).find((f) => f.id === t);
+              ).find((f) => f.id === s);
               D ? n(D) : d(!0);
             } catch (k) {
               (console.error("Error loading test result:", k), d(!0));
             }
           })()
         : d(!0);
-    }, [t]);
+    }, [s]);
     const h = () => {
         o("/");
       },
@@ -7550,13 +7571,13 @@ ${c}`),
           const { generatePDFReport: v } = await us(
             async () => {
               const { generatePDFReport: k } = await import(
-                "./ReportGenerator-CbOP5yeF.js"
+                "./ReportGenerator-lY0zm9Sv.js"
               );
               return { generatePDFReport: k };
             },
             __vite__mapDeps([0, 1, 2, 3]),
           );
-          (await v(s), O.success("PDF report generated successfully!"));
+          (await v(t), O.success("PDF report generated successfully!"));
         } catch (v) {
           (console.error("Error generating PDF report:", v),
             O.error("Failed to generate PDF report. Please try again."));
@@ -7631,11 +7652,11 @@ ${c}`),
           ],
         }),
       S = () => {
-        if (!s)
+        if (!t)
           return { grade: "N/A", color: "text-gray-500", bg: "bg-gray-100" };
-        const v = Math.min(s.downloadSpeed / 100, 1) * 40,
-          k = Math.min(s.uploadSpeed / 50, 1) * 30,
-          D = Math.max(0, (100 - s.ping) / 100) * 30,
+        const v = Math.min(t.downloadSpeed / 100, 1) * 40,
+          k = Math.min(t.uploadSpeed / 50, 1) * 30,
+          D = Math.max(0, (100 - t.ping) / 100) * 30,
           f = v + k + D;
         return f >= 90
           ? { grade: "A+", color: "text-green-600", bg: "bg-green-100" }
@@ -7684,7 +7705,7 @@ ${c}`),
           ],
         }),
       });
-    if (!s)
+    if (!t)
       return e.jsx("div", {
         className:
           "container mx-auto px-4 py-12 flex justify-center items-center",
@@ -7729,7 +7750,7 @@ ${c}`),
                       }),
                       e.jsxs("p", {
                         className: "text-gray-600 mt-1",
-                        children: ["Test completed on ", w(s.timestamp)],
+                        children: ["Test completed on ", w(t.timestamp)],
                       }),
                     ],
                   }),
@@ -7859,7 +7880,8 @@ ${c}`),
                                         className:
                                           "text-sm font-medium text-gray-700",
                                         children: [
-                                          "Your connection is ",
+                                          "Your connection is",
+                                          " ",
                                           M.grade === "A+" || M.grade === "A"
                                             ? "excellent"
                                             : M.grade === "B"
@@ -7882,7 +7904,7 @@ ${c}`),
                                       className:
                                         "w-5 h-5 sm:w-6 sm:h-6 text-green-500",
                                     }),
-                                    value: s.downloadSpeed,
+                                    value: t.downloadSpeed,
                                     unit: "Mbps",
                                     label: "Download Speed",
                                     color: "bg-green-500",
@@ -7894,7 +7916,7 @@ ${c}`),
                                       className:
                                         "w-5 h-5 sm:w-6 sm:h-6 text-orange-500",
                                     }),
-                                    value: s.uploadSpeed,
+                                    value: t.uploadSpeed,
                                     unit: "Mbps",
                                     label: "Upload Speed",
                                     color: "bg-orange-500",
@@ -7906,7 +7928,7 @@ ${c}`),
                                       className:
                                         "w-5 h-5 sm:w-6 sm:h-6 text-blue-500",
                                     }),
-                                    value: s.ping,
+                                    value: t.ping,
                                     unit: "ms",
                                     label: "Ping (Latency)",
                                     color: "bg-blue-500",
@@ -7948,7 +7970,7 @@ ${c}`),
                                           e.jsx("span", {
                                             className:
                                               "font-medium text-gray-800",
-                                            children: s.serverLocation,
+                                            children: t.serverLocation,
                                           }),
                                         ],
                                       }),
@@ -7966,9 +7988,10 @@ ${c}`),
                                             className:
                                               "font-medium text-gray-800",
                                             children: [
-                                              s.userLocation.city,
-                                              ", ",
-                                              s.userLocation.country,
+                                              t.userLocation.city,
+                                              ",",
+                                              " ",
+                                              t.userLocation.country,
                                             ],
                                           }),
                                         ],
@@ -7987,7 +8010,7 @@ ${c}`),
                                             className:
                                               "font-medium text-gray-800",
                                             children: [
-                                              s.testDuration,
+                                              t.testDuration,
                                               " seconds",
                                             ],
                                           }),
@@ -8018,27 +8041,27 @@ ${c}`),
                                     className:
                                       "w-5 h-5 sm:w-6 sm:h-6 text-purple-500",
                                   }),
-                                  value: s.jitter,
+                                  value: t.jitter,
                                   unit: "ms",
                                   label: "Jitter",
                                   color: "bg-purple-500",
                                   description:
                                     "Variation in ping over time. Lower jitter means a more stable connection.",
                                 }),
-                                s.packetLoss &&
+                                t.packetLoss &&
                                   e.jsx(g, {
                                     icon: e.jsx(ye, {
                                       className:
                                         "w-5 h-5 sm:w-6 sm:h-6 text-yellow-500",
                                     }),
-                                    value: s.packetLoss.percentage,
+                                    value: t.packetLoss.percentage,
                                     unit: "%",
                                     label: "Packet Loss",
                                     color: "bg-yellow-500",
                                     description:
                                       "Percentage of data packets that fail to reach their destination. Lower is better.",
                                   }),
-                                s.bufferbloat &&
+                                t.bufferbloat &&
                                   e.jsxs("div", {
                                     className:
                                       "bg-white rounded-xl shadow-lg p-6 border border-gray-100",
@@ -8063,8 +8086,8 @@ ${c}`),
                                             children: "Rating",
                                           }),
                                           e.jsx("div", {
-                                            className: `px-3 py-1 rounded-full text-sm font-medium ${s.bufferbloat.rating === "A" ? "bg-green-100 text-green-800" : s.bufferbloat.rating === "B" ? "bg-blue-100 text-blue-800" : s.bufferbloat.rating === "C" ? "bg-yellow-100 text-yellow-800" : s.bufferbloat.rating === "D" ? "bg-orange-100 text-orange-800" : "bg-red-100 text-red-800"}`,
-                                            children: s.bufferbloat.rating,
+                                            className: `px-3 py-1 rounded-full text-sm font-medium ${t.bufferbloat.rating === "A" ? "bg-green-100 text-green-800" : t.bufferbloat.rating === "B" ? "bg-blue-100 text-blue-800" : t.bufferbloat.rating === "C" ? "bg-yellow-100 text-yellow-800" : t.bufferbloat.rating === "D" ? "bg-orange-100 text-orange-800" : "bg-red-100 text-red-800"}`,
+                                            children: t.bufferbloat.rating,
                                           }),
                                         ],
                                       }),
@@ -8080,7 +8103,7 @@ ${c}`),
                                             className:
                                               "font-medium text-gray-800",
                                             children: [
-                                              s.bufferbloat.latencyIncrease,
+                                              t.bufferbloat.latencyIncrease,
                                               " ms",
                                             ],
                                           }),
@@ -8093,7 +8116,7 @@ ${c}`),
                                       }),
                                     ],
                                   }),
-                                s.stability &&
+                                t.stability &&
                                   e.jsxs("div", {
                                     className:
                                       "bg-white rounded-xl shadow-lg p-6 border border-gray-100",
@@ -8117,9 +8140,9 @@ ${c}`),
                                             children: "Stability Score",
                                           }),
                                           e.jsxs("div", {
-                                            className: `px-3 py-1 rounded-full text-sm font-medium ${s.stability.score >= 90 ? "bg-green-100 text-green-800" : s.stability.score >= 70 ? "bg-blue-100 text-blue-800" : s.stability.score >= 50 ? "bg-yellow-100 text-yellow-800" : "bg-red-100 text-red-800"}`,
+                                            className: `px-3 py-1 rounded-full text-sm font-medium ${t.stability.score >= 90 ? "bg-green-100 text-green-800" : t.stability.score >= 70 ? "bg-blue-100 text-blue-800" : t.stability.score >= 50 ? "bg-yellow-100 text-yellow-800" : "bg-red-100 text-red-800"}`,
                                             children: [
-                                              s.stability.score,
+                                              t.stability.score,
                                               "/100",
                                             ],
                                           }),
@@ -8137,7 +8160,7 @@ ${c}`),
                                             className:
                                               "font-medium text-gray-800",
                                             children: [
-                                              s.stability.variance.toFixed(2),
+                                              t.stability.variance.toFixed(2),
                                               " Mbps",
                                             ],
                                           }),
@@ -8246,7 +8269,7 @@ ${c}`),
                                               className:
                                                 "px-4 py-3 text-sm font-medium text-gray-800",
                                               children: [
-                                                s.downloadSpeed.toFixed(1),
+                                                t.downloadSpeed.toFixed(1),
                                                 " Mbps",
                                               ],
                                             }),
@@ -8276,7 +8299,7 @@ ${c}`),
                                               className:
                                                 "px-4 py-3 text-sm font-medium text-gray-800",
                                               children: [
-                                                s.downloadSpeed.toFixed(1),
+                                                t.downloadSpeed.toFixed(1),
                                                 " Mbps",
                                               ],
                                             }),
@@ -8286,7 +8309,7 @@ ${c}`),
                                                 className:
                                                   "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800",
                                                 children:
-                                                  s.downloadSpeed >= 5
+                                                  t.downloadSpeed >= 5
                                                     ? "Excellent"
                                                     : "Insufficient",
                                               }),
@@ -8309,18 +8332,18 @@ ${c}`),
                                               className:
                                                 "px-4 py-3 text-sm font-medium text-gray-800",
                                               children: [
-                                                s.downloadSpeed.toFixed(1),
+                                                t.downloadSpeed.toFixed(1),
                                                 " Mbps",
                                               ],
                                             }),
                                             e.jsx("td", {
                                               className: "px-4 py-3",
                                               children: e.jsx("span", {
-                                                className: `inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${s.downloadSpeed >= 25 ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`,
+                                                className: `inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${t.downloadSpeed >= 25 ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`,
                                                 children:
-                                                  s.downloadSpeed >= 25
+                                                  t.downloadSpeed >= 25
                                                     ? "Good"
-                                                    : s.downloadSpeed >= 15
+                                                    : t.downloadSpeed >= 15
                                                       ? "Marginal"
                                                       : "Insufficient",
                                               }),
@@ -8343,18 +8366,18 @@ ${c}`),
                                               className:
                                                 "px-4 py-3 text-sm font-medium text-gray-800",
                                               children: [
-                                                s.ping.toFixed(0),
+                                                t.ping.toFixed(0),
                                                 " ms",
                                               ],
                                             }),
                                             e.jsx("td", {
                                               className: "px-4 py-3",
                                               children: e.jsx("span", {
-                                                className: `inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${s.ping < 50 ? "bg-green-100 text-green-800" : s.ping < 100 ? "bg-yellow-100 text-yellow-800" : "bg-red-100 text-red-800"}`,
+                                                className: `inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${t.ping < 50 ? "bg-green-100 text-green-800" : t.ping < 100 ? "bg-yellow-100 text-yellow-800" : "bg-red-100 text-red-800"}`,
                                                 children:
-                                                  s.ping < 50
+                                                  t.ping < 50
                                                     ? "Excellent"
-                                                    : s.ping < 100
+                                                    : t.ping < 100
                                                       ? "Good"
                                                       : "Poor",
                                               }),
@@ -8378,20 +8401,21 @@ ${c}`),
                                                 "px-4 py-3 text-sm font-medium text-gray-800",
                                               children: [
                                                 Math.min(
-                                                  s.uploadSpeed,
-                                                  s.downloadSpeed,
+                                                  t.uploadSpeed,
+                                                  t.downloadSpeed,
                                                 ).toFixed(1),
-                                                " Mbps",
+                                                " ",
+                                                "Mbps",
                                               ],
                                             }),
                                             e.jsx("td", {
                                               className: "px-4 py-3",
                                               children: e.jsx("span", {
-                                                className: `inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${Math.min(s.uploadSpeed, s.downloadSpeed) >= 3 ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`,
+                                                className: `inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${Math.min(t.uploadSpeed, t.downloadSpeed) >= 3 ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`,
                                                 children:
                                                   Math.min(
-                                                    s.uploadSpeed,
-                                                    s.downloadSpeed,
+                                                    t.uploadSpeed,
+                                                    t.downloadSpeed,
                                                   ) >= 3
                                                     ? "Good"
                                                     : "Marginal",
@@ -8416,7 +8440,7 @@ ${c}`),
           ],
         }),
         e.jsx(z, {
-          children: r && s && e.jsx(ze, { result: s, onClose: () => a(!1) }),
+          children: r && t && e.jsx(ze, { result: t, onClose: () => a(!1) }),
         }),
       ],
     });
@@ -8448,7 +8472,7 @@ ${c}`),
             }),
           }),
           e.jsx(rr, {}),
-          e.jsx(Bs, {
+          e.jsx(Fs, {
             position: "bottom-center",
             toastOptions: {
               duration: 3e3,

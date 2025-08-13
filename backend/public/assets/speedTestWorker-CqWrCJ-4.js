@@ -1,7 +1,10 @@
 (function () {
   "use strict";
   var ee = ((e) => ((e.XHR = "xhr"), (e.WEBSOCKET = "websocket"), e))(ee || {});
-  const te = () => "https://api.yourdomain.com",
+  const te = () =>
+      window.location.hostname.includes("onrender.com")
+        ? ""
+        : window.location.origin,
     re = () => {
       const e = te();
       return window.location.hostname.includes("onrender.com") || e === ""

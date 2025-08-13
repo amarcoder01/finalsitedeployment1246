@@ -1,6 +1,6 @@
-import React from 'react';
-import { SpeedTestResult } from '../types/speedTest';
-import ModernShareModal from './ModernShareModal';
+import React from "react";
+import { SpeedTestResult } from "../types/speedTest";
+import ModernShareModal from "./ModernShareModal";
 
 interface ShareModalProps {
   result: SpeedTestResult;

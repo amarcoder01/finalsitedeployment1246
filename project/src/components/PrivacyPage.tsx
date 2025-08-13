@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Shield, Eye, Lock, Database, UserX, CheckCircle } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Shield, Eye, Lock, Database, UserX, CheckCircle } from "lucide-react";
 
 const PrivacyPage: React.FC = () => {
   return (
@@ -22,10 +22,13 @@ const PrivacyPage: React.FC = () => {
             >
               <Shield className="w-8 h-8 text-white" />
             </motion.div>
-            
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">Privacy Policy</h1>
+
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+              Privacy Policy
+            </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Your privacy is our priority. Learn how we protect your data and ensure complete anonymity.
+              Your privacy is our priority. Learn how we protect your data and
+              ensure complete anonymity.
             </p>
           </div>
 
@@ -39,19 +42,19 @@ const PrivacyPage: React.FC = () => {
             {[
               {
                 icon: UserX,
-                title: 'No Personal Data',
-                desc: 'We never collect names, emails, or personal information'
+                title: "No Personal Data",
+                desc: "We never collect names, emails, or personal information",
               },
               {
                 icon: Database,
-                title: 'Local Storage Only',
-                desc: 'Test results stored locally in your browser only'
+                title: "Local Storage Only",
+                desc: "Test results stored locally in your browser only",
               },
               {
                 icon: Lock,
-                title: 'Zero Tracking',
-                desc: 'No cookies, analytics, or tracking scripts'
-              }
+                title: "Zero Tracking",
+                desc: "No cookies, analytics, or tracking scripts",
+              },
             ].map((principle, index) => (
               <motion.div
                 key={principle.title}
@@ -63,7 +66,9 @@ const PrivacyPage: React.FC = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
                   <principle.icon className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">{principle.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {principle.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{principle.desc}</p>
               </motion.div>
             ))}
@@ -79,28 +84,45 @@ const PrivacyPage: React.FC = () => {
             <section>
               <div className="flex items-center gap-3 mb-4">
                 <Eye className="w-6 h-6 text-blue-600" />
-                <h2 className="text-2xl font-bold text-gray-800">What Data We Collect</h2>
+                <h2 className="text-2xl font-bold text-gray-800">
+                  What Data We Collect
+                </h2>
               </div>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-800">Network Performance Data</h3>
-                    <p className="text-gray-600">Download speed, upload speed, ping, and jitter measurements for test functionality.</p>
+                    <h3 className="font-semibold text-gray-800">
+                      Network Performance Data
+                    </h3>
+                    <p className="text-gray-600">
+                      Download speed, upload speed, ping, and jitter
+                      measurements for test functionality.
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-800">Approximate Location</h3>
-                    <p className="text-gray-600">City and country (via IP geolocation) to select optimal test servers. No precise location data.</p>
+                    <h3 className="font-semibold text-gray-800">
+                      Approximate Location
+                    </h3>
+                    <p className="text-gray-600">
+                      City and country (via IP geolocation) to select optimal
+                      test servers. No precise location data.
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-800">Technical Information</h3>
-                    <p className="text-gray-600">Browser type and basic device information for compatibility and optimization.</p>
+                    <h3 className="font-semibold text-gray-800">
+                      Technical Information
+                    </h3>
+                    <p className="text-gray-600">
+                      Browser type and basic device information for
+                      compatibility and optimization.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -109,26 +131,38 @@ const PrivacyPage: React.FC = () => {
             <section>
               <div className="flex items-center gap-3 mb-4">
                 <Database className="w-6 h-6 text-blue-600" />
-                <h2 className="text-2xl font-bold text-gray-800">How We Use Your Data</h2>
+                <h2 className="text-2xl font-bold text-gray-800">
+                  How We Use Your Data
+                </h2>
               </div>
               <div className="space-y-3">
-                <p className="text-gray-600">Your data is used exclusively for:</p>
+                <p className="text-gray-600">
+                  Your data is used exclusively for:
+                </p>
                 <ul className="space-y-2 ml-4">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="text-gray-600">Conducting accurate speed tests</span>
+                    <span className="text-gray-600">
+                      Conducting accurate speed tests
+                    </span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="text-gray-600">Selecting optimal test servers</span>
+                    <span className="text-gray-600">
+                      Selecting optimal test servers
+                    </span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="text-gray-600">Displaying your test results</span>
+                    <span className="text-gray-600">
+                      Displaying your test results
+                    </span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="text-gray-600">Generating downloadable reports</span>
+                    <span className="text-gray-600">
+                      Generating downloadable reports
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -137,28 +171,38 @@ const PrivacyPage: React.FC = () => {
             <section>
               <div className="flex items-center gap-3 mb-4">
                 <Lock className="w-6 h-6 text-blue-600" />
-                <h2 className="text-2xl font-bold text-gray-800">Data Protection & Anonymization</h2>
+                <h2 className="text-2xl font-bold text-gray-800">
+                  Data Protection & Anonymization
+                </h2>
               </div>
               <div className="space-y-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-green-800 mb-2">Complete Anonymization</h3>
+                  <h3 className="font-semibold text-green-800 mb-2">
+                    Complete Anonymization
+                  </h3>
                   <p className="text-green-700 text-sm">
-                    All data is immediately anonymized and cannot be traced back to individual users. 
-                    We use advanced techniques to ensure your privacy is protected.
+                    All data is immediately anonymized and cannot be traced back
+                    to individual users. We use advanced techniques to ensure
+                    your privacy is protected.
                   </p>
                 </div>
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-blue-800 mb-2">Local Storage</h3>
+                  <h3 className="font-semibold text-blue-800 mb-2">
+                    Local Storage
+                  </h3>
                   <p className="text-blue-700 text-sm">
-                    Test history is stored locally in your browser only. You can clear this data 
-                    anytime through your browser settings.
+                    Test history is stored locally in your browser only. You can
+                    clear this data anytime through your browser settings.
                   </p>
                 </div>
                 <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-purple-800 mb-2">No Third-Party Sharing</h3>
+                  <h3 className="font-semibold text-purple-800 mb-2">
+                    No Third-Party Sharing
+                  </h3>
                   <p className="text-purple-700 text-sm">
-                    We never share, sell, or transfer your data to third parties. Your information 
-                    stays with us and is used solely for test functionality.
+                    We never share, sell, or transfer your data to third
+                    parties. Your information stays with us and is used solely
+                    for test functionality.
                   </p>
                 </div>
               </div>
@@ -167,11 +211,15 @@ const PrivacyPage: React.FC = () => {
             <section>
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="w-6 h-6 text-blue-600" />
-                <h2 className="text-2xl font-bold text-gray-800">Your Rights</h2>
+                <h2 className="text-2xl font-bold text-gray-800">
+                  Your Rights
+                </h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
-                  <h3 className="font-semibold text-gray-800">GDPR Compliance</h3>
+                  <h3 className="font-semibold text-gray-800">
+                    GDPR Compliance
+                  </h3>
                   <ul className="space-y-1 text-sm text-gray-600">
                     <li>• Right to access your data</li>
                     <li>• Right to data portability</li>
@@ -180,7 +228,9 @@ const PrivacyPage: React.FC = () => {
                   </ul>
                 </div>
                 <div className="space-y-3">
-                  <h3 className="font-semibold text-gray-800">CCPA Compliance</h3>
+                  <h3 className="font-semibold text-gray-800">
+                    CCPA Compliance
+                  </h3>
                   <ul className="space-y-1 text-sm text-gray-600">
                     <li>• Right to know what data is collected</li>
                     <li>• Right to delete personal information</li>
@@ -192,15 +242,22 @@ const PrivacyPage: React.FC = () => {
             </section>
 
             <section className="border-t border-gray-200 pt-6">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">Contact & Updates</h2>
+              <h2 className="text-xl font-bold text-gray-800 mb-4">
+                Contact & Updates
+              </h2>
               <div className="space-y-3">
                 <p className="text-gray-600">
-                  This privacy policy was last updated on <strong>January 2024</strong>. 
-                  We may update this policy to reflect changes in our practices or legal requirements.
+                  This privacy policy was last updated on{" "}
+                  <strong>January 2024</strong>. We may update this policy to
+                  reflect changes in our practices or legal requirements.
                 </p>
                 <p className="text-gray-600">
-                  For privacy-related questions or concerns, please contact us at{' '}
-                  <a href="mailto:privacy@speedtestpro.com" className="text-blue-600 hover:underline">
+                  For privacy-related questions or concerns, please contact us
+                  at{" "}
+                  <a
+                    href="mailto:privacy@speedtestpro.com"
+                    className="text-blue-600 hover:underline"
+                  >
                     privacy@speedtestpro.com
                   </a>
                 </p>

@@ -1,5 +1,5 @@
-import React from 'react';
-import PrivacyPage from './PrivacyPage';
+import React from "react";
+import PrivacyPage from "./PrivacyPage";
 
 const PrivacyPolicy: React.FC = () => {
   return <PrivacyPage />;
