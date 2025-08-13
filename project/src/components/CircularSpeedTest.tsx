@@ -1,20 +1,25 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Download, Upload, Wifi, Activity, AlertTriangle } from 'lucide-react';
-import { SpeedTestResult, TestProgress as TestProgressType } from '../types/speedTest';
-import SpeedTestEngine from '../utils/speedTestEngine';
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Download, Upload, Wifi, Activity, AlertTriangle } from "lucide-react";
+import {
+  SpeedTestResult,
+  TestProgress as TestProgressType,
+} from "../types/speedTest";
+import SpeedTestEngine from "../utils/speedTestEngine";
 
 interface CircularSpeedTestProps {
   onTestComplete?: (result: SpeedTestResult) => void;
 }
 
-const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete }) => {
+const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({
+  onTestComplete,
+}) => {
   const [isTestRunning, setIsTestRunning] = useState(false);
   const [testProgress, setTestProgress] = useState<TestProgressType>({
-    phase: 'idle',
+    phase: "idle",
     progress: 0,
     currentSpeed: 0,
-    elapsedTime: 0
+    elapsedTime: 0,
   });
   const [testResult, setTestResult] = useState<SpeedTestResult | null>(null);
   const [autoStarted, setAutoStarted] = useState(false);
@@ -27,10 +32,10 @@ const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete })
     setIsTestRunning(true);
     setTestResult(null);
     setTestProgress({
-      phase: 'ping',
+      phase: "ping",
       progress: 0,
       currentSpeed: 0,
-      elapsedTime: 0
+      elapsedTime: 0,
     });
 
     try {
@@ -38,22 +43,27 @@ const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete })
         duration: 10,
         parallelConnections: 4,
         enableBufferbloat: true,
-        enableStressTest: false
+        enableStressTest: false,
       });
-      
+
       const result = await testEngine.runSpeedTest();
       setTestResult(result);
-      
+
       // Store result in localStorage
-      const savedResults = JSON.parse(localStorage.getItem('speedTestResults') || '[]');
+      const savedResults = JSON.parse(
+        localStorage.getItem("speedTestResults") || "[]",
+      );
       savedResults.unshift(result);
-      localStorage.setItem('speedTestResults', JSON.stringify(savedResults.slice(0, 20)));
-      
+      localStorage.setItem(
+        "speedTestResults",
+        JSON.stringify(savedResults.slice(0, 20)),
+      );
+
       if (onTestComplete) {
         onTestComplete(result);
       }
     } catch (error) {
-      console.error('Speed test failed:', error);
+      console.error("Speed test failed:", error);
       setTimeout(() => startTest(), 2000);
     } finally {
       setIsTestRunning(false);
@@ -72,45 +82,69 @@ const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete })
 
   const getPhaseLabel = (phase: string) => {
     switch (phase) {
-      case 'ping': return 'Testing Connection';
-      case 'download': return 'Testing Download';
-      case 'upload': return 'Testing Upload';
-      case 'packetLoss': return 'Measuring Packet Loss';
-      case 'complete': return 'Test Complete';
-      default: return 'Initializing';
+      case "ping":
+        return "Testing Connection";
+      case "download":
+        return "Testing Download";
+      case "upload":
+        return "Testing Upload";
+      case "packetLoss":
+        return "Measuring Packet Loss";
+      case "complete":
+        return "Test Complete";
+      default:
+        return "Initializing";
     }
   };
 
   const getPhaseColor = (phase: string) => {
     switch (phase) {
-      case 'ping': return 'text-blue-500';
-      case 'download': return 'text-green-500';
-      case 'upload': return 'text-orange-500';
-      case 'packetLoss': return 'text-yellow-500';
-      case 'complete': return 'text-purple-500';
-      default: return 'text-gray-500';
+      case "ping":
+        return "text-blue-500";
+      case "download":
+        return "text-green-500";
+      case "upload":
+        return "text-orange-500";
+      case "packetLoss":
+        return "text-yellow-500";
+      case "complete":
+        return "text-purple-500";
+      default:
+        return "text-gray-500";
     }
   };
 
   const getPhaseGradient = (phase: string) => {
     switch (phase) {
-      case 'ping': return 'from-blue-400 to-blue-600';
-      case 'download': return 'from-green-400 to-green-600';
-      case 'upload': return 'from-orange-400 to-orange-600';
-      case 'packetLoss': return 'from-yellow-400 to-yellow-600';
-      case 'complete': return 'from-purple-400 to-purple-600';
-      default: return 'from-gray-400 to-gray-600';
+      case "ping":
+        return "from-blue-400 to-blue-600";
+      case "download":
+        return "from-green-400 to-green-600";
+      case "upload":
+        return "from-orange-400 to-orange-600";
+      case "packetLoss":
+        return "from-yellow-400 to-yellow-600";
+      case "complete":
+        return "from-purple-400 to-purple-600";
+      default:
+        return "from-gray-400 to-gray-600";
     }
   };
 
   const getPhaseIcon = (phase: string) => {
     switch (phase) {
-      case 'ping': return <Wifi className="w-8 h-8 text-white" />;
-      case 'download': return <Download className="w-8 h-8 text-white" />;
-      case 'upload': return <Upload className="w-8 h-8 text-white" />;
-      case 'packetLoss': return <AlertTriangle className="w-8 h-8 text-white" />;
-      case 'complete': return <Activity className="w-8 h-8 text-white" />;
-      default: return <Activity className="w-8 h-8 text-white" />;
+      case "ping":
+        return <Wifi className="w-8 h-8 text-white" />;
+      case "download":
+        return <Download className="w-8 h-8 text-white" />;
+      case "upload":
+        return <Upload className="w-8 h-8 text-white" />;
+      case "packetLoss":
+        return <AlertTriangle className="w-8 h-8 text-white" />;
+      case "complete":
+        return <Activity className="w-8 h-8 text-white" />;
+      default:
+        return <Activity className="w-8 h-8 text-white" />;
     }
   };
 
@@ -134,7 +168,7 @@ const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete })
             transition={{
               duration: 8,
               repeat: Infinity,
-              repeatType: 'reverse',
+              repeatType: "reverse",
             }}
           />
           <motion.div
@@ -147,7 +181,7 @@ const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete })
             transition={{
               duration: 10,
               repeat: Infinity,
-              repeatType: 'reverse',
+              repeatType: "reverse",
             }}
           />
         </div>
@@ -157,9 +191,21 @@ const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete })
           {/* Track circle */}
           <svg className="w-full h-full" viewBox="0 0 256 256">
             <defs>
-              <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" className={`${testProgress.phase === 'ping' ? 'stop-color-blue-400' : testProgress.phase === 'download' ? 'stop-color-green-400' : 'stop-color-orange-400'}`} />
-                <stop offset="100%" className={`${testProgress.phase === 'ping' ? 'stop-color-blue-600' : testProgress.phase === 'download' ? 'stop-color-green-600' : 'stop-color-orange-600'}`} />
+              <linearGradient
+                id="progressGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop
+                  offset="0%"
+                  className={`${testProgress.phase === "ping" ? "stop-color-blue-400" : testProgress.phase === "download" ? "stop-color-green-400" : "stop-color-orange-400"}`}
+                />
+                <stop
+                  offset="100%"
+                  className={`${testProgress.phase === "ping" ? "stop-color-blue-600" : testProgress.phase === "download" ? "stop-color-green-600" : "stop-color-orange-600"}`}
+                />
               </linearGradient>
               <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
                 <feGaussianBlur stdDeviation="4" result="blur" />
@@ -175,13 +221,19 @@ const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete })
               fill="none"
               className="text-gray-100"
             />
-            
+
             {/* Progress circle with glow effect */}
             <circle
               cx="128"
               cy="128"
               r="120"
-              stroke={testProgress.phase === 'ping' ? '#3B82F6' : testProgress.phase === 'download' ? '#10B981' : '#F97316'}
+              stroke={
+                testProgress.phase === "ping"
+                  ? "#3B82F6"
+                  : testProgress.phase === "download"
+                    ? "#10B981"
+                    : "#F97316"
+              }
               strokeWidth="8"
               fill="none"
               strokeLinecap="round"
@@ -205,29 +257,42 @@ const CircularSpeedTest: React.FC<CircularSpeedTestProps> = ({ onTestComplete })
               >
                 <motion.div
                   animate={isTestRunning ? { rotate: 360 } : { rotate: 0 }}
-                  transition={isTestRunning ? { duration: 2, repeat: Infinity, ease: "linear" } : { duration: 0 }}
+                  transition={
+                    isTestRunning
+                      ? { duration: 2, repeat: Infinity, ease: "linear" }
+                      : { duration: 0 }
+                  }
                   className={`flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full mb-3 sm:mb-4 bg-gradient-to-r ${getPhaseGradient(testProgress.phase)}`}
                 >
                   {getPhaseIcon(testProgress.phase)}
                 </motion.div>
-                
+
                 <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-1 sm:mb-2">
                   {getPhaseLabel(testProgress.phase)}
                 </h3>
-                
-                {testProgress.currentSpeed > 0 && testProgress.phase !== 'ping' && (
-                  <div className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1">
-                    {testProgress.currentSpeed.toFixed(1)}
-                    <span className="text-xs sm:text-sm font-medium text-gray-500 ml-1">Mbps</span>
-                  </div>
-                )}
-                
-                {testProgress.phase === 'ping' && (
+
+                {testProgress.currentSpeed > 0 &&
+                  testProgress.phase !== "ping" && (
+                    <div className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1">
+                      {testProgress.currentSpeed.toFixed(1)}
+                      <span className="text-xs sm:text-sm font-medium text-gray-500 ml-1">
+                        Mbps
+                      </span>
+                    </div>
+                  )}
+
+                {testProgress.phase === "ping" && (
                   <div className="flex items-center gap-2 text-blue-600">
                     <div className="flex space-x-1">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-bounce"></div>
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                      <div
+                        className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-bounce"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                      <div
+                        className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-bounce"
+                        style={{ animationDelay: "0.4s" }}
+                      ></div>
                     </div>
                   </div>
                 )}

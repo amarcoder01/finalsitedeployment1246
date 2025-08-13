@@ -1,11 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Gauge, Shield, Mail, ExternalLink } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Gauge, Shield, Mail, ExternalLink } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-white border-t border-gray-200 pt-10 pb-6">
       <div className="container mx-auto px-4">
@@ -19,16 +19,22 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-sm text-gray-600 max-w-xs">
-              Accurate internet speed testing with detailed metrics and analysis to help you understand your connection quality.
+              Accurate internet speed testing with detailed metrics and analysis
+              to help you understand your connection quality.
             </p>
           </div>
-          
+
           {/* Features Section */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Features</h3>
+            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+              Features
+            </h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1.5">
+                <Link
+                  to="/"
+                  className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1.5"
+                >
                   <Gauge className="w-4 h-4" />
                   Speed Test
                 </Link>
@@ -47,19 +53,27 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Legal & Contact Section */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Legal & Contact</h3>
+            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+              Legal & Contact
+            </h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/privacy" className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1.5">
+                <Link
+                  to="/privacy"
+                  className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1.5"
+                >
                   <Shield className="w-4 h-4" />
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1.5">
+                <Link
+                  to="/contact"
+                  className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-1.5"
+                >
                   <Mail className="w-4 h-4" />
                   Contact Us
                 </Link>
@@ -67,13 +81,13 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-xs text-gray-500 mb-4 sm:mb-0">
             © {currentYear} SpeedTest. All rights reserved.
           </p>
           <div className="flex items-center space-x-1">
-            <motion.a 
+            <motion.a
               href="#"
               className="text-xs text-gray-500 hover:text-blue-600 transition-colors px-2 py-1"
               whileHover={{ scale: 1.05 }}
@@ -82,7 +96,7 @@ const Footer: React.FC = () => {
               Terms
             </motion.a>
             <span className="text-gray-300">|</span>
-            <motion.a 
+            <motion.a
               href="#"
               className="text-xs text-gray-500 hover:text-blue-600 transition-colors px-2 py-1"
               whileHover={{ scale: 1.05 }}
@@ -91,7 +105,7 @@ const Footer: React.FC = () => {
               GDPR
             </motion.a>
             <span className="text-gray-300">|</span>
-            <motion.a 
+            <motion.a
               href="#"
               className="text-xs text-gray-500 hover:text-blue-600 transition-colors px-2 py-1"
               whileHover={{ scale: 1.05 }}

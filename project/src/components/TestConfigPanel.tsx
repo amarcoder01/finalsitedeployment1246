@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { X, Settings, Zap, Activity, Clock } from 'lucide-react';
-import { TestConfig } from '../types/speedTest';
+import React from "react";
+import { motion } from "framer-motion";
+import { X, Settings, Zap, Activity, Clock } from "lucide-react";
+import { TestConfig } from "../types/speedTest";
 
 interface TestConfigPanelProps {
   config: TestConfig;
@@ -9,7 +9,11 @@ interface TestConfigPanelProps {
   onClose: () => void;
 }
 
-const TestConfigPanel: React.FC<TestConfigPanelProps> = ({ config, onChange, onClose }) => {
+const TestConfigPanel: React.FC<TestConfigPanelProps> = ({
+  config,
+  onChange,
+  onClose,
+}) => {
   const updateConfig = (updates: Partial<TestConfig>) => {
     onChange({ ...config, ...updates });
   };
@@ -27,8 +31,12 @@ const TestConfigPanel: React.FC<TestConfigPanelProps> = ({ config, onChange, onC
             <Settings className="w-5 h-5 text-blue-600" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-800">Test Configuration</h3>
-            <p className="text-sm text-gray-600">Customize your speed test parameters</p>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Test Configuration
+            </h3>
+            <p className="text-sm text-gray-600">
+              Customize your speed test parameters
+            </p>
           </div>
         </div>
         <button
@@ -44,11 +52,15 @@ const TestConfigPanel: React.FC<TestConfigPanelProps> = ({ config, onChange, onC
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-gray-500" />
-            <label className="text-sm font-medium text-gray-700">Duration (seconds)</label>
+            <label className="text-sm font-medium text-gray-700">
+              Duration (seconds)
+            </label>
           </div>
           <select
             value={config.duration}
-            onChange={(e) => updateConfig({ duration: parseInt(e.target.value) })}
+            onChange={(e) =>
+              updateConfig({ duration: parseInt(e.target.value) })
+            }
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value={5}>5 seconds</option>
@@ -62,11 +74,15 @@ const TestConfigPanel: React.FC<TestConfigPanelProps> = ({ config, onChange, onC
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Zap className="w-4 h-4 text-gray-500" />
-            <label className="text-sm font-medium text-gray-700">Connections</label>
+            <label className="text-sm font-medium text-gray-700">
+              Connections
+            </label>
           </div>
           <select
             value={config.parallelConnections}
-            onChange={(e) => updateConfig({ parallelConnections: parseInt(e.target.value) })}
+            onChange={(e) =>
+              updateConfig({ parallelConnections: parseInt(e.target.value) })
+            }
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value={1}>1 connection</option>
@@ -80,13 +96,17 @@ const TestConfigPanel: React.FC<TestConfigPanelProps> = ({ config, onChange, onC
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Activity className="w-4 h-4 text-gray-500" />
-            <label className="text-sm font-medium text-gray-700">Bufferbloat Test</label>
+            <label className="text-sm font-medium text-gray-700">
+              Bufferbloat Test
+            </label>
           </div>
           <label className="flex items-center space-x-3 cursor-pointer">
             <input
               type="checkbox"
               checked={config.enableBufferbloat}
-              onChange={(e) => updateConfig({ enableBufferbloat: e.target.checked })}
+              onChange={(e) =>
+                updateConfig({ enableBufferbloat: e.target.checked })
+              }
               className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
             <span className="text-sm text-gray-700">Enable analysis</span>
@@ -97,13 +117,17 @@ const TestConfigPanel: React.FC<TestConfigPanelProps> = ({ config, onChange, onC
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Activity className="w-4 h-4 text-gray-500" />
-            <label className="text-sm font-medium text-gray-700">Stress Test</label>
+            <label className="text-sm font-medium text-gray-700">
+              Stress Test
+            </label>
           </div>
           <label className="flex items-center space-x-3 cursor-pointer">
             <input
               type="checkbox"
               checked={config.enableStressTest}
-              onChange={(e) => updateConfig({ enableStressTest: e.target.checked })}
+              onChange={(e) =>
+                updateConfig({ enableStressTest: e.target.checked })
+              }
               className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
             <span className="text-sm text-gray-700">Enable monitoring</span>
@@ -113,8 +137,9 @@ const TestConfigPanel: React.FC<TestConfigPanelProps> = ({ config, onChange, onC
 
       <div className="mt-6 p-4 bg-blue-50 rounded-lg">
         <p className="text-sm text-blue-800">
-          <strong>Pro Tip:</strong> Higher parallel connections may show faster speeds but use more bandwidth. 
-          Bufferbloat testing helps identify network congestion issues.
+          <strong>Pro Tip:</strong> Higher parallel connections may show faster
+          speeds but use more bandwidth. Bufferbloat testing helps identify
+          network congestion issues.
         </p>
       </div>
     </motion.div>

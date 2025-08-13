@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Wifi } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Wifi } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
@@ -14,16 +14,22 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Fast & Accurate <span className="text-blue-600">Internet Speed Test</span>
+                Fast & Accurate{" "}
+                <span className="text-blue-600">Internet Speed Test</span>
               </h1>
               <p className="text-lg text-gray-600 mb-8">
-                Test your connection speed with our advanced, privacy-focused speed test tool.
-                Get detailed insights about your download, upload, ping, and more.
+                Test your connection speed with our advanced, privacy-focused
+                speed test tool. Get detailed insights about your download,
+                upload, ping, and more.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button 
+                <button
                   className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
-                  onClick={() => document.getElementById('speed-test')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() =>
+                    document
+                      .getElementById("speed-test")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
                   <Wifi size={20} />
                   Start Speed Test
@@ -34,7 +40,7 @@ const HeroSection: React.FC = () => {
               </div>
             </motion.div>
           </div>
-          
+
           <div className="md:w-1/2 relative z-0">
             <div className="relative">
               <motion.div
@@ -47,7 +53,7 @@ const HeroSection: React.FC = () => {
                 transition={{
                   duration: 10,
                   repeat: Infinity,
-                  repeatType: 'reverse',
+                  repeatType: "reverse",
                 }}
               />
               <motion.div
@@ -60,7 +66,7 @@ const HeroSection: React.FC = () => {
                 transition={{
                   duration: 10,
                   repeat: Infinity,
-                  repeatType: 'reverse',
+                  repeatType: "reverse",
                 }}
               />
               <motion.div
@@ -73,19 +79,20 @@ const HeroSection: React.FC = () => {
                 transition={{
                   duration: 10,
                   repeat: Infinity,
-                  repeatType: 'reverse',
+                  repeatType: "reverse",
                 }}
               />
               <motion.img
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                src="/speedometer.svg" 
+                src="/speedometer.svg"
                 alt="Speed Test Illustration"
                 className="relative z-10 w-full max-w-lg mx-auto"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = 'https://via.placeholder.com/500x400?text=Speed+Test';
+                  target.src =
+                    "https://via.placeholder.com/500x400?text=Speed+Test";
                 }}
               />
             </div>

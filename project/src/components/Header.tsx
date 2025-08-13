@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Gauge, Shield, Mail } from 'lucide-react';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Gauge, Shield, Mail } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={closeMobileMenu}>
-            <motion.div 
+            <motion.div
               className="flex items-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -37,20 +37,32 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <NavLink to="/" isActive={currentPath === '/'} icon={<Gauge className="w-4 h-4" />}>
+            <NavLink
+              to="/"
+              isActive={currentPath === "/"}
+              icon={<Gauge className="w-4 h-4" />}
+            >
               Speed Test
             </NavLink>
-            <NavLink to="/privacy" isActive={currentPath === '/privacy'} icon={<Shield className="w-4 h-4" />}>
+            <NavLink
+              to="/privacy"
+              isActive={currentPath === "/privacy"}
+              icon={<Shield className="w-4 h-4" />}
+            >
               Privacy
             </NavLink>
-            <NavLink to="/contact" isActive={currentPath === '/contact'} icon={<Mail className="w-4 h-4" />}>
+            <NavLink
+              to="/contact"
+              isActive={currentPath === "/contact"}
+              icon={<Mail className="w-4 h-4" />}
+            >
               Contact
             </NavLink>
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button 
+            <button
               onClick={toggleMobileMenu}
               className="p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors"
               aria-label="Toggle mobile menu"
@@ -70,32 +82,32 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden bg-white border-t border-gray-100"
           >
             <div className="container mx-auto px-4 py-3">
               <div className="flex flex-col space-y-1">
-                <MobileNavLink 
-                  to="/" 
-                  isActive={currentPath === '/'} 
+                <MobileNavLink
+                  to="/"
+                  isActive={currentPath === "/"}
                   icon={<Gauge className="w-5 h-5" />}
                   onClick={closeMobileMenu}
                 >
                   Speed Test
                 </MobileNavLink>
-                <MobileNavLink 
-                  to="/privacy" 
-                  isActive={currentPath === '/privacy'} 
+                <MobileNavLink
+                  to="/privacy"
+                  isActive={currentPath === "/privacy"}
                   icon={<Shield className="w-5 h-5" />}
                   onClick={closeMobileMenu}
                 >
                   Privacy
                 </MobileNavLink>
-                <MobileNavLink 
-                  to="/contact" 
-                  isActive={currentPath === '/contact'} 
+                <MobileNavLink
+                  to="/contact"
+                  isActive={currentPath === "/contact"}
                   icon={<Mail className="w-5 h-5" />}
                   onClick={closeMobileMenu}
                 >
@@ -118,14 +130,22 @@ interface NavLinkProps {
   onClick?: () => void;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ to, isActive, icon, children, onClick }) => {
+const NavLink: React.FC<NavLinkProps> = ({
+  to,
+  isActive,
+  icon,
+  children,
+  onClick,
+}) => {
   return (
     <Link
       to={to}
       onClick={onClick}
-      className={`px-3 py-2 rounded-lg flex items-center gap-1.5 text-sm font-medium transition-colors ${isActive
-        ? 'bg-blue-50 text-blue-600'
-        : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'}`}
+      className={`px-3 py-2 rounded-lg flex items-center gap-1.5 text-sm font-medium transition-colors ${
+        isActive
+          ? "bg-blue-50 text-blue-600"
+          : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+      }`}
     >
       {icon}
       {children}
@@ -133,14 +153,22 @@ const NavLink: React.FC<NavLinkProps> = ({ to, isActive, icon, children, onClick
   );
 };
 
-const MobileNavLink: React.FC<NavLinkProps> = ({ to, isActive, icon, children, onClick }) => {
+const MobileNavLink: React.FC<NavLinkProps> = ({
+  to,
+  isActive,
+  icon,
+  children,
+  onClick,
+}) => {
   return (
     <Link
       to={to}
       onClick={onClick}
-      className={`px-4 py-3 rounded-lg flex items-center gap-2 text-base font-medium transition-colors ${isActive
-        ? 'bg-blue-50 text-blue-600'
-        : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'}`}
+      className={`px-4 py-3 rounded-lg flex items-center gap-2 text-base font-medium transition-colors ${
+        isActive
+          ? "bg-blue-50 text-blue-600"
+          : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+      }`}
     >
       {icon}
       {children}

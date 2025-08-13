@@ -13,7 +13,7 @@ export interface SpeedTestResult {
   };
   testDuration: number;
   bufferbloat?: {
-    rating: 'A' | 'B' | 'C' | 'D' | 'F';
+    rating: "A" | "B" | "C" | "D" | "F";
     latencyIncrease: number;
   };
   stability?: {
@@ -33,7 +33,14 @@ export interface SpeedTestResult {
 }
 
 export interface TestProgress {
-  phase: 'idle' | 'ping' | 'download' | 'upload' | 'bufferbloat' | 'packetLoss' | 'complete';
+  phase:
+    | "idle"
+    | "ping"
+    | "download"
+    | "upload"
+    | "bufferbloat"
+    | "packetLoss"
+    | "complete";
   progress: number;
   currentSpeed: number;
   elapsedTime: number;
@@ -56,8 +63,8 @@ export interface GraphData {
 }
 
 export enum TestProtocol {
-  XHR = 'xhr',
-  WEBSOCKET = 'websocket'
+  XHR = "xhr",
+  WEBSOCKET = "websocket",
 }
 
 export interface TestConfig {

@@ -1,5 +1,5 @@
-import React from 'react';
-import AdvancedSpeedTest from './AdvancedSpeedTest';
+import React from "react";
+import AdvancedSpeedTest from "./AdvancedSpeedTest";
 
 const SpeedTest: React.FC = () => {
   return <AdvancedSpeedTest />;

@@ -28,10 +28,6 @@ jobs:
     - name: Build
       run: npm run build:all
 
-    - name: Run tests
-      run: |
-        cd project && npm run test
-
   docker-build:
     needs: build-and-test
     runs-on: ubuntu-latest

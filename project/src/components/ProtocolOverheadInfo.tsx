@@ -1,12 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { X, Info } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { X, Info } from "lucide-react";
 
 interface ProtocolOverheadInfoProps {
   onClose: () => void;
 }
 
-const ProtocolOverheadInfo: React.FC<ProtocolOverheadInfoProps> = ({ onClose }) => {
+const ProtocolOverheadInfo: React.FC<ProtocolOverheadInfoProps> = ({
+  onClose,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -38,30 +40,41 @@ const ProtocolOverheadInfo: React.FC<ProtocolOverheadInfoProps> = ({ onClose }) 
         <div className="p-6">
           <div className="space-y-4">
             <section>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">What is Protocol Overhead?</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                What is Protocol Overhead?
+              </h3>
               <p className="text-gray-600">
-                When data is transferred over the internet, it doesn't travel alone. It's wrapped in multiple layers of 
-                protocols (like HTTP, TCP, and IP) that add headers and other information to ensure reliable delivery. 
-                This additional information is called "protocol overhead" and it consumes bandwidth but doesn't 
+                When data is transferred over the internet, it doesn't travel
+                alone. It's wrapped in multiple layers of protocols (like HTTP,
+                TCP, and IP) that add headers and other information to ensure
+                reliable delivery. This additional information is called
+                "protocol overhead" and it consumes bandwidth but doesn't
                 contribute to the actual content being transferred.
               </p>
             </section>
 
             <section>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Why Compensate for Overhead?</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Why Compensate for Overhead?
+              </h3>
               <p className="text-gray-600">
-                Traditional speed tests measure raw data transfer rates without accounting for protocol overhead. 
-                However, in real-world usage, this overhead reduces the effective throughput of useful data. 
-                By applying a compensation factor, we provide a more accurate representation of the speeds you'll 
-                actually experience when browsing websites, streaming videos, or downloading files.
+                Traditional speed tests measure raw data transfer rates without
+                accounting for protocol overhead. However, in real-world usage,
+                this overhead reduces the effective throughput of useful data.
+                By applying a compensation factor, we provide a more accurate
+                representation of the speeds you'll actually experience when
+                browsing websites, streaming videos, or downloading files.
               </p>
             </section>
 
             <section>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">The Default Factor: 1.06</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                The Default Factor: 1.06
+              </h3>
               <p className="text-gray-600">
-                Our default compensation factor of 1.06 (representing 6% overhead) is based on typical HTTP/TCP/IP 
-                overhead in modern web traffic. This value accounts for:
+                Our default compensation factor of 1.06 (representing 6%
+                overhead) is based on typical HTTP/TCP/IP overhead in modern web
+                traffic. This value accounts for:
               </p>
               <ul className="list-disc pl-5 mt-2 text-gray-600 space-y-1">
                 <li>TCP headers (20 bytes per packet)</li>
@@ -73,22 +86,37 @@ const ProtocolOverheadInfo: React.FC<ProtocolOverheadInfoProps> = ({ onClose }) 
             </section>
 
             <section>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Adjusting the Factor</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Adjusting the Factor
+              </h3>
               <p className="text-gray-600">
-                You can adjust the compensation factor based on your specific network conditions and usage patterns:
+                You can adjust the compensation factor based on your specific
+                network conditions and usage patterns:
               </p>
               <ul className="list-disc pl-5 mt-2 text-gray-600 space-y-1">
-                <li><strong>Higher values (e.g., 1.10):</strong> For networks with more overhead, such as those with high packet loss or using VPNs</li>
-                <li><strong>Lower values (e.g., 1.03):</strong> For more efficient protocols or optimized connections</li>
-                <li><strong>1.00:</strong> No compensation (raw data transfer rate)</li>
+                <li>
+                  <strong>Higher values (e.g., 1.10):</strong> For networks with
+                  more overhead, such as those with high packet loss or using
+                  VPNs
+                </li>
+                <li>
+                  <strong>Lower values (e.g., 1.03):</strong> For more efficient
+                  protocols or optimized connections
+                </li>
+                <li>
+                  <strong>1.00:</strong> No compensation (raw data transfer
+                  rate)
+                </li>
               </ul>
             </section>
 
             <div className="bg-blue-50 p-4 rounded-lg mt-4">
               <p className="text-sm text-blue-800">
-                <strong>Note:</strong> The actual overhead varies based on many factors including network conditions, 
-                protocol versions, packet sizes, and the specific services being used. The compensation factor is an 
-                approximation designed to provide more realistic speed measurements.
+                <strong>Note:</strong> The actual overhead varies based on many
+                factors including network conditions, protocol versions, packet
+                sizes, and the specific services being used. The compensation
+                factor is an approximation designed to provide more realistic
+                speed measurements.
               </p>
             </div>
           </div>

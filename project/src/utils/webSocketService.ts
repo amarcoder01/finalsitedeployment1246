@@ -1,29 +1,29 @@
-import { SpeedTestResult } from '../types/speedTest';
+import { SpeedTestResult } from "../types/speedTest";
 
 // WebSocket connection states
 export enum WebSocketState {
-  CONNECTING = 'connecting',
-  OPEN = 'open',
-  CLOSING = 'closing',
-  CLOSED = 'closed',
-  ERROR = 'error'
+  CONNECTING = "connecting",
+  OPEN = "open",
+  CLOSING = "closing",
+  CLOSED = "closed",
+  ERROR = "error",
 }
 
 // WebSocket message types
 export enum MessageType {
-  PING = 'ping',
-  PONG = 'pong',
-  DOWNLOAD_START = 'download_start',
-  DOWNLOAD_STARTED = 'download_started',
-  DOWNLOAD_PROGRESS = 'download_progress',
-  DOWNLOAD_COMPLETE = 'download_complete',
-  UPLOAD_START = 'upload_start',
-  UPLOAD_READY = 'upload_ready',
-  UPLOAD_DATA = 'upload_data',
-  UPLOAD_ACK = 'upload_ack',
-  TEST_COMPLETE = 'test_complete',
-  TEST_COMPLETE_ACK = 'test_complete_ack',
-  ERROR = 'error'
+  PING = "ping",
+  PONG = "pong",
+  DOWNLOAD_START = "download_start",
+  DOWNLOAD_STARTED = "download_started",
+  DOWNLOAD_PROGRESS = "download_progress",
+  DOWNLOAD_COMPLETE = "download_complete",
+  UPLOAD_START = "upload_start",
+  UPLOAD_READY = "upload_ready",
+  UPLOAD_DATA = "upload_data",
+  UPLOAD_ACK = "upload_ack",
+  TEST_COMPLETE = "test_complete",
+  TEST_COMPLETE_ACK = "test_complete_ack",
+  ERROR = "error",
 }
 
 // WebSocket service configuration
@@ -35,7 +35,11 @@ interface WebSocketServiceConfig {
 }
 
 // Progress update callback type
-type ProgressCallback = (phase: string, progress: number, currentSpeed: number) => void;
+type ProgressCallback = (
+  phase: string,
+  progress: number,
+  currentSpeed: number,
+) => void;
 
 // WebSocket service for speed testing
 class WebSocketService {
@@ -59,7 +63,7 @@ class WebSocketService {
       reconnectAttempts: 3,
       reconnectInterval: 2000,
       debug: false,
-      ...config
+      ...config,
     };
     this.debug = this.config.debug || false;
   }
@@ -67,8 +71,12 @@ class WebSocketService {
   // Connect to WebSocket server
   connect(): Promise<void> {
     return new Promise((resolve, reject) => {
-      if (this.socket && (this.state === WebSocketState.OPEN || this.state === WebSocketState.CONNECTING)) {
-        this.log('WebSocket already connected or connecting');
+      if (
+        this.socket &&
+        (this.state === WebSocketState.OPEN ||
+          this.state === WebSocketState.CONNECTING)
+      ) {
+        this.log("WebSocket already connected or connecting");
         resolve();
         return;
       }
@@ -80,37 +88,37 @@ class WebSocketService {
         this.socket = new WebSocket(this.config.url);
 
         // Connection opened
-        this.socket.addEventListener('open', () => {
+        this.socket.addEventListener("open", () => {
           this.state = WebSocketState.OPEN;
           this.reconnectAttempt = 0;
-          this.log('WebSocket connection established');
+          this.log("WebSocket connection established");
           resolve();
         });
 
         // Connection error
-        this.socket.addEventListener('error', (event) => {
+        this.socket.addEventListener("error", (event) => {
           this.state = WebSocketState.ERROR;
-          this.log('WebSocket connection error:', event);
+          this.log("WebSocket connection error:", event);
           if (this.state === WebSocketState.CONNECTING) {
-            reject(new Error('Failed to connect to WebSocket server'));
+            reject(new Error("Failed to connect to WebSocket server"));
           }
           this.attemptReconnect();
         });
 
         // Connection closed
-        this.socket.addEventListener('close', () => {
+        this.socket.addEventListener("close", () => {
           this.state = WebSocketState.CLOSED;
-          this.log('WebSocket connection closed');
+          this.log("WebSocket connection closed");
           this.attemptReconnect();
         });
 
         // Listen for messages
-        this.socket.addEventListener('message', (event) => {
+        this.socket.addEventListener("message", (event) => {
           this.handleMessage(event);
         });
       } catch (error) {
         this.state = WebSocketState.ERROR;
-        this.log('Error creating WebSocket:', error);
+        this.log("Error creating WebSocket:", error);
         reject(error);
         this.attemptReconnect();
       }
@@ -120,23 +128,27 @@ class WebSocketService {
   // Attempt to reconnect to the server
   private attemptReconnect(): void {
     if (
-      this.state !== WebSocketState.CLOSED && 
+      this.state !== WebSocketState.CLOSED &&
       this.state !== WebSocketState.ERROR
     ) {
       return;
     }
 
     if (this.reconnectAttempt >= (this.config.reconnectAttempts || 3)) {
-      this.log(`Maximum reconnect attempts (${this.config.reconnectAttempts}) reached`);
+      this.log(
+        `Maximum reconnect attempts (${this.config.reconnectAttempts}) reached`,
+      );
       return;
     }
 
     this.reconnectAttempt++;
-    this.log(`Attempting to reconnect (${this.reconnectAttempt}/${this.config.reconnectAttempts})...`);
+    this.log(
+      `Attempting to reconnect (${this.reconnectAttempt}/${this.config.reconnectAttempts})...`,
+    );
 
     setTimeout(() => {
-      this.connect().catch(error => {
-        this.log('Reconnection attempt failed:', error);
+      this.connect().catch((error) => {
+        this.log("Reconnection attempt failed:", error);
       });
     }, this.config.reconnectInterval);
   }
@@ -156,7 +168,7 @@ class WebSocketService {
   // Send a message to the server
   private send(type: MessageType, data: any = {}): boolean {
     if (!this.socket || this.state !== WebSocketState.OPEN) {
-      this.log('Cannot send message, WebSocket is not open');
+      this.log("Cannot send message, WebSocket is not open");
       return false;
     }
 
@@ -165,13 +177,13 @@ class WebSocketService {
         type,
         timestamp: Date.now(),
         clientId: this.clientId,
-        ...data
+        ...data,
       });
 
       this.socket.send(message);
       return true;
     } catch (error) {
-      this.log('Error sending message:', error);
+      this.log("Error sending message:", error);
       return false;
     }
   }
@@ -179,7 +191,7 @@ class WebSocketService {
   // Send binary data to the server
   private sendBinary(data: ArrayBuffer): boolean {
     if (!this.socket || this.state !== WebSocketState.OPEN) {
-      this.log('Cannot send binary data, WebSocket is not open');
+      this.log("Cannot send binary data, WebSocket is not open");
       return false;
     }
 
@@ -187,7 +199,7 @@ class WebSocketService {
       this.socket.send(data);
       return true;
     } catch (error) {
-      this.log('Error sending binary data:', error);
+      this.log("Error sending binary data:", error);
       return false;
     }
   }
@@ -196,7 +208,7 @@ class WebSocketService {
   private handleMessage(event: MessageEvent): void {
     // Handle binary messages (for upload test)
     if (event.data instanceof ArrayBuffer) {
-      if (this.testPhase === 'upload') {
+      if (this.testPhase === "upload") {
         // For upload test, we receive binary data acknowledgments
         this.handleUploadAck(event.data);
       }
@@ -206,7 +218,7 @@ class WebSocketService {
     // Handle text messages
     try {
       const message = JSON.parse(event.data);
-      this.log('Received message:', message);
+      this.log("Received message:", message);
 
       switch (message.type) {
         case MessageType.CONNECTED:
@@ -219,7 +231,7 @@ class WebSocketService {
           break;
 
         case MessageType.DOWNLOAD_STARTED:
-          this.testPhase = 'download';
+          this.testPhase = "download";
           this.testStartTime = Date.now();
           this.log(`Download test started, total bytes: ${message.totalBytes}`);
           break;
@@ -242,18 +254,18 @@ class WebSocketService {
 
         case MessageType.TEST_COMPLETE_ACK:
           this.testComplete = true;
-          this.log('Test completed and acknowledged by server');
+          this.log("Test completed and acknowledged by server");
           break;
 
         case MessageType.ERROR:
-          this.log('Error from server:', message.message);
+          this.log("Error from server:", message.message);
           break;
 
         default:
           this.log(`Unknown message type: ${message.type}`);
       }
     } catch (error) {
-      this.log('Error parsing message:', error, event.data);
+      this.log("Error parsing message:", error, event.data);
     }
   }
 
@@ -261,12 +273,14 @@ class WebSocketService {
   private handlePong(message: any): void {
     const roundTripTime = Date.now() - message.clientTimestamp;
     this.pingResults.push(roundTripTime);
-    this.log(`Ping: ${roundTripTime}ms (server processing: ${message.serverProcessingTime}ms)`);
+    this.log(
+      `Ping: ${roundTripTime}ms (server processing: ${message.serverProcessingTime}ms)`,
+    );
 
     // Update progress if callback is set
-    if (this.progressCallback && this.testPhase === 'ping') {
+    if (this.progressCallback && this.testPhase === "ping") {
       const progress = Math.min((this.pingResults.length / 10) * 100, 100);
-      this.progressCallback('ping', progress, 0);
+      this.progressCallback("ping", progress, 0);
     }
 
     // If we have enough ping samples, calculate average
@@ -276,11 +290,11 @@ class WebSocketService {
       this.log(`Average ping: ${avgPing}ms`);
 
       // Move to next test phase if we're in ping phase
-      if (this.testPhase === 'ping') {
-        this.testPhase = 'download';
+      if (this.testPhase === "ping") {
+        this.testPhase = "download";
         this.startDownloadTest();
       }
-    } else if (this.testPhase === 'ping') {
+    } else if (this.testPhase === "ping") {
       // Continue ping test
       setTimeout(() => this.measurePing(), 200);
     }
@@ -288,12 +302,16 @@ class WebSocketService {
 
   // Handle download progress updates
   private handleDownloadProgress(message: any): void {
-    if (this.progressCallback && this.testPhase === 'download') {
+    if (this.progressCallback && this.testPhase === "download") {
       // Calculate current speed in Mbps
       const elapsedTime = (Date.now() - this.testStartTime) / 1000;
-      const currentSpeed = ((message.bytesSent * 8) / elapsedTime / 1000000);
+      const currentSpeed = (message.bytesSent * 8) / elapsedTime / 1000000;
 
-      this.progressCallback('download', parseFloat(message.progress), currentSpeed);
+      this.progressCallback(
+        "download",
+        parseFloat(message.progress),
+        currentSpeed,
+      );
     }
   }
 
@@ -306,7 +324,7 @@ class WebSocketService {
     this.log(`Download test complete: ${downloadSpeed.toFixed(2)} Mbps`);
 
     // Move to upload test
-    this.testPhase = 'upload';
+    this.testPhase = "upload";
     this.startUploadTest();
   }
 
@@ -317,15 +335,16 @@ class WebSocketService {
 
   // Handle upload progress
   private handleUploadProgress(message: any): void {
-    if (this.progressCallback && this.testPhase === 'upload') {
+    if (this.progressCallback && this.testPhase === "upload") {
       // Calculate current speed in Mbps
       const elapsedTime = (Date.now() - this.testStartTime) / 1000;
-      const currentSpeed = ((message.totalBytesReceived * 8) / elapsedTime / 1000000);
+      const currentSpeed =
+        (message.totalBytesReceived * 8) / elapsedTime / 1000000;
 
       // Calculate progress based on time (since we don't know total upload size)
       const progress = Math.min((elapsedTime / 10) * 100, 100); // Assume 10 second test
 
-      this.progressCallback('upload', progress, currentSpeed);
+      this.progressCallback("upload", progress, currentSpeed);
 
       // If we've been uploading for 10 seconds, finish the test
       if (elapsedTime >= 10) {
@@ -359,9 +378,9 @@ class WebSocketService {
 
   // Start ping measurement
   measurePing(): void {
-    this.testPhase = 'ping';
+    this.testPhase = "ping";
     this.pingResults = [];
-    this.log('Starting ping measurement');
+    this.log("Starting ping measurement");
 
     // Send ping message
     this.send(MessageType.PING);
@@ -369,28 +388,28 @@ class WebSocketService {
 
   // Start download test
   startDownloadTest(): void {
-    this.testPhase = 'download';
+    this.testPhase = "download";
     this.downloadResults = [];
     this.testStartTime = Date.now();
-    this.log('Starting download test');
+    this.log("Starting download test");
 
     // Request download test
     this.send(MessageType.DOWNLOAD_START, {
       size: 10 * 1024 * 1024, // 10MB
-      chunkSize: 64 * 1024 // 64KB chunks
+      chunkSize: 64 * 1024, // 64KB chunks
     });
   }
 
   // Start upload test
   startUploadTest(): void {
-    this.testPhase = 'upload';
+    this.testPhase = "upload";
     this.uploadResults = [];
     this.testStartTime = Date.now();
-    this.log('Starting upload test');
+    this.log("Starting upload test");
 
     // Request upload test
     this.send(MessageType.UPLOAD_START, {
-      size: 10 * 1024 * 1024 // 10MB
+      size: 10 * 1024 * 1024, // 10MB
     });
   }
 
@@ -430,7 +449,7 @@ class WebSocketService {
         // Send metadata about the chunk
         this.send(MessageType.UPLOAD_DATA, {
           byteLength: chunkSize,
-          totalUploaded
+          totalUploaded,
         });
 
         // Schedule next chunk
@@ -449,7 +468,7 @@ class WebSocketService {
   private completeTest(): void {
     this.testPhase = null;
     this.send(MessageType.TEST_COMPLETE, this.testData);
-    this.log('Speed test complete', this.testData);
+    this.log("Speed test complete", this.testData);
   }
 
   // Run a complete speed test
@@ -479,18 +498,18 @@ class WebSocketService {
               ping: this.testData.ping || 0,
               jitter: 0, // Not implemented in WebSocket version yet
               packetLoss: { percentage: 0, sent: 0, received: 0 }, // Not implemented in WebSocket version yet
-              bufferbloat: { rating: 'A', latencyIncrease: 0 }, // Not implemented in WebSocket version yet
+              bufferbloat: { rating: "A", latencyIncrease: 0 }, // Not implemented in WebSocket version yet
               timestamp: Date.now(),
               server: {
-                name: 'WebSocket Server',
-                location: 'Local',
-                distance: 0
+                name: "WebSocket Server",
+                location: "Local",
+                distance: 0,
               },
               protocolOverhead: {
-                detectionMode: 'fixed',
+                detectionMode: "fixed",
                 factor: 1.0,
-                percentage: 0
-              }
+                percentage: 0,
+              },
             };
             resolve(result);
           } else {
@@ -514,7 +533,7 @@ class WebSocketService {
   // Logging helper
   private log(...args: any[]): void {
     if (this.debug) {
-      console.log('[WebSocketService]', ...args);
+      console.log("[WebSocketService]", ...args);
     }
   }
 }

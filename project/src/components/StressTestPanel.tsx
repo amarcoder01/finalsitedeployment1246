@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { TrendingUp, Play, Pause, BarChart3 } from 'lucide-react';
-import { NetworkStabilityData } from '../types/speedTest';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { TrendingUp, Play, Pause, BarChart3 } from "lucide-react";
+import { NetworkStabilityData } from "../types/speedTest";
 
 const StressTestPanel: React.FC = () => {
   const [isRunning, setIsRunning] = useState(false);
-  const [stabilityData, setStabilityData] = useState<NetworkStabilityData[]>([]);
+  const [stabilityData, setStabilityData] = useState<NetworkStabilityData[]>(
+    [],
+  );
 
   const toggleStressTest = () => {
     setIsRunning(!isRunning);
@@ -16,9 +18,9 @@ const StressTestPanel: React.FC = () => {
           timestamp: Date.now(),
           downloadSpeed: Math.random() * 50 + 25,
           uploadSpeed: Math.random() * 20 + 10,
-          ping: Math.random() * 30 + 15
+          ping: Math.random() * 30 + 15,
         };
-        setStabilityData(prev => [...prev.slice(-19), newData]);
+        setStabilityData((prev) => [...prev.slice(-19), newData]);
       }, 2000);
 
       // Stop after 30 seconds for demo
@@ -40,8 +42,12 @@ const StressTestPanel: React.FC = () => {
           <TrendingUp className="w-5 h-5 text-orange-600" />
         </div>
         <div>
-          <h4 className="text-lg font-semibold text-gray-800">Stress Testing</h4>
-          <p className="text-sm text-gray-600">Long-term stability monitoring</p>
+          <h4 className="text-lg font-semibold text-gray-800">
+            Stress Testing
+          </h4>
+          <p className="text-sm text-gray-600">
+            Long-term stability monitoring
+          </p>
         </div>
       </div>
 
@@ -49,32 +55,42 @@ const StressTestPanel: React.FC = () => {
         <button
           onClick={toggleStressTest}
           className={`w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-colors ${
-            isRunning 
-              ? 'bg-red-100 text-red-700 hover:bg-red-200' 
-              : 'bg-orange-100 text-orange-700 hover:bg-orange-200'
+            isRunning
+              ? "bg-red-100 text-red-700 hover:bg-red-200"
+              : "bg-orange-100 text-orange-700 hover:bg-orange-200"
           }`}
         >
-          {isRunning ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-          {isRunning ? 'Stop Test' : 'Start Stress Test'}
+          {isRunning ? (
+            <Pause className="w-4 h-4" />
+          ) : (
+            <Play className="w-4 h-4" />
+          )}
+          {isRunning ? "Stop Test" : "Start Stress Test"}
         </button>
 
         {stabilityData.length > 0 && (
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <BarChart3 className="w-4 h-4 text-gray-500" />
-              <span className="text-sm font-medium text-gray-700">Stability Metrics</span>
+              <span className="text-sm font-medium text-gray-700">
+                Stability Metrics
+              </span>
             </div>
-            
+
             <div className="grid grid-cols-3 gap-3 text-center">
               <div className="bg-gray-50 rounded-lg p-3">
                 <div className="text-lg font-bold text-gray-800">
-                  {stabilityData[stabilityData.length - 1]?.downloadSpeed.toFixed(1)}
+                  {stabilityData[
+                    stabilityData.length - 1
+                  ]?.downloadSpeed.toFixed(1)}
                 </div>
                 <div className="text-xs text-gray-600">Mbps Down</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-3">
                 <div className="text-lg font-bold text-gray-800">
-                  {stabilityData[stabilityData.length - 1]?.uploadSpeed.toFixed(1)}
+                  {stabilityData[stabilityData.length - 1]?.uploadSpeed.toFixed(
+                    1,
+                  )}
                 </div>
                 <div className="text-xs text-gray-600">Mbps Up</div>
               </div>

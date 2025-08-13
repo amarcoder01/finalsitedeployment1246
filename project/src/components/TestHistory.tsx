@@ -1,21 +1,36 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Clock, TrendingUp, TrendingDown, Minus } from 'lucide-react';
-import { SpeedTestResult } from '../types/speedTest';
+import React from "react";
+import { motion } from "framer-motion";
+import { Clock, TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { SpeedTestResult } from "../types/speedTest";
 
 interface TestHistoryProps {
   currentResult: SpeedTestResult;
 }
 
 const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
-  const savedResults = JSON.parse(localStorage.getItem('speedTestResults') || '[]') as SpeedTestResult[];
-  const allResults = [currentResult, ...savedResults.filter(r => r.id !== currentResult.id)].slice(0, 10);
+  const savedResults = JSON.parse(
+    localStorage.getItem("speedTestResults") || "[]",
+  ) as SpeedTestResult[];
+  const allResults = [
+    currentResult,
+    ...savedResults.filter((r) => r.id !== currentResult.id),
+  ].slice(0, 10);
 
   const getTrend = (current: number, previous: number) => {
     const diff = ((current - previous) / previous) * 100;
-    if (Math.abs(diff) < 5) return { icon: Minus, color: 'text-gray-500', text: 'No change' };
-    if (diff > 0) return { icon: TrendingUp, color: 'text-green-500', text: `+${diff.toFixed(1)}%` };
-    return { icon: TrendingDown, color: 'text-red-500', text: `${diff.toFixed(1)}%` };
+    if (Math.abs(diff) < 5)
+      return { icon: Minus, color: "text-gray-500", text: "No change" };
+    if (diff > 0)
+      return {
+        icon: TrendingUp,
+        color: "text-green-500",
+        text: `+${diff.toFixed(1)}%`,
+      };
+    return {
+      icon: TrendingDown,
+      color: "text-red-500",
+      text: `${diff.toFixed(1)}%`,
+    };
   };
 
   return (
@@ -26,7 +41,9 @@ const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
         </div>
         <div>
           <h3 className="text-xl font-semibold text-gray-800">Test History</h3>
-          <p className="text-sm text-gray-600">Your recent speed test results</p>
+          <p className="text-sm text-gray-600">
+            Your recent speed test results
+          </p>
         </div>
       </div>
 
@@ -40,7 +57,7 @@ const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
           {allResults.map((result, index) => {
             const isLatest = index === 0;
             const previousResult = allResults[index + 1];
-            
+
             return (
               <motion.div
                 key={result.id}
@@ -48,9 +65,9 @@ const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className={`p-4 rounded-lg border ${
-                  isLatest 
-                    ? 'bg-blue-50 border-blue-200' 
-                    : 'bg-gray-50 border-gray-200'
+                  isLatest
+                    ? "bg-blue-50 border-blue-200"
+                    : "bg-gray-50 border-gray-200"
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
@@ -64,7 +81,9 @@ const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
                       </span>
                     )}
                   </div>
-                  <span className="text-xs text-gray-500">{result.serverLocation}</span>
+                  <span className="text-xs text-gray-500">
+                    {result.serverLocation}
+                  </span>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4">
@@ -77,8 +96,15 @@ const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
                       {previousResult && (
                         <div className="ml-2">
                           {(() => {
-                            const trend = getTrend(result.downloadSpeed, previousResult.downloadSpeed);
-                            return <trend.icon className={`w-4 h-4 ${trend.color}`} />;
+                            const trend = getTrend(
+                              result.downloadSpeed,
+                              previousResult.downloadSpeed,
+                            );
+                            return (
+                              <trend.icon
+                                className={`w-4 h-4 ${trend.color}`}
+                              />
+                            );
                           })()}
                         </div>
                       )}
@@ -95,8 +121,15 @@ const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
                       {previousResult && (
                         <div className="ml-2">
                           {(() => {
-                            const trend = getTrend(result.uploadSpeed, previousResult.uploadSpeed);
-                            return <trend.icon className={`w-4 h-4 ${trend.color}`} />;
+                            const trend = getTrend(
+                              result.uploadSpeed,
+                              previousResult.uploadSpeed,
+                            );
+                            return (
+                              <trend.icon
+                                className={`w-4 h-4 ${trend.color}`}
+                              />
+                            );
                           })()}
                         </div>
                       )}
@@ -113,8 +146,15 @@ const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
                       {previousResult && (
                         <div className="ml-2">
                           {(() => {
-                            const trend = getTrend(previousResult.ping, result.ping); // Inverted for ping (lower is better)
-                            return <trend.icon className={`w-4 h-4 ${trend.color}`} />;
+                            const trend = getTrend(
+                              previousResult.ping,
+                              result.ping,
+                            ); // Inverted for ping (lower is better)
+                            return (
+                              <trend.icon
+                                className={`w-4 h-4 ${trend.color}`}
+                              />
+                            );
                           })()}
                         </div>
                       )}
@@ -130,8 +170,8 @@ const TestHistory: React.FC<TestHistoryProps> = ({ currentResult }) => {
 
       <div className="mt-6 p-4 bg-gray-50 rounded-lg">
         <p className="text-sm text-gray-600">
-          <strong>Privacy Note:</strong> Test history is stored locally in your browser only. 
-          No data is transmitted to external servers.
+          <strong>Privacy Note:</strong> Test history is stored locally in your
+          browser only. No data is transmitted to external servers.
         </p>
       </div>
     </div>
