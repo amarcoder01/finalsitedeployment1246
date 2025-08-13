@@ -246,54 +246,61 @@ app.get("/api/status", (req, res) => {
 // Create HTTP server
 const server = http.createServer(app);
 
-// WebSocket server for real-time speed tests
-const wss = new WebSocketServer({ server });
+const DISABLE_WEBSOCKET = process.env.DISABLE_WEBSOCKET === 'true' || process.env.AZURE_STATIC_WEB_APPS_API_TOKEN;
+let wss = null;
 
-wss.on("connection", (ws, req) => {
-  console.log("WebSocket client connected");
+if (!DISABLE_WEBSOCKET) {
+  // WebSocket server for real-time speed tests
+  wss = new WebSocketServer({ server });
 
-  const clientInfo = {
-    id: Date.now(),
-    ip: req.socket.remoteAddress,
-    userAgent: req.headers["user-agent"],
-    connectedAt: Date.now(),
-    testPhase: null,
-    bytesTransferred: 0,
-    testStartTime: null,
-  };
+  wss.on("connection", (ws, req) => {
+    console.log("WebSocket client connected");
 
-  ws.on("message", (message) => {
-    try {
-      const data = JSON.parse(message);
+    const clientInfo = {
+      id: Date.now(),
+      ip: req.socket.remoteAddress,
+      userAgent: req.headers["user-agent"],
+      connectedAt: Date.now(),
+      testPhase: null,
+      bytesTransferred: 0,
+      testStartTime: null,
+    };
 
-      switch (data.type) {
-        case "ping":
-          handlePingTest(ws, data, clientInfo);
-          break;
-        case "download":
-          handleDownloadTest(ws, data, clientInfo);
-          break;
-        case "upload":
-          handleUploadTest(ws, data, clientInfo);
-          break;
-        default:
-          ws.send(JSON.stringify({ error: "Unknown message type" }));
+    ws.on("message", (message) => {
+      try {
+        const data = JSON.parse(message);
+
+        switch (data.type) {
+          case "ping":
+            handlePingTest(ws, data, clientInfo);
+            break;
+          case "download":
+            handleDownloadTest(ws, data, clientInfo);
+            break;
+          case "upload":
+            handleUploadTest(ws, data, clientInfo);
+            break;
+          default:
+            ws.send(JSON.stringify({ error: "Unknown message type" }));
+        }
+      } catch (error) {
+        console.error("WebSocket message error:", error);
+        ws.send(JSON.stringify({ error: "Invalid message format" }));
       }
-    } catch (error) {
-      console.error("WebSocket message error:", error);
-      ws.send(JSON.stringify({ error: "Invalid message format" }));
-    }
-  });
+    });
 
-  ws.on("close", () => {
-    console.log("WebSocket client disconnected");
-  });
+    ws.on("close", () => {
+      console.log("WebSocket client disconnected");
+    });
 
-  ws.on("error", (error) => {
-    console.error("WebSocket error:", error);
-    serverStats.errors++;
+    ws.on("error", (error) => {
+      console.error("WebSocket error:", error);
+      serverStats.errors++;
+    });
   });
-});
+} else {
+  console.log("WebSocket server disabled (Azure Static Web Apps compatibility mode)");
+}
 
 // WebSocket ping test handler
 function handlePingTest(ws, data, clientInfo) {

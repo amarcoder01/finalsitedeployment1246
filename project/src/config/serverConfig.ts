@@ -43,6 +43,10 @@ const getWebSocketUrl = (): string => {
     return import.meta.env.VITE_WS_URL;
   }
 
+  if (window.location.hostname.includes("azurestaticapps.net")) {
+    return "";
+  }
+
   const baseUrl = getBaseUrl();
 
   // In production, handle different platforms
