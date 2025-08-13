@@ -303,13 +303,11 @@ if (cluster.isPrimary && ENABLE_CLUSTER) {
       if (fs.existsSync(indexPath)) {
         res.sendFile(indexPath);
       } else {
-        res
-          .status(404)
-          .json({
-            error: "Frontend not found",
-            message:
-              "This is a backend API server. Frontend files are not available.",
-          });
+        res.status(404).json({
+          error: "Frontend not found",
+          message:
+            "This is a backend API server. Frontend files are not available.",
+        });
       }
     });
   } else {
